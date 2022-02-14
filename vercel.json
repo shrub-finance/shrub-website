@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/paper-gardens",
+      "destination": "https://paper.shrub.finance",
+      "permanent": true
+    }
+  ]
+}
