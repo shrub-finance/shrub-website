@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Button from "../elements/Button";
 import ReactGA from "react-ga";
+import CountDownTimer from './paper-gardens/CountDownTimer/CountDownTimer';
 
 const propTypes = {
   ...SectionProps.types
@@ -51,9 +52,14 @@ const PaperGardens = ({
               Introducing Paper Gardens
             </h1>
             <div className="container-xs" style={{marginTop: "70px", fontWeight: "500", color:"#9CA9B3"}}>
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+              {/* <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                   Paper Gardens is an interactive multi-chapter story, full of NFTs, rewards, and fun tied to Shrub Paper.
-              </p>
+              </p> */}
+               <div className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" >
+    <CountDownTimer tillTime='feb 15,2022 11:00:00'></CountDownTimer>
+    </div>
+    
+             
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <Button tag="a" color="primary" className="btn-garden" wideMobile href="https://opensea.io/collection/shrub-paper-gardens">
                 <ReactGA.OutboundLink eventLabel="main CTA to Open Sea" to="https://opensea.io/collection/shrub-paper-gardens" target="_blank" rel='noopener noreferrer'>
