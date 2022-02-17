@@ -4,16 +4,18 @@ import What from "../components/sections/paper-gardens/What";
 import Community from "../components/sections/paper-gardens/Community";
 import FAQs from "../components/sections/paper-gardens/FAQs";
 import Why from "../components/sections/paper-gardens/Why";
+import CountDownTimer from '../components/sections/paper-gardens/CountDownTimer';
 
 const Home = () => {
 
     return (
     <>
+   
         <PaperGardens className="illustration-section-01"/>
-        <Why/>
+        {/* <Why/>
         <What invertMobile imageFill className="illustration-section-02"/>
         <FAQs/>
-        <Community/>
+        <Community/> */}
     </>
   );
 }

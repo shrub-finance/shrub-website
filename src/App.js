@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
+import PaperGardens from "./components/sections/PaperGardens"
 import ReactGA from 'react-ga';
 
 // Layouts
@@ -52,12 +53,13 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault1} />
-          <AppRoute exact path="/main" component={Main} layout={LayoutDefault1} />
+          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/main" component={Main} layout={LayoutDefault} />
           <AppRoute exact path="/airdrop" component={AirDrop} layout={LayoutDefault} />
           <AppRoute exact path="/paper-gardens" component={Chapters} layout={LayoutDefault} />
         </Switch>
       )} />
+    
   );
 }
 

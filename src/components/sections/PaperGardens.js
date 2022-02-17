@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Button from "../elements/Button";
 import ReactGA from "react-ga";
-import CountDownTimer from './paper-gardens/CountDownTimer/CountDownTimer';
+import CountDownTimer from './paper-gardens/CountDownTimer';
 
 const propTypes = {
   ...SectionProps.types
@@ -45,18 +45,33 @@ const PaperGardens = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+
+        {/* timer div */}
+
+      <div className='container'>
+        <div className={innerClasses} style={{display:'flex',justifyContent:'center',alignItems:'center',flex:1,}}  >
+          <div className='hero-content' style={{paddingTop:"10%"}}>
+          <CountDownTimer tillTime='feb 20,2022 01:22:00'></CountDownTimer>
+          </div>
+          
+        </div>
+      </div>
+      
+
+
+      {/* <div className="container">
         <div className={innerClasses}>
-          <div className="hero-content">
+          <div className="hero-content" style={{paddingTop:'30%',border:'2px solid'}}>
+          <CountDownTimer tillTime='feb 17,2022 01:22:00'></CountDownTimer>
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
               Introducing Paper Gardens
             </h1>
             <div className="container-xs" style={{marginTop: "70px", fontWeight: "500", color:"#9CA9B3"}}>
-              {/* <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                   Paper Gardens is an interactive multi-chapter story, full of NFTs, rewards, and fun tied to Shrub Paper.
-              </p> */}
+              </p>
                <div className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400" >
-    <CountDownTimer tillTime='feb 15,2022 11:00:00'></CountDownTimer>
+  
     </div>
     
              
@@ -136,7 +151,7 @@ const PaperGardens = ({
               </svg>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

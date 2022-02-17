@@ -134,20 +134,20 @@
 	height: 90px;
 	margin-left: 105px;
 
-	@include media( '<=medium' ) {
+	// @include media( '<=medium' ) {
 
-		margin-left: auto;
-		width: 100%;
+	// 	margin-left: auto;
+	// 	width: 100%;
 
-		.search-button {
-			display: none;
-		}
+	// 	.search-button {
+	// 		display: none;
+	// 	}
 
-		.search-placeholder {
-			font-size: 16px;
-		}
+	// 	.search-placeholder {
+	// 		font-size: 16px;
+	// 	}
 
-	}
+	// }
 
 	&::before {
 		content: "";
@@ -181,14 +181,14 @@
 		border-top-left-radius: 12px;
 		border-bottom-left-radius: 12px;
 
-		@include media( '<=medium' ) {
-			border-top-right-radius: 12px;
-			border-bottom-right-radius: 12px;
-		}
+		// @include media( '<=medium' ) {
+		// 	border-top-right-radius: 12px;
+		// 	border-bottom-right-radius: 12px;
+		// }
 
-		@include media( '<=small' ) {
-			border-radius: 60px;
-		}
+		// @include media( '<=small' ) {
+		// 	border-radius: 60px;
+		// }
 	}
 }
 
@@ -205,9 +205,7 @@
 			margin-left: 34%;
 			font-size:24px;
 			box-shadow:   inset 20px 0 80px #54885d, inset -20px 0 80px #cad1cb, inset 20px 0 300px #518259, 0 0 50px #cad1cb;
-
 		}
-
 	}
 
 	.search-result {
@@ -282,4 +280,32 @@
 		font-size: 20px;
 	}
 }
+  .card-dateTime-container{
+	  display: flex;
+	  padding: 10px;
+	  flex-direction: column;
+	  
+  }
 
+.card-container{
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+	flex-wrap: wrap;
+	  }
+  .card-timer{
+	flex: 1;
+	padding: 5px;
+	padding-top: 20px;
+	color:white;
+	font-size: 40px;
+	text-align: center;
+	
+  }
+  .label{
+	flex: 1;
+	font-size: small;
+	padding: 5px;
+	}
+	
+  
