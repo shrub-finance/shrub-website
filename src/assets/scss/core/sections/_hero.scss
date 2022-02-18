@@ -283,3 +283,14 @@
 	}
 }
 
+.roadmap-title {
+	font-size: 90px;
+	padding-bottom: 50px;
+
+	@include media( '<=medium' ) {
+		font-size: 70px;
+	}
+
+	@include media( '<=small' ) {
+		font-size: 50px;
+	}}
