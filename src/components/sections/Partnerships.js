@@ -64,7 +64,7 @@ const Partnerships = ({
             <div className="tiles-item reveal-from-right center-content" data-reveal-delay="200">
 
               <ReactGA.OutboundLink eventLabel="Polygon" to="https://polygon.technology/" target="_blank" rel='noopener noreferrer'>
-                <Image src={require('./../../assets/images/polygon.svg')} alt="Polygon"/>
+                <Image src={require('../../assets/images/partners/polygon.svg')} alt="Polygon"/>
               </ReactGA.OutboundLink>
 
               {/*<div className="tiles-item-inner">*/}
@@ -86,7 +86,7 @@ const Partnerships = ({
 
             <div className="tiles-item reveal-from-bottom center-content">
               <ReactGA.OutboundLink eventLabel="OWC" to="https://www.openwebcollective.com/" target="_blank" rel='noopener noreferrer'>
-                <Image src={require('./../../assets/images/owc.svg')} alt="Open Web Collective"/>
+                <Image src={require('../../assets/images/partners/owc.svg')} alt="Open Web Collective"/>
               </ReactGA.OutboundLink>
 
               {/*<div className="tiles-item-inner">*/}
@@ -107,7 +107,7 @@ const Partnerships = ({
 
             <div className="tiles-item reveal-from-left center-content" data-reveal-delay="200">
               <ReactGA.OutboundLink eventLabel="Near" to="https://near.org/" target="_blank" rel='noopener noreferrer'>
-                <Image src={require('./../../assets/images/near.svg')} alt="Near Protocol"/>
+                <Image src={require('../../assets/images/partners/near.svg')} alt="Near Protocol"/>
               </ReactGA.OutboundLink>
 
               {/*<div className="tiles-item-inner">*/}

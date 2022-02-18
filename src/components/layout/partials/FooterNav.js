@@ -24,6 +24,11 @@ const FooterNav = ({
           </ReactGA.OutboundLink>
         </li>
         <li style={{marginBottom: "20px"}}>
+          <ReactGA.OutboundLink eventLabel="Footer Roadmap Link" to="/roadmap">
+            Roadmap
+          </ReactGA.OutboundLink>
+        </li>
+        <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Footer Open Sea Link" to="https://opensea.io/collection/shrub-paper-gardens" target="_blank" rel='noopener noreferrer'>
             <a title="View OpenSea collection">View Collection</a>
           </ReactGA.OutboundLink>

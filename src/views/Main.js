@@ -2,7 +2,6 @@ import React from 'react';
 // import sections
 import Hero from '../components/sections/Hero';
 import ShrubStory from '../components/sections/ShrubStory';
-import RoadMap from '../components/sections/RoadMap';
 import Partnerships from "../components/sections/Partnerships";
 import Team from "../components/sections/Team";
 import Grants from "../components/sections/Grants";
@@ -17,7 +16,6 @@ const Main = () => {
             <Team/>
             <Partnerships/>
             <Grants/>
-            {/*<RoadMap/>*/}
         </>
     );
 }

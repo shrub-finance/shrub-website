@@ -20,7 +20,7 @@ const Logo = ({
     >
         <Link to="/">
           <Image
-            src={require('./../../../assets/images/logo.svg')}
+            src={require('../../../assets/images/bud/logo.svg')}
             alt="Shrub"
             width={30}
             height={30} className={'logo'}/>

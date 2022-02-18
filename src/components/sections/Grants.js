@@ -63,7 +63,7 @@ const Partnerships = ({
             <div className="tiles-item reveal-from-right center-content" data-reveal-delay="200">
 
               <ReactGA.OutboundLink eventLabel="Polygon" to="https://polygon.technology/" target="_blank" rel='noopener noreferrer'>
-                <Image src={require('./../../assets/images/polygon.svg')} alt="Polygon"/>
+                <Image src={require('../../assets/images/partners/polygon.svg')} alt="Polygon"/>
               </ReactGA.OutboundLink>
             </div>
           </div>
