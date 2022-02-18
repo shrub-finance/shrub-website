@@ -59,7 +59,7 @@ const RoadMap = ({
                 <div className={innerClasses}>
                     {/*roadmap section*/}
                     <div className="hero-content">
-                        { !isMobile ? <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{fontSize: "90px", paddingBottom: "50px"}}>
+                        { !isMobile ? <h1 className="mt-0 mb-16 reveal-from-bottom roadmap-title" data-reveal-delay="200">
                             ROADMAP
                         </h1>:
                         <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{fontSize: "50px", paddingBottom: "50px"}}>
