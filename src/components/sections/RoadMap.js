@@ -59,20 +59,17 @@ const RoadMap = ({
                 <div className={innerClasses}>
                     {/*roadmap section*/}
                     <div className="hero-content">
-                        { !isMobile ? <h1 className="mt-0 mb-16 reveal-from-bottom roadmap-title" data-reveal-delay="200">
+                        <h1 className="mt-0 mb-16 reveal-from-bottom roadmap-title" data-reveal-delay="200">
                             ROADMAP
-                        </h1>:
-                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{fontSize: "50px", paddingBottom: "50px"}}>
-                            ROADMAP
-                        </h1>}
+                        </h1>
                     </div>
                     <hr/>
                     {/*claiming section*/}
                     <div className="center-content">
-                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px', textDecoration:'line-through'}}>
+                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
                             THE PAPER MERCHANT
                         </h1>
-                        <div style={{fontWeight: "600", textDecoration:'line-through'}}>
+                        <div style={{fontWeight: "600"}}>
                             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
                                 Chapter 1 Complete
                             </p>
