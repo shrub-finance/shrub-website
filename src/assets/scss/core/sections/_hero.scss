@@ -31,7 +31,7 @@
 		position: absolute;
 		width: 1940px;
 		height: 1280px;
-		background-image: url(../../../images/paper.png);
+		background-image: url(../../../images/bud/paper.png);
 		background-repeat: no-repeat;
 		background-size: auto;
 		right: -85%;
@@ -158,7 +158,7 @@
 		display: block;
 		width: 27px;
 		height: 27px;
-		background: url(../../../images/search.svg) no-repeat;
+		background: url(../../../images/misc/search.svg) no-repeat;
 	}
 
 	.search-button {
@@ -273,7 +273,7 @@
 }
 
 .story-text {
-	font-size: 26px;
+	font-size: 20px;
 	font-weight: 500;
 	line-height: 1.8;
 	color:#9CA9B3;

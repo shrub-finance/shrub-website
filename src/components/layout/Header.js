@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
 import ReactGA from "react-ga";
-import Image from "../elements/Image";
 import {isMobile} from "react-device-detect";
 
 const propTypes = {
@@ -134,9 +133,15 @@ const Header = ({
                     </ReactGA.OutboundLink>
                   </li> }
 
+                  {/*{!isMobile  && <li>*/}
+                  {/*  <ReactGA.OutboundLink eventLabel="Header Blog Link" to="https://medium.com/@shrubfinance" target="_blank" rel='noopener noreferrer'>*/}
+                  {/*    Blog*/}
+                  {/*  </ReactGA.OutboundLink>*/}
+                  {/*</li> }*/}
+
                   {!isMobile  && <li>
-                    <ReactGA.OutboundLink eventLabel="Header Blog Link" to="https://medium.com/@shrubfinance" target="_blank" rel='noopener noreferrer'>
-                      Blog
+                    <ReactGA.OutboundLink eventLabel="Header Roadmap Link" to="/roadmap">
+                      Roadmap
                     </ReactGA.OutboundLink>
                   </li> }
                 </ul>

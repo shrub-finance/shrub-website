@@ -76,6 +76,25 @@ const What = ({
               </Button>
           </div>
         </div>
+        <div className={innerClasses}>
+          <div className="center-content">
+            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
+              Roadmap
+            </h1>
+            <div className="container-xs center-content story-text" >
+              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+                Learn where this journey will lead you.
+              </p>
+            </div>
+            <div className="reveal-from-bottom center-content" data-reveal-delay="600">
+              <Button tag="a" color="primary" wideMobile className="btn-garden">
+                <ReactGA.OutboundLink eventLabel="Clicked on roadmap from home page" to="/roadmap">
+                  Read Roadmap
+                </ReactGA.OutboundLink>
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

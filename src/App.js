@@ -5,13 +5,14 @@ import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
 
 // Layouts
+import LayoutDefaultSlim from './layouts/LayoutDefaultSlim';
 import LayoutDefault from './layouts/LayoutDefault';
-import LayoutDefault1 from './layouts/LayoutDefault1';
 // Views 
 import Home from './views/Home';
 import Main from './views/Main';
 import Chapters from "./components/sections/Chapters";
 import AirDrop from "./components/sections/AirDrop";
+import RoadMap from "./components/sections/RoadMap";
 
 
 // Initialize Google Analytics
@@ -52,10 +53,11 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault1} />
-          <AppRoute exact path="/main" component={Main} layout={LayoutDefault1} />
-          <AppRoute exact path="/airdrop" component={AirDrop} layout={LayoutDefault} />
-          <AppRoute exact path="/paper-gardens" component={Chapters} layout={LayoutDefault} />
+          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/main" component={Main} layout={LayoutDefault} />
+          <AppRoute exact path="/roadmap" component={RoadMap} layout={LayoutDefault} />
+          <AppRoute exact path="/airdrop" component={AirDrop} layout={LayoutDefaultSlim} />
+          <AppRoute exact path="/paper-gardens" component={Chapters} layout={LayoutDefaultSlim} />
         </Switch>
       )} />
   );

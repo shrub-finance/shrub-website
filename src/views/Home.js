@@ -5,6 +5,7 @@ import Community from "../components/sections/paper-gardens/Community";
 import FAQs from "../components/sections/paper-gardens/FAQs";
 import Why from "../components/sections/paper-gardens/Why";
 
+
 const Home = () => {
 
     return (
