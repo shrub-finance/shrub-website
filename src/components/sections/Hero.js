@@ -85,7 +85,8 @@ const Hero = ({
             </h1>
             <div className="container-xs" style={{marginTop: "70px", fontWeight: "500", color:"#9CA9B3"}}>
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Shrub makes it easy to buy and sell crypto options on the Polygon blockchain, powered by the community.
+                {/*Shrub makes it easy to buy and sell crypto options on the Polygon blockchain, powered by the community.*/}
+                  Shrub is bringing an innovative user-centric crypto options platform to the Polygon blockchain.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <Button tag="a" color="primary" wideMobile href="https://discord.gg/swbVfEPyT8">

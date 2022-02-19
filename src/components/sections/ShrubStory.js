@@ -65,13 +65,10 @@ const ShrubStory = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className="container-xs center-content" style={{fontWeight: "500", color:"#9CA9B3"}}>
             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-              Shrub was created with one fundamental thought at its core: "The only one in control of your money should be you".
+              Shrub was created with one fundamental thought at its core: "Options should be easy to understand, and user should be in control of their money."
             </p>
             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
               With no misaligned incentives, no middleman, the capability of trading options for any ERC-20 token, and an intuitive UI, users are truly in control.
-            </p>
-            <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-              Buy, Sell, Calls, Puts - any options trade you would want, is available on Shrub.
             </p>
           </div>
           <div className="reveal-from-bottom center-content" data-reveal-delay="600">
