@@ -59,16 +59,16 @@ const RoadMap = ({
                 <div className={innerClasses}>
                     {/*roadmap section*/}
                     <div className="hero-content">
-                        <h1 className="mt-0 mb-16 reveal-from-bottom roadmap-title" data-reveal-delay="200">
+                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
                             ROADMAP
                         </h1>
                     </div>
                     <hr/>
                     {/*claiming section*/}
                     <div className="center-content">
-                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
+                        <h2 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
                             THE PAPER MERCHANT
-                        </h1>
+                        </h2>
                         <div style={{fontWeight: "600"}}>
                             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="200">
                                 Chapter 1 Complete
@@ -100,9 +100,9 @@ const RoadMap = ({
                     <hr/>
                     {/*sad seeds section*/}
                     <div className="center-content">
-                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
+                        <h2 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
                             THE SAD SEEDS
-                        </h1>
+                        </h2>
                         <div style={{fontWeight: "600"}}>
                             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                                 Chapter 2 Ongoing
@@ -134,9 +134,9 @@ const RoadMap = ({
                     <hr/>
                     {/*time to grow section*/}
                     <div className="center-content">
-                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
+                        <h2 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
                             TIME TO GROW
-                        </h1>
+                        </h2>
                         <div style={{fontWeight: "600"}}>
                             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                                 Chapter 3
@@ -207,9 +207,9 @@ const RoadMap = ({
                     <hr/>
                     {/*shrub paper section*/}
                     <div className="center-content">
-                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
+                        <h2 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
                             SHRUB PAPER
-                        </h1>
+                        </h2>
                         <div style={{fontWeight: "600"}}>
                             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                                 Chapter 4
@@ -276,9 +276,9 @@ const RoadMap = ({
                     <hr/>
                     {/*paper dao section*/}
                     <div className="center-content">
-                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
+                        <h2 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{paddingTop: '50px'}}>
                             PAPER DAO
-                        </h1>
+                        </h2>
                         <div style={{fontWeight: "600"}}>
                             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                                 Chapter 5
@@ -352,9 +352,9 @@ const RoadMap = ({
                     <hr/>
                    {/*reveal section*/}
                     <div className="center-content">
-                        <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="400" style={{paddingTop: '50px'}}>
+                        <h2 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="400" style={{paddingTop: '50px'}}>
                             SECRET PROJECT
-                        </h1>
+                        </h2>
                     </div>
                     <div className={tilesClasses}>
                         <div className="tiles-item reveal-from-bottom">
