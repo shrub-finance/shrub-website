@@ -294,3 +294,22 @@
 	@include media( '<=small' ) {
 		font-size: 50px;
 	}}
+
+.new {
+	display: inline-block;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-padding-start: .25rem;
+	padding-inline-start: .25rem;
+	-webkit-padding-end: .25rem;
+	padding-inline-end: .25rem;
+	text-transform: uppercase;
+	font-size: 10px;
+	border-radius: 0.125rem;
+	font-weight: bold;
+	background: #C6F6D5;
+	color: #22543D;
+	margin-left: .25rem;
+	height:20px;
+
+}
