@@ -48,8 +48,7 @@ const Community = ({
 
 
   const sectionHeader = {
-    title: 'Join the Community',
-    // paragraph: 'Shrub is truly community driven. Our buds have come from all over the world to join the Shrub mission'
+    title: 'Join the Community'
   };
 
   return (
@@ -62,7 +61,7 @@ const Community = ({
             <SectionHeader data={sectionHeader} className="center-content" />
               <div className="container-xs center-content" style={{fontWeight: "500", color:"#9CA9B3"}}>
                   <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                      Thousands of gardeners have been chosen by the seeds. The rest are being adopted by new gardeners. Learn all about the seeds, and become a part of the journey.
+                      Be the first one to know about the project updates, ask questions, and participate in community events.
                   </p>
               </div>
               <div className="reveal-from-bottom center-content" data-reveal-delay="600">

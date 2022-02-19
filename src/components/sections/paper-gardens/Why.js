@@ -64,7 +64,7 @@ const What = ({
           <SectionHeader data={sectionHeader} className="center-content" style={{marginTop: "-50px"}}/>
           <div className="container-xs center-content story-text">
             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-              At Shrub, we talked to many users. And over and over again what we heard was, “Options are hard”. So we challenged ourselves to figure out the most interesting way to learn crypto options. Paper Gardens is our answer. Born out of love for simplicity and DeFi,  Paper Gardens is a fruit of labor and love. An innovative way to make options accessible to everyone.
+              We wanted to bring the most interesting way to learn crypto options to the space. An interactive multi-chapter story full of NFTs, rewards, and surprises.
 
             </p>
           </div>

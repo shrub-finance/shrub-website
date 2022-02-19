@@ -267,7 +267,7 @@ const RoadMap = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        Earn Seeds and Fertilizer!
+                                        Earn Fertilizer!
                                     </h4>
                                 </div>
                             </div>

@@ -62,38 +62,27 @@ const Partnerships = ({
 
                         <div className="reveal-from-right" data-reveal-delay="200">
                             <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
-                                <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">What is the inspiration behind Paper Gardens?</h4>
-                                <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                    We wanted to bring the most interesting way to learn crypto options to the space. An interactive multi-chapter story full of NFTs, rewards, and surprises.
-                                </p>
-                            </div>
-                            <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
                                 <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">How many chapters are there?</h4>
                                 <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                    Chapters unfold over time.
+                                    5 chapters. <a style={{color: "#9CA9B3", textDecoration:"underline"}} href="https://paper.shrub.finance/adoption">See roadmap for more details.</a>
                                 </p>
                             </div>
                             <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
                                 <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">What is happening right now?</h4>
                                 <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                    We are in Chapter 2. Paper Merchant has started a <a href="https://paper.shrub.finance/adoption">Seed Adoption Program</a>.
+                                    We are in Chapter 2. <a style={{color: "#9CA9B3", textDecoration:"underline"}} href="https://paper.shrub.finance/">Follow the story here.</a>
+                                </p>
+                            </div>
+                            <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
+                                <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">What's coming up next?</h4>
+                                <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+                                    Chapter 3, where you will have the opportunity to purchase a pot and grow your Shrub.
                                 </p>
                             </div>
                             <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
                                 <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">What does it all lead to?</h4>
                                 <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                    As Ralph Waldo Emerson said, “Its the not the destination, it's the journey.” The
-                                    paper gardeners are walking down a new path that has never been taken before. What
-                                    lies on the other end is only to be found by the seekers. Through this journey we will gather all the like-minded people together whose interests are aligned
-                                    with Shrub's mission and who want to grow together with Shrub.
-                                </p>
-                            </div>
-                            <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
-                                <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">I missed out on Chapter 1. Is it too late to join?</h4>
-                                <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                    No. You can still participate in the Paper Gardens by getting a seed from <a
-                                    href="https://opensea.io/collection/shrub-paper-gardens">OpenSea</a>, and joining
-                                    your fellow gardeners in the journey.
+                                    Paper Gardens will culminate in the formation of Paper DAO. Each gradener will grow a unique Shrub to gain entry to the Paper DAO.
                                 </p>
                             </div>
                             <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
@@ -107,18 +96,19 @@ const Partnerships = ({
                                 </p>
                             </div>
                             <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
-                                <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">Why should I join?</h4>
-                                <ul className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                    <li>Earn forever bragging rights for being an early supporter of Shrub.</li>
-                                    <li>Join a growing community of gardeners who believe in doing things in style.</li>
-                                </ul>
+                                <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">I missed out on Chapter 1. Is it too late to join?</h4>
+                                <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+                                    No. You can still participate in the Paper Gardens by getting a seed from <a
+                                    href="https://opensea.io/collection/shrub-paper-gardens">OpenSea</a>, and joining
+                                    your fellow gardeners in the journey.
+                                </p>
                             </div>
                             <div className="reveal-from-bottom center-content" data-reveal-delay="600">
                                 <Button tag="a" color="primary" className="btn-garden" wideMobile>
                                     <ReactGA.OutboundLink eventLabel="Clicked Open Sea collection link" target="_blank"
                                                           rel='noopener noreferrer'
                                                           to="https://opensea.io/collection/shrub-paper-gardens">
-                                        View Collection
+                                        Buy a Seed
                                     </ReactGA.OutboundLink>
                                 </Button>
                             </div>
