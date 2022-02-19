@@ -141,9 +141,9 @@ const Header = ({
 
                   {!isMobile  && <li>
                     <ReactGA.OutboundLink eventLabel="Header Roadmap Link" to="/roadmap">
-                      Roadmap
+                      Roadmap <span className="new">New</span>
                     </ReactGA.OutboundLink>
-                  </li> }
+                  </li>  }
                 </ul>
                 {!hideSignin &&
                 <ul className="list-reset header-nav-right">
