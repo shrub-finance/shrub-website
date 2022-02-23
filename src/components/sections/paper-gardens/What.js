@@ -69,7 +69,7 @@ const What = ({
           </div>
           <div className="reveal-from-bottom center-content" data-reveal-delay="600">
               <Button tag="a" color="primary" wideMobile className="btn-garden">
-                <ReactGA.OutboundLink eventLabel="Clicked on read more" to="https://paper.shrub.finance/" target="_blank"
+                <ReactGA.OutboundLink eventLabel="Clicked on read more" to="https://gardens.shrub.finance/" target="_blank"
                                       rel='noopener noreferrer'>
                   Read more
                 </ReactGA.OutboundLink>

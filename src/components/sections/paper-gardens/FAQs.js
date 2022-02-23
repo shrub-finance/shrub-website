@@ -64,13 +64,13 @@ const Partnerships = ({
                             <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
                                 <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">How many chapters are there?</h4>
                                 <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                    5 chapters. <a style={{color: "#9CA9B3", textDecoration:"underline"}} href="https://paper.shrub.finance/adoption">See roadmap for more details.</a>
+                                    5 chapters. <a style={{color: "#9CA9B3", textDecoration:"underline"}} href="https://gardens.shrub.finance/adoption">See roadmap for more details.</a>
                                 </p>
                             </div>
                             <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>
                                 <h4 className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">What is happening right now?</h4>
                                 <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                    We are in Chapter 2. <a style={{color: "#9CA9B3", textDecoration:"underline"}} href="https://paper.shrub.finance/">Follow the story here.</a>
+                                    We are in Chapter 2. <a style={{color: "#9CA9B3", textDecoration:"underline"}} href="https://gardens.shrub.finance/">Follow the story here.</a>
                                 </p>
                             </div>
                             <div className="container-xs" style={{fontWeight: "500", color: "#9CA9B3"}}>

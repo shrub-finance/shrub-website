@@ -19,7 +19,7 @@ const FooterNav = ({
     >
       <ul className="list-reset text-xs">
         <li style={{marginBottom: "20px"}}>
-          <ReactGA.OutboundLink eventLabel="Footer Paper Garden App Link" to="https://paper.shrub.finance" target="_blank" rel='noopener noreferrer'>
+          <ReactGA.OutboundLink eventLabel="Footer Paper Garden App Link" to="https://gardens.shrub.finance" target="_blank" rel='noopener noreferrer'>
             <a title="Go to Paper Gardens App">Paper Gardens</a>
           </ReactGA.OutboundLink>
         </li>
@@ -31,7 +31,7 @@ const FooterNav = ({
         </li>
         <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Footer Open Sea Link" to="https://opensea.io/collection/shrub-paper-gardens" target="_blank" rel='noopener noreferrer'>
-            <a title="View OpenSea collection">View Collection</a>
+            <a title="View OpenSea collection">Open Sea</a>
           </ReactGA.OutboundLink>
         </li>
         <li style={{marginBottom: "20px"}}>

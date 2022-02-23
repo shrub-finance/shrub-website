@@ -97,7 +97,7 @@ const Chapters = ({
               <Button tag="a" color="primary" className="btn-garden" wideMobile>
                 <ReactGA.OutboundLink eventLabel="Clicked adoption link" target="_blank"
                                       rel='noopener noreferrer'
-                                      to="https://paper.shrub.finance/adoption">
+                                      to="https://gardens.shrub.finance/adoption">
                   Adopt a Seed
                 </ReactGA.OutboundLink>
               </Button>
@@ -136,7 +136,7 @@ const Chapters = ({
             <ReactGA.OutboundLink eventLabel="Clicked Open Sea collection link" target="_blank"
                                   rel='noopener noreferrer'
                                   to="https://opensea.io/collection/shrub-paper-gardens">
-              View Collection
+              Open Sea
             </ReactGA.OutboundLink>
           </Button>
         </div>
