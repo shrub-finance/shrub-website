@@ -40,6 +40,11 @@ const FooterNav = ({
           </ReactGA.OutboundLink>
         </li>
         <li style={{marginBottom: "20px"}}>
+          <ReactGA.OutboundLink eventLabel="Footer Github Link" to="https://github.com/shrub-finance" target="_blank" rel='noopener noreferrer'>
+            <a title="Shrub's github">GitHub</a>
+          </ReactGA.OutboundLink>
+        </li>
+        <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Footer Blog Link" to="https://medium.com/@shrubfinance" target="_blank" rel='noopener noreferrer'>
             Blog
           </ReactGA.OutboundLink>
