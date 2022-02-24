@@ -84,11 +84,6 @@ const ShrubPaper = ({
                 <a title="Go to Shrub.finance main page">Introducing Paper Gardens</a>
               </ReactGA.OutboundLink>
             </div>
-            {/*<div  style={{top: "60px", position:"relative", zIndex: "9999", fontSize:"15px", fontWeight:"500"}} className="reveal-from-bottom" data-reveal-delay="600">*/}
-            {/*  <ReactGA.OutboundLink eventLabel="CTA for nft claim" to="https://paper.shrub.finance/claim" >*/}
-            {/*    <a style={{ color:"#9CA9B3"}} title="claim NFT">Claim NFT</a>*/}
-            {/*  </ReactGA.OutboundLink>*/}
-            {/*</div>*/}
             </div>
           <div className="reveal-from-bottom" data-reveal-delay="600" style={{marginTop: "70px"}}>
             <Button tag="a" color="primary" wideMobile href="https://discord.gg/swbVfEPyT8">

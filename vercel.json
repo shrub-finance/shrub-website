@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/paper-gardens",
-      "destination": "https://paper.shrub.finance",
+      "destination": "https://gardens.shrub.finance",
       "permanent": true
     }
   ]
