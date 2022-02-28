@@ -51,7 +51,7 @@ const PaperGardens = ({
       <div className='container'>
         <div className={innerClasses} style={{display:'flex',justifyContent:'center',alignItems:'center',flex:1,}}  >
           <div className='hero-content' style={{paddingTop:"10%"}}>
-          <CountDownTimer tillTime='feb 20,2022 01:22:00'></CountDownTimer>
+          <CountDownTimer tillTime='march 6,2022 01:22:00'></CountDownTimer>
           </div>
           
         </div>
