@@ -89,8 +89,8 @@ const Hero = ({
                   Shrub is building an innovative user-centric crypto options platform for the Polygon blockchain.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
-                <Button tag="a" color="primary" wideMobile href="https://discord.gg/swbVfEPyT8">
-                <ReactGA.OutboundLink eventLabel="main CTA to Shrub discord" to="https://discord.gg/swbVfEPyT8" target="_blank" rel='noopener noreferrer'>
+                <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg">
+                <ReactGA.OutboundLink eventLabel="main CTA to Shrub discord" to="https://discord.gg/csusZhYgTg" target="_blank" rel='noopener noreferrer'>
                   Join Shrub Discord
                 </ReactGA.OutboundLink>
                 </Button>

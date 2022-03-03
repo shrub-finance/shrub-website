@@ -66,7 +66,7 @@ const Community = ({
               </div>
               <div className="reveal-from-bottom center-content" data-reveal-delay="600">
                   <Button tag="a" color="primary" className="btn-garden" wideMobile>
-                      <ReactGA.OutboundLink eventLabel="Clicked on discord link" to="https://discord.gg/swbVfEPyT8" target="_blank"
+                      <ReactGA.OutboundLink eventLabel="Clicked on discord link" to="https://discord.gg/csusZhYgTg" target="_blank"
                                             rel='noopener noreferrer'>
                           Join Shrub Discord
                       </ReactGA.OutboundLink>

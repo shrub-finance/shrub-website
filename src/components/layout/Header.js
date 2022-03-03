@@ -150,7 +150,7 @@ const Header = ({
                     </ReactGA.OutboundLink>
                   </li>
                   {!isMobile  && <li>
-                    <ReactGA.OutboundLink eventLabel="Header Shrub discord link" to="https://discord.gg/swbVfEPyT8" target="_blank" rel='noopener noreferrer' className="button button-primary button-wide-mobile button-md">
+                    <ReactGA.OutboundLink eventLabel="Header Shrub discord link" to="https://discord.gg/csusZhYgTg" target="_blank" rel='noopener noreferrer' className="button button-primary button-wide-mobile button-md">
                       Join Shrub Discord
                     </ReactGA.OutboundLink>
                   </li> }
