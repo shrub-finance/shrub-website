@@ -19,7 +19,7 @@ const FooterSocial = ({
     >
       <ul className="list-reset">
         <li>
-          <ReactGA.OutboundLink eventLabel="Footer Discord Link" to="https://discord.gg/Z4SRKjmKRp" target="_blank" rel='noopener noreferrer'>
+          <ReactGA.OutboundLink eventLabel="Footer Discord Link" to="https://discord.gg/csusZhYgTg" target="_blank" rel='noopener noreferrer'>
           <a title="Join Shrub's Discord community">
             <svg width="30" height="30" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0)">

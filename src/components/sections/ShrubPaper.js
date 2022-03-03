@@ -86,8 +86,8 @@ const ShrubPaper = ({
             </div>
             </div>
           <div className="reveal-from-bottom" data-reveal-delay="600" style={{marginTop: "70px"}}>
-            <Button tag="a" color="primary" wideMobile href="https://discord.gg/swbVfEPyT8">
-              <ReactGA.OutboundLink eventLabel="Main CTA for Shrub discord" to="https://discord.gg/swbVfEPyT8" target="_blank" rel='noopener noreferrer'>
+            <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg">
+              <ReactGA.OutboundLink eventLabel="Main CTA for Shrub discord" to="https://discord.gg/csusZhYgTg" target="_blank" rel='noopener noreferrer'>
                 Join Paper Gardens
               </ReactGA.OutboundLink>
             </Button>

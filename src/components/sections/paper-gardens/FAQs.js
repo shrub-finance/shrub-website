@@ -91,7 +91,7 @@ const Partnerships = ({
                                 <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                                     Shrub will keep everyone up to date on Shrub news via our <a
                                     href="https://twitter.com/shrubfinance">Twitter</a>. If you have any questions about
-                                    the project, the best way is to join <a style={{color: "#9CA9B3", textDecoration:"underline"}} href="https://discord.gg/swbVfEPyT8">Shrub's
+                                    the project, the best way is to join <a style={{color: "#9CA9B3", textDecoration:"underline"}} href="https://discord.gg/csusZhYgTg">Shrub's
                                     Discord</a>. Shrub's core team makes a point to be available and respond to every question promptly.
                                 </p>
                             </div>
