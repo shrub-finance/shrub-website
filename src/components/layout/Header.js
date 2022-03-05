@@ -115,8 +115,13 @@ const Header = ({
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                   )}>
+                  <li className="garden-text">
+                    <ReactGA.OutboundLink eventLabel="Header Shrub Paper App Link" to="https://paper.shrub.finance" target="_blank" rel='noopener noreferrer'>
+                      Shrub Paper
+                    </ReactGA.OutboundLink>
+                  </li>
                  <li className="garden-text">
-                    <ReactGA.OutboundLink eventLabel="Header Paper Gardens App Link" to="https://paper.shrub.finance" target="_blank" rel='noopener noreferrer'>
+                    <ReactGA.OutboundLink eventLabel="Header Paper Gardens App Link" to="https://gardens.shrub.finance" target="_blank" rel='noopener noreferrer'>
                       Paper Gardens
                     </ReactGA.OutboundLink>
                   </li>
@@ -132,11 +137,11 @@ const Header = ({
                     </ReactGA.OutboundLink>
                   </li>
 
-                  <li>
-                    <ReactGA.OutboundLink eventLabel="Header Docs Link" to="https://docs.shrub.finance" target="_blank" rel='noopener noreferrer'>
-                      Docs
-                    </ReactGA.OutboundLink>
-                  </li>
+                  {/*<li>*/}
+                  {/*  <ReactGA.OutboundLink eventLabel="Header Docs Link" to="https://docs.shrub.finance" target="_blank" rel='noopener noreferrer'>*/}
+                  {/*    Docs*/}
+                  {/*  </ReactGA.OutboundLink>*/}
+                  {/*</li>*/}
                 </ul>
                 {!hideSignin &&
                 <ul className="list-reset header-nav-right">

@@ -105,7 +105,7 @@ const RoadMap = ({
                         </h2>
                         <div style={{fontWeight: "600"}}>
                             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                Chapter 2 Ongoing
+                                Chapter 2 (Ongoing)
                             </p>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ const RoadMap = ({
                         </h2>
                         <div style={{fontWeight: "600"}}>
                             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                                Chapter 3
+                                Chapter 3 (Upcoming)
                             </p>
                         </div>
                     </div>
