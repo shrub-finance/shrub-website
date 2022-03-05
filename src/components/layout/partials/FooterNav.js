@@ -28,12 +28,12 @@ const FooterNav = ({
             <a title="Go to Paper Gardens App">Paper Gardens</a>
           </ReactGA.OutboundLink>
         </li>
-        <li style={{marginBottom: "20px"}}>
-          <ReactGA.OutboundLink eventLabel="Footer Roadmap Link" to="/roadmap">
-            Roadmap<span className="new">New</span>
-          </ReactGA.OutboundLink>
+        {/*<li style={{marginBottom: "20px"}}>*/}
+        {/*  <ReactGA.OutboundLink eventLabel="Footer Roadmap Link" to="/roadmap">*/}
+        {/*    Roadmap<span className="new">New</span>*/}
+        {/*  </ReactGA.OutboundLink>*/}
 
-        </li>
+        {/*</li>*/}
         <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Footer Open Sea Link" to="https://opensea.io/collection/shrub-paper-gardens" target="_blank" rel='noopener noreferrer'>
             <a title="View OpenSea collection">Open Sea</a>
