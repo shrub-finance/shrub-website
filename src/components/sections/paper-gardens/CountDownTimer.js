@@ -1,8 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion'
+import Chapter3 from './Chapter3';
+const container={
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 1
+    }
+  }
+};
+const item = {
+  hidden: { y: 50,opacity:0 },
+  show: { y: 0,opacity:1,
+  transition:{
+  duration:2
+  }}
+};
 function CountDownTimer({ tillTime = "march 1,2022 10:00:00" }) {
   const [timer, setTimer] = useState({ days: '00', hour: '00', minute: '00', sec: '00', });
+  const [timerDay,setTimerDay]=useState([]);
+  const [timerHour,setTimerHour]=useState([]);
+  const [timerMinu,setTimerMinu]=useState([]);
+  const [timerSec,setTimerSec]=useState([]);
   const control = useAnimation();
+  const controlMin = useAnimation();
+  const controlMinDiv=useAnimation();
+  const controlSec = useAnimation();
   const currentDate = new Date()
   const weekDay = ['sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat']
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -19,36 +43,77 @@ function CountDownTimer({ tillTime = "march 1,2022 10:00:00" }) {
       const hour = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const min = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const sec = Math.floor((diff % (1000 * 60)) / 1000);
-      if (diff > 0) {
-        setTimer({
-          days: pad(day),
-          hour: pad(hour),
-          minute: pad(min),
-          sec: pad(sec)
-        })
+      if (diff > 0) {  
+        setTimerDay(pad(day));
+        setTimerHour(pad(hour));
+        setTimerMinu(pad(min));
+        setTimerSec(pad(sec));
+          {
+          if(sec==1){
+            anim(controlMin,'controlMin').then(()=>{
+              controlMin.stop()
+            });  
+          }
+          if(sec==1 && (min%10)==0)
+          {
+            controlMin.stop()
+            anim(controlMinDiv,'controlMinDiv').then(()=>{
+              controlMinDiv.stop()
+            }); 
+          }   
+        }
       }
       else {
         setTimer({ days: '00', hour: '00', minute: '00', sec: '00', });
         clearInterval(removeInterval)
       }
-      if (diff > 0 && sec == 0) {
-        const seq = async () => {
-          await control.start({
-            y: [0, 40],
-            opacity: [1, 0]
-          },
-          )
-          return await control.start({ y: [-30, 0], opacity: [0, 0.5, 1] })
-        }
-        seq().then(() => {
-          control.stop()
-        });
-      }
     }, 1000);
   }, []);
+    const anim = async (x,y) => {
+  
+    if(y=='control' || y=='controlSec'){
+      if(y=='controlSec'){
+        await x.start({
+          y: [0, -25],
+          opacity: [1, 0]
+        },
+        )
+      return await x.start({ 
+        y: [10,0], opacity: [0, 1] })
+      }
+      else{
+        await x.start({
+          y: [0, -25],
+          opacity: [1, 0]
+        },
+        )
+      return await x.start({ 
+        y: [1,0], opacity: [0, 1] })
+      }
+      
+    }
+    else{
+      await x.start({y: [0,-20],opacity: [1, 0]})
+           return await x.start({ y: [20, 0], opacity: [0, 1] })
+    }
+    
+};
+  useEffect(() => {
+    if(timerSec[1] == 0){       
+      anim(controlSec,'controlSec').then(()=>{
+        controlSec.stop()
+      });   
+    }
+    else
+    {   
+      anim(control,'control').then(()=>{
+        control.stop();
+      }); 
+    }  
+  }, [timerSec]);
   return (
-    <motion.div
-      animate={{ y: [-200, 0] }} className='card-dateTime-container'>
+    <>
+    <motion.div className='card-dateTime-container'>
       <div className='card-container' style={{ marginBottom: '5%', paddingLeft: '20%' }} >
         <div >
           {day}
@@ -63,56 +128,110 @@ function CountDownTimer({ tillTime = "march 1,2022 10:00:00" }) {
           {year}
         </div>
       </div>
-      <div >
-        <div className='card-container' >
-          <div className='card-timer'>
-            <div>
-              {timer.days}
+      <motion.div>
+        <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className='card-container'>
+        <motion.div
+          animate={{opacity:[0,1],y:[50,0]}}
+          transition={{duration:2}}
+          style={{marginLeft:'5%'}}>
+            <div className='card-container' >
+            <div className='card-timer'>
+            {timerDay[0]}
+            </div>
+            <div
+            className='card-timer'>
+            {timerDay[1]}
+            </div>
             </div>
             <div className='label'>
               Days
             </div>
-          </div>
-          <div className='card-timer'>
-            <div>
-              {timer.hour}
+            </motion.div>
+          <motion.div
+          animate={{opacity:[0,1],y:[50,0]}}
+          transition={{duration:2,delay:.5}}
+          style={{marginLeft:'5%'}}>
+            <div className='card-container' >
+            <div className='card-timer'>
+            {timerHour[0]}
+            </div>
+            <div className='card-timer'>
+            {timerHour[1]}
+            </div>
             </div>
             <div className='label'>
               Hours
             </div>
-          </div>
-          <motion.div
-            animate={control}
+            </motion.div>      
+            <motion.div animate={{opacity:[0,1],y:[50,0]}}
+          transition={{duration:2,delay:1}} style={{marginLeft:'5%'}}>
+            <div className='card-container' >
+              <div className='card-container'>
+               <motion.div
+               animate={controlMinDiv}
+               transition={{
+                   repeatType: 'loop',
+                  duration: 2,
+                  }}  
+                      className='card-container'>
+               <motion.div
+               className='card-timer'>
+            {timerMinu[0]}
+            </motion.div>
+            <motion.div
+            animate={controlMin}
             transition={{
-              duration: 1
-            }}
+                          repeatType:'loop',
+                            duration: 2,
+                            delay:.5
+                   }}
             className='card-timer'>
-            <div>
-              {timer.minute}
-            </div>
+            {timerMinu[1]}
+            </motion.div>
+               </motion.div>
+              </div>
+              </div>
             <div className='label'>
               Minutes
             </div>
-          </motion.div>
-          <motion.div
-            animate={{ opacity: [0, 1] }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: .5
-            }}
-            className='card-timer'>
-            <div>
-              {timer.sec}
-            </div>
+            </motion.div>
+            <motion.div
+            animate={{opacity:[0,1],y:[50,0]}}
+            transition={{duration:2,delay:1.5}} style={{marginLeft:'5%'}}>
+            <div className='card-container'  >
+              <motion.div 
+              animate={controlSec} 
+              transition={{
+                duration:1,
+                delay:.1
+                }}
+              className='card-container' >
+              <motion.div
+             className='card-timer'>
+            {timerSec[0]}
+            </motion.div>
+            <motion.div
+            animate={control}
+                       transition={{
+                       duration:1
+            }} className='card-timer'>
+            {timerSec[1]}
+            </motion.div>
+              </motion.div>
+                      </div>
             <div className='label'>
               Seconds
             </div>
-          </motion.div>
-        </div>
-      </div>
+            </motion.div>
+        </motion.div>
+      </motion.div>
     </motion.div>
-  );
+    </>
+      );
 }
 function pad(d) {
   return (d < 10) ? '0' + d.toString() : d.toString();

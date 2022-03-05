@@ -4,6 +4,7 @@ import { SectionProps } from '../../utils/SectionProps';
 import Button from "../elements/Button";
 import ReactGA from "react-ga";
 import CountDownTimer from './paper-gardens/CountDownTimer';
+import Chapter3 from './paper-gardens/Chapter3';
 
 const propTypes = {
   ...SectionProps.types
@@ -50,8 +51,8 @@ const PaperGardens = ({
 
       <div className='container'>
         <div className={innerClasses} style={{display:'flex',justifyContent:'center',alignItems:'center',flex:1,}}  >
-          <div className='hero-content' style={{paddingTop:"10%"}}>
-          <CountDownTimer tillTime='march 6,2022 01:22:00'></CountDownTimer>
+          <div className='hero-content' style={{paddingTop:"2%"}}>
+         <Chapter3 className="illustration-section-01"></Chapter3>
           </div>
           
         </div>
