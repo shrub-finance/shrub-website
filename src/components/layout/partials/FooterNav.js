@@ -19,6 +19,11 @@ const FooterNav = ({
     >
       <ul className="list-reset text-xs">
         <li style={{marginBottom: "20px"}}>
+          <ReactGA.OutboundLink eventLabel="Footer Paper Garden App Link" to="https://paper.shrub.finance" target="_blank" rel='noopener noreferrer'>
+            <a title="Go to Shrub Paper App">Shrub Paper</a>
+          </ReactGA.OutboundLink>
+        </li>
+        <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Footer Paper Garden App Link" to="https://gardens.shrub.finance" target="_blank" rel='noopener noreferrer'>
             <a title="Go to Paper Gardens App">Paper Gardens</a>
           </ReactGA.OutboundLink>
