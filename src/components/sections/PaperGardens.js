@@ -58,7 +58,7 @@ const PaperGardensIntro = ({
                 </div>
                 <div className="reveal-from-bottom center-content" data-reveal-delay="600">
                     <Button tag="a" color="primary" wideMobile>
-                        <ReactGA.OutboundLink eventLabel="Documentation" to="https://gardens.shrub.finance/" target="_blank" rel='noopener noreferrer'>
+                        <ReactGA.OutboundLink eventLabel="paper gardens main cta" to="https://gardens.shrub.finance/" target="_blank" rel='noopener noreferrer'>
                             Learn More
                         </ReactGA.OutboundLink>
                     </Button>
