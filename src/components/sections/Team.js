@@ -59,62 +59,92 @@ const Team = ({
         <div className="container">
           <div className={innerClasses}>
             <SectionHeader data={sectionHeader} className="center-content" />
-              <div className="center-content"  style={{fontSize:"25px", fontWeight:700, color:"#C4C4C4", paddingBottom:"20px"}} data-reveal-delay="200" >
-                  Core Devs
-              </div>
+              {/*devs*/}
             <div className={tilesClasses}>
               <div className="tiles-item team reveal-from-right center-content" data-reveal-delay="200" >
 
                 <ReactGA.OutboundLink eventLabel="John" to="https://twitter.com/jguthrie7" target="_blank" rel='noopener noreferrer'>
-                  <Image src={require('../../assets/images/team/john.svg')} alt="John Guthrie"/>
+                  <Image width="100px" src={require('../../assets/images/team/john.svg')} alt="John"/>
                     <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}}>
-                        John <span className="team-info">"Chef Bud"</span>
-                    </div>
-                </ReactGA.OutboundLink>
-              </div>
-
-              <div className="tiles-item team reveal-from-bottom center-content">
-                <ReactGA.OutboundLink eventLabel="Micah" to="https://twitter.com/micahriggan" target="_blank" rel='noopener noreferrer'>
-                  <Image src={require('../../assets/images/team/micah.svg')} alt="Micah Riggan"/>
-                    <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}}>
-                        Micah <span className="team-info">"Magi Bud"</span>
+                        <span className="team-info">Chef Bud</span>
+                        <p style={{fontSize:"14px", marginTop:"-10px"}}>Core Dev</p>
                     </div>
                 </ReactGA.OutboundLink>
               </div>
 
               <div className="tiles-item team reveal-from-left center-content" data-reveal-delay="200">
                 <ReactGA.OutboundLink eventLabel="Rachita" to="https://twitter.com/way2rach" target="_blank" rel='noopener noreferrer'>
-                  <Image src={require('../../assets/images/team/rachita.svg')} alt="Rachita Joshi"/>
+                  <Image width="100px" src={require('../../assets/images/team/rachita.svg')} alt="Rachita"/>
                     <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}} >
-                        Rachita <span className="team-info">"Queen Bud"</span>
+                        <span className="team-info">Queen Bud</span>
+                        <p style={{fontSize:"14px", marginTop:"-10px"}}>Core Dev</p>
                     </div>
                 </ReactGA.OutboundLink>
               </div>
             </div>
-              <div className="center-content" style={{fontSize:"25px", fontWeight:700, color:"#C4C4C4", padding:"30px", marginTop:"50px"}} data-reveal-delay="200" >
-                  Community Leaders
+              {/*designers*/}
+              <div className={tilesClasses}>
+                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+                          <Image width="100px" src={require('../../assets/images/team/anastasi.svg')} alt="Anastasi"/>
+                          <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}}>
+                              <span className="team-info">Princess Bud</span>
+                              <p style={{fontSize:"14px", marginTop:"-10px"}}>Artist</p>
+                          </div>
+                  </div>
+
+                  <div className="tiles-item team team-nohover reveal-from-left center-content" data-reveal-delay="200">
+                          <Image width="100px" src={require('../../assets/images/team/arkila.svg')} alt="Arkila"/>
+                          <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}} >
+                              <span className="team-info">Snapback Bud</span>
+                              <p style={{fontSize:"14px", marginTop:"-10px"}}>Artist</p>
+                          </div>
+                  </div>
               </div>
+              {/*community leads*/}
               <div className={tilesClasses}>
                   <div className="tiles-item team reveal-from-right center-content" data-reveal-delay="200" >
 
                       <ReactGA.OutboundLink eventLabel="John" to="https://twitter.com/diepca102" target="_blank" rel='noopener noreferrer'>
-                          <Image src={require('../../assets/images/team/diep.svg')} alt="Diep"/>
+                          <Image width="100px" src={require('../../assets/images/team/diep.svg')} alt="Diep"/>
                           <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}}>
-                              Diệp<span className="team-info">"Star Bud"</span>
+                               <span className="team-info">Star Bud Diệp</span>
+                              <p style={{fontSize:"14px", marginTop:"-10px"}}>Community Lead</p>
                           </div>
                       </ReactGA.OutboundLink>
                   </div>
 
                   <div className="tiles-item team reveal-from-bottom center-content">
                       <ReactGA.OutboundLink eventLabel="Jack" to="https://twitter.com/jack_giao" target="_blank" rel='noopener noreferrer'>
-                          <Image src={require('../../assets/images/team/jack.svg')} alt="Jack"/>
+                          <Image width="100px" src={require('../../assets/images/team/jack.svg')} alt="Jack"/>
                           <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}}>
-                              Jack <span className="team-info">"Star Bud"</span>
+                              <span className="team-info">Star Bud Jack</span>
+                              <p style={{fontSize:"14px", marginTop:"-10px"}}>Community Lead</p>
                           </div>
                       </ReactGA.OutboundLink>
                   </div>
 
 
+              </div>
+
+              {/*evangelist*/}
+              <div className={tilesClasses}>
+                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+
+
+                          <Image width="100px" src={require('../../assets/images/team/thomas.svg')} alt="Thomas"/>
+                          <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}}>
+                              <span className="team-info">Angel Bud Thomas</span>
+                              <p style={{fontSize:"14px", marginTop:"-10px"}}>Evangelist</p>
+                          </div>
+                  </div>
+
+                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+                          <Image width="100px" src={require('../../assets/images/team/snapback.svg')} alt="Sunita"/>
+                          <div style={{fontWeight:500, color:"#C4C4C4", paddingTop:"12px"}}>
+                              <span className="team-info">Snapback Bud Sunita</span>
+                              <p style={{fontSize:"14px", marginTop:"-10px"}}>Project Manager</p>
+                          </div>
+                  </div>
               </div>
           </div>
         </div>
