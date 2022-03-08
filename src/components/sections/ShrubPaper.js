@@ -5,6 +5,7 @@ import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import ReactGA from "react-ga";
 import Image from "../elements/Image";
+import SectionHeader from "./partials/SectionHeader";
 
 const propTypes = {
   ...SectionProps.types
@@ -67,6 +68,10 @@ const ShrubPaper = ({
     );
   };
 
+  const sectionHeader = {
+    title: 'Shrub Paper',
+  };
+
   return (
     <section
       {...props}
@@ -74,32 +79,19 @@ const ShrubPaper = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <div className="hero-content">
-            <h1 className="mt-0 mb-16 reveal-from-bottom paper" data-reveal-delay="200" >
-                <p className="split-name">Shrub Paper
-                </p>
-            </h1>
-            <div  style={{top: "20px", position:"relative", zIndex: "9999", fontSize:"40px", lineHeight:"1.8"}} className="reveal-from-bottom garden-text-2" data-reveal-delay="600">
-              <ReactGA.OutboundLink eventLabel="Main CTA for Paper Gardens" to="/paper-gardens" >
-                <a title="Go to Shrub.finance main page">Introducing Paper Gardens</a>
-              </ReactGA.OutboundLink>
-            </div>
-            </div>
-          <div className="reveal-from-bottom" data-reveal-delay="600" style={{marginTop: "70px"}}>
-            <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg">
-              <ReactGA.OutboundLink eventLabel="Main CTA for Shrub discord" to="https://discord.gg/csusZhYgTg" target="_blank" rel='noopener noreferrer'>
-                Join Paper Gardens
+          <SectionHeader data={sectionHeader} className="center-content" />
+          <div className="container-xs center-content" style={{fontWeight: "500", color:"#9CA9B3"}}>
+            <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+              Shrub Paper is the paper trading platform by Shrub Finance. Practice trading options in an easy to use platform powered by an intuitive UI.
+            </p>
+          </div>
+          <div className="reveal-from-bottom center-content" data-reveal-delay="600">
+            <Button tag="a" color="primary" wideMobile>
+              <ReactGA.OutboundLink eventLabel="shrub paper main cta" to="https://paper.shrub.finance/" target="_blank" rel='noopener noreferrer'>
+                Try Shrub Paper
               </ReactGA.OutboundLink>
             </Button>
-          </div>
-          <div  style={{top: "8px", position:"relative", zIndex: "9999", fontSize:"14px", fontWeight:"500"}} className="reveal-from-bottom" data-reveal-delay="600">
-            <ReactGA.OutboundLink eventLabel="CTA for Main Website" to="/main" >
-              <a style={{ color:"#9CA9B3"}} title="Go to Shrub.finance main page">Shrub Main</a>
-            </ReactGA.OutboundLink>
-          </div>
-          <div className="reveal-from-bottom" data-reveal-value="20px" data-reveal-delay="800">
-            <p className="paper-image center-content-mobile">
-            </p>
+
           </div>
         </div>
       </div>

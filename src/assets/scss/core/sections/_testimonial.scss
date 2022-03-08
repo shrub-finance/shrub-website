@@ -117,6 +117,12 @@
 					&:hover {
 						filter: invert(1%) brightness(70%);
 					}
+
+					&-nohover {
+						&:hover {
+							filter: none;
+						}
+					}
 				}
 				&:hover {
 					filter: invert(1%) brightness(140%);
@@ -135,4 +141,22 @@
 			}
 		}
 	}
+}
+
+.team-title {
+	font-size:25px;
+	font-weight:700;
+	color:#C4C4C4;
+	padding-bottom:20px;
+}
+
+.team-member {
+	font-weight:500;
+	color:#C4C4C4;
+	padding-top:12px;
+}
+
+.team-role {
+	font-size: 14px;
+	margin-top: -10px;
 }

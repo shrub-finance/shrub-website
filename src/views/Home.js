@@ -1,5 +1,5 @@
 import React from 'react';
-import PaperGardens from "../components/sections/PaperGardens";
+import PaperGardensIntro from "../components/sections/PaperGardens-intro";
 import What from "../components/sections/paper-gardens/What";
 import Community from "../components/sections/paper-gardens/Community";
 import FAQs from "../components/sections/paper-gardens/FAQs";
@@ -10,7 +10,7 @@ const Home = () => {
 
     return (
     <>
-        <PaperGardens className="illustration-section-01"/>
+        <PaperGardensIntro className="illustration-section-01"/>
         <Why/>
         <What invertMobile imageFill className="illustration-section-02"/>
         <FAQs/>
