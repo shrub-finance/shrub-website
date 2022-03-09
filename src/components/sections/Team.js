@@ -66,7 +66,7 @@ const Team = ({
                 <ReactGA.OutboundLink eventLabel="John" to="https://twitter.com/jguthrie7" target="_blank" rel='noopener noreferrer'>
                   <Image width="100px" src={require('../../assets/images/team/john.svg')} alt="John"/>
                     <div className="team-member">
-                        <span className="team-info">Chef Bud</span>
+                        <span className="team-info">Chef Bud John</span>
                         <p className="team-role">Core Dev</p>
                     </div>
                 </ReactGA.OutboundLink>
@@ -76,7 +76,7 @@ const Team = ({
                 <ReactGA.OutboundLink eventLabel="Rachita" to="https://twitter.com/way2rach" target="_blank" rel='noopener noreferrer'>
                   <Image width="100px" src={require('../../assets/images/team/rachita.svg')} alt="Rachita"/>
                     <div className="team-member">
-                        <span className="team-info">Queen Bud</span>
+                        <span className="team-info">Queen Bud Rachita</span>
                         <p className="team-role">Core Dev</p>
                     </div>
                 </ReactGA.OutboundLink>
@@ -87,7 +87,7 @@ const Team = ({
                   <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
                           <Image width="100px" src={require('../../assets/images/team/anastasi.svg')} alt="Anastasi"/>
                           <div className="team-member">
-                              <span className="team-info">Princess Bud</span>
+                              <span className="team-info">Princess Bud Anastasi</span>
                               <p className="team-role">Artist</p>
                           </div>
                   </div>
@@ -95,7 +95,7 @@ const Team = ({
                   <div className="tiles-item team team-nohover reveal-from-left center-content" data-reveal-delay="200">
                           <Image width="100px" src={require('../../assets/images/team/arkila.svg')} alt="Arkila"/>
                           <div className="team-member" >
-                              <span className="team-info">Snapback Bud</span>
+                              <span className="team-info">Cloud Bud Arkila</span>
                               <p className="team-role">Artist</p>
                           </div>
                   </div>
