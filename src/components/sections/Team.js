@@ -93,9 +93,9 @@ const Team = ({
                   </div>
 
                   <div className="tiles-item team team-nohover reveal-from-left center-content" data-reveal-delay="200">
-                          <Image width="100px" src={require('../../assets/images/team/arkila.svg')} alt="Arkila"/>
+                          <Image width="100px" src={require('../../assets/images/team/arkila.svg')} alt="Arkilabot"/>
                           <div className="team-member" >
-                              <span className="team-info">Cloud Bud Arkila</span>
+                              <span className="team-info">Cloud Bud Arkilabot</span>
                               <p className="team-role">Artist</p>
                           </div>
                   </div>
