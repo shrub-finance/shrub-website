@@ -59,7 +59,7 @@ const App = () => {
           <AppRoute exact path="/roadmap" component={RoadMap} layout={LayoutDefault} />
           <AppRoute exact path="/airdrop" component={AirDrop} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/paper-gardens" component={Chapters} layout={LayoutDefaultSlim} />
-          <AppRoute exact path="/About" component={About} layout={LayoutDefault} />
+          <AppRoute exact path="/about" component={About} layout={LayoutDefault} />
         </Switch>
       )} />
   );

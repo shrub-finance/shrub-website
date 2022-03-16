@@ -56,7 +56,7 @@ const FooterNav = ({
         </li>
 
         <li style={{marginBottom: "20px"}}>
-          <ReactGA.OutboundLink eventLabel="Footer About Link" to="/About">
+          <ReactGA.OutboundLink eventLabel="Footer About Link" to="/about">
             About Us
         </ReactGA.OutboundLink>
 
