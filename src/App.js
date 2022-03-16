@@ -13,6 +13,7 @@ import Main from './views/Main';
 import Chapters from "./components/sections/Chapters";
 import AirDrop from "./components/sections/AirDrop";
 import RoadMap from "./components/sections/RoadMap";
+import About from "./components/sections/About";
 
 
 // Initialize Google Analytics
@@ -58,6 +59,7 @@ const App = () => {
           <AppRoute exact path="/roadmap" component={RoadMap} layout={LayoutDefault} />
           <AppRoute exact path="/airdrop" component={AirDrop} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/paper-gardens" component={Chapters} layout={LayoutDefaultSlim} />
+          <AppRoute exact path="/About" component={About} layout={LayoutDefault} />
         </Switch>
       )} />
   );

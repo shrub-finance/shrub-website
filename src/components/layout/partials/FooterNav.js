@@ -54,6 +54,14 @@ const FooterNav = ({
             Blog
           </ReactGA.OutboundLink>
         </li>
+
+        <li style={{marginBottom: "20px"}}>
+          <ReactGA.OutboundLink eventLabel="Footer About Link" to="/About">
+            About Us
+        </ReactGA.OutboundLink>
+
+        </li>
+
         <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Contact Us Email" to="https://forms.gle/XHXU4kTGKyCnuNt87" >
             <a title="Get in touch">Contact Us</a>
