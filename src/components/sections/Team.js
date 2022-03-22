@@ -146,6 +146,26 @@ const Team = ({
                           </div>
                   </div>
               </div>
+
+              {/*Community Leads*/}
+              <div className={tilesClasses}>
+                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+                          <Image width="100px" src={require('../../assets/images/team/star_3.svg')} alt="Thomas"/>
+                          <div className="team-member">
+                              <span className="team-info">Star Bud Thomas</span>
+                              <p className="team-role">Community Lead</p>
+                          </div>
+                  </div>
+              {/*devs*/}
+                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+                          <Image width="100px" src={require('../../assets/images/team/cog.svg')} alt="engineer"/>
+                          <div className="team-member">
+                              <span className="team-info">Engineer Bud Amrinder</span>
+                              <p className="team-role">Dev</p>
+                          </div>
+                  </div>
+              </div>
+
           </div>
         </div>
       </section>
