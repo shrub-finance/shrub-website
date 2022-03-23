@@ -81,6 +81,14 @@ const Team = ({
                     </div>
                 </ReactGA.OutboundLink>
               </div>
+
+              <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+                          <Image width="100px" src={require('../../assets/images/team/cog.svg')} alt="engineer"/>
+                          <div className="team-member">
+                              <span className="team-info">Engineer Bud Amrinder</span>
+                              <p className="team-role">Dev</p>
+                          </div>
+                </div>
             </div>
               {/*designers*/}
               <div className={tilesClasses}>
@@ -103,7 +111,6 @@ const Team = ({
               {/*community leads*/}
               <div className={tilesClasses}>
                   <div className="tiles-item team reveal-from-right center-content" data-reveal-delay="200" >
-
                       <ReactGA.OutboundLink eventLabel="John" to="https://twitter.com/diepca102" target="_blank" rel='noopener noreferrer'>
                           <Image width="100px" src={require('../../assets/images/team/diep.svg')} alt="Diep"/>
                           <div className="team-member">
@@ -112,7 +119,13 @@ const Team = ({
                           </div>
                       </ReactGA.OutboundLink>
                   </div>
-
+                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+                          <Image width="100px" src={require('../../assets/images/team/star_3.svg')} alt="Thomas"/>
+                          <div className="team-member">
+                              <span className="team-info">Star Bud Thomas</span>
+                              <p className="team-role">Community Lead</p>
+                          </div>
+                  </div>
                   <div className="tiles-item team reveal-from-bottom center-content">
                       <ReactGA.OutboundLink eventLabel="Jack" to="https://twitter.com/jack_giao" target="_blank" rel='noopener noreferrer'>
                           <Image width="100px" src={require('../../assets/images/team/jack.svg')} alt="Jack"/>
@@ -122,46 +135,21 @@ const Team = ({
                           </div>
                       </ReactGA.OutboundLink>
                   </div>
-
-
               </div>
-
               {/*ambassador*/}
               <div className={tilesClasses}>
                   <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
-
-
                           <Image width="100px" src={require('../../assets/images/team/thomas.svg')} alt="Thomas"/>
                           <div className="team-member">
                               <span className="team-info">Angel Bud Thomas</span>
                               <p className="team-role">Ambassador</p>
                           </div>
                   </div>
-
                   <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
                           <Image width="100px" src={require('../../assets/images/team/snapback.svg')} alt="Sunita"/>
                           <div className="team-member">
                               <span className="team-info">Snapback Bud Sunita</span>
                               <p className="team-role">Project Manager</p>
-                          </div>
-                  </div>
-              </div>
-
-              {/*Community Leads*/}
-              <div className={tilesClasses}>
-                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
-                          <Image width="100px" src={require('../../assets/images/team/star_3.svg')} alt="Thomas"/>
-                          <div className="team-member">
-                              <span className="team-info">Star Bud Thomas</span>
-                              <p className="team-role">Community Lead</p>
-                          </div>
-                  </div>
-              {/*devs*/}
-                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
-                          <Image width="100px" src={require('../../assets/images/team/cog.svg')} alt="engineer"/>
-                          <div className="team-member">
-                              <span className="team-info">Engineer Bud Amrinder</span>
-                              <p className="team-role">Dev</p>
                           </div>
                   </div>
               </div>
