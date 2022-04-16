@@ -56,8 +56,8 @@ const App = () => {
         <Switch>
           <AppRoute exact path="/" component={Main} layout={LayoutDefault} />
           <AppRoute exact path="/main" component={Home} layout={LayoutDefault} />
-          <AppRoute exact path="/roadmap" component={Main} layout={LayoutDefault} />
-          <AppRoute exact path="/airdrop" component={AirDrop} layout={LayoutDefaultSlim} />
+          <AppRoute exact path="/roadmap" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/airdrop" component={Home} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/paper-gardens" component={Chapters} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/about" component={About} layout={LayoutDefault} />
         </Switch>
