@@ -13,8 +13,7 @@ import ReactGA from "react-ga";
 const Main = () => {
 
     return (
-        <><div className={"banner"}><ReactGA.OutboundLink eventLabel="Banner link to Paper gardens" to="https://gardens.shrub.finance" target="_blank" rel='noopener noreferrer'>
-           &nbsp; <a title="Go to Paper Gardens App">Shrub's Genesis NFT series - Paper Gardens </a>
+        <><div className={"banner"}><ReactGA.OutboundLink eventLabel="Banner link to Paper gardens" to="https://gardens.shrub.finance" target="_blank" rel='noopener noreferrer'><a title="Go to Paper Gardens App">Shrub's Genesis NFT series - Paper Gardens </a>
         </ReactGA.OutboundLink></div>
             <Hero className="illustration-section-01" />
             <ShrubStory invertMobile imageFill className="illustration-section-02" />
