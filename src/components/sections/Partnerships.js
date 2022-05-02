@@ -61,7 +61,7 @@ const Partnerships = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={tilesClasses}>
 
-            <div className="tiles-item reveal-from-right center-content" data-reveal-delay="200">
+            <div className="tiles-item reveal-from-right center-content give-mt" data-reveal-delay="200">
 
               <ReactGA.OutboundLink eventLabel="Polygon" to="https://polygon.technology/" target="_blank" rel='noopener noreferrer'>
                 <Image src={require('../../assets/images/partners/polygon.svg')} alt="Polygon"/>
@@ -84,7 +84,7 @@ const Partnerships = ({
 
             </div>
 
-            <div className="tiles-item reveal-from-bottom center-content">
+            <div className="tiles-item reveal-from-bottom center-content give-mt" data-reveal-delay="200">
               <ReactGA.OutboundLink eventLabel="OWC" to="https://www.openwebcollective.com/" target="_blank" rel='noopener noreferrer'>
                 <Image src={require('../../assets/images/partners/owc.svg')} alt="Open Web Collective"/>
               </ReactGA.OutboundLink>
@@ -105,7 +105,7 @@ const Partnerships = ({
               {/*</div>*/}
             </div>
 
-            <div className="tiles-item reveal-from-left center-content" data-reveal-delay="200">
+            <div className="tiles-item reveal-from-left center-content give-mt" data-reveal-delay="200">
               <ReactGA.OutboundLink eventLabel="Near" to="https://near.org/" target="_blank" rel='noopener noreferrer'>
                 <Image src={require('../../assets/images/partners/near.svg')} alt="Near Protocol"/>
               </ReactGA.OutboundLink>
@@ -126,8 +126,8 @@ const Partnerships = ({
               {/*</div>*/}
             </div>
 
-            <div className="tiles-item reveal-from-left center-content" data-reveal-delay="200">
-              <ReactGA.OutboundLink eventLabel="Near" to="https://www.sendwyre.com/" target="_blank" rel='noopener noreferrer'>
+            <div className="tiles-item reveal-from-left center-content give-mt" data-reveal-delay="200">
+              <ReactGA.OutboundLink eventLabel="Wyre" to="https://www.sendwyre.com/" target="_blank" rel='noopener noreferrer'>
                 <Image src={require('../../assets/images/partners/wyre.svg')} alt="Wyre"/>
               </ReactGA.OutboundLink>
 
