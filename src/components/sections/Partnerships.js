@@ -67,21 +67,6 @@ const Partnerships = ({
                 <Image src={require('../../assets/images/partners/polygon.svg')} alt="Polygon"/>
               </ReactGA.OutboundLink>
 
-              {/*<div className="tiles-item-inner">*/}
-              {/*  <div className="testimonial-item-content">*/}
-              {/*    <p className="text-sm mb-0">*/}
-              {/*      — Duis aute irure dolor in reprehenderit in voluptate.*/}
-              {/*        </p>*/}
-              {/*  </div>*/}
-              {/*  <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">*/}
-              {/*    <span className="testimonial-item-name text-color-high">Roman Level</span>*/}
-              {/*    <span className="text-color-low"> / </span>*/}
-              {/*    <span className="testimonial-item-link">*/}
-              {/*      <a href="#0">AppName</a>*/}
-              {/*    </span>*/}
-              {/*  </div>*/}
-              {/*</div>*/}
-
             </div>
 
             <div className="tiles-item reveal-from-bottom center-content give-mt" data-reveal-delay="200">
@@ -89,20 +74,6 @@ const Partnerships = ({
                 <Image src={require('../../assets/images/partners/owc.svg')} alt="Open Web Collective"/>
               </ReactGA.OutboundLink>
 
-              {/*<div className="tiles-item-inner">*/}
-              {/*  <div className="testimonial-item-content">*/}
-              {/*    <p className="text-sm mb-0">*/}
-              {/*      — Duis aute irure dolor in reprehenderit in voluptate.*/}
-              {/*        </p>*/}
-              {/*  </div>*/}
-              {/*  /!*<div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">*!/*/}
-              {/*  /!*  <span className="testimonial-item-name text-color-high">Diana Rynzhuk</span>*!/*/}
-              {/*  /!*  <span className="text-color-low"> / </span>*!/*/}
-              {/*  /!*  <span className="testimonial-item-link">*!/*/}
-              {/*  /!*    <a href="#0">AppName</a>*!/*/}
-              {/*  /!*  </span>*!/*/}
-              {/*  /!*</div>*!/*/}
-              {/*</div>*/}
             </div>
 
             <div className="tiles-item reveal-from-left center-content give-mt" data-reveal-delay="200">
@@ -110,20 +81,6 @@ const Partnerships = ({
                 <Image src={require('../../assets/images/partners/near.svg')} alt="Near Protocol"/>
               </ReactGA.OutboundLink>
 
-              {/*<div className="tiles-item-inner">*/}
-              {/*  <div className="testimonial-item-content">*/}
-              {/*    <p className="text-sm mb-0">*/}
-              {/*      — Duis aute irure dolor in reprehenderit in voluptate velit .*/}
-              {/*        </p>*/}
-              {/*  </div>*/}
-              {/*  <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">*/}
-              {/*    <span className="testimonial-item-name text-color-high">Ben Stafford</span>*/}
-              {/*    <span className="text-color-low"> / </span>*/}
-              {/*    <span className="testimonial-item-link">*/}
-              {/*      <a href="#0">AppName</a>*/}
-              {/*    </span>*/}
-              {/*  </div>*/}
-              {/*</div>*/}
             </div>
 
             <div className="tiles-item reveal-from-left center-content give-mt" data-reveal-delay="200">
@@ -131,20 +88,6 @@ const Partnerships = ({
                 <Image src={require('../../assets/images/partners/wyre.svg')} alt="Wyre"/>
               </ReactGA.OutboundLink>
 
-              {/*<div className="tiles-item-inner">*/}
-              {/*  <div className="testimonial-item-content">*/}
-              {/*    <p className="text-sm mb-0">*/}
-              {/*      — Duis aute irure dolor in reprehenderit in voluptate velit .*/}
-              {/*        </p>*/}
-              {/*  </div>*/}
-              {/*  <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">*/}
-              {/*    <span className="testimonial-item-name text-color-high">Ben Stafford</span>*/}
-              {/*    <span className="text-color-low"> / </span>*/}
-              {/*    <span className="testimonial-item-link">*/}
-              {/*      <a href="#0">AppName</a>*/}
-              {/*    </span>*/}
-              {/*  </div>*/}
-              {/*</div>*/}
             </div>
 
           </div>
