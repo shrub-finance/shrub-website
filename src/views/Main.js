@@ -19,7 +19,7 @@ const Main = () => {
             <ShrubStory invertMobile imageFill className="illustration-section-02" />
             <ShrubPaper/>
             <PaperGardens/>
-            <Team/>
+        {/*}    <Team/>    */}
             <Partnerships/>
             <Grants/>
         </>
