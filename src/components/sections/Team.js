@@ -59,7 +59,7 @@ const Team = ({
         <div className="container">
           <div className={innerClasses}>
             <SectionHeader data={sectionHeader} className="center-content" />
-              {/*devs*/}
+              {/*core devs*/}
             <div className={tilesClasses}>
               <div className="tiles-item team reveal-from-right center-content" data-reveal-delay="200" >
 
@@ -81,14 +81,23 @@ const Team = ({
                     </div>
                 </ReactGA.OutboundLink>
               </div>
-
+            </div>
+            {/*dev-team*/}
+            <div className={tilesClasses}>
               <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
                           <Image width="100px" src={require('../../assets/images/team/cog.svg')} alt="engineer"/>
                           <div className="team-member">
                               <span className="team-info">Engineer Bud Amrinder</span>
                               <p className="team-role">Dev</p>
                           </div>
-                </div>
+              </div>
+              <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+                          <Image width="100px" src={require('../../assets/images/team/neeta.svg')} alt="Neetta"/>
+                          <div className="team-member">
+                              <span className="team-info">Engineer Bud Neetta</span>
+                              <p className="team-role">Dev</p>
+                          </div>
+              </div>
             </div>
               {/*designers*/}
               <div className={tilesClasses}>
@@ -119,13 +128,13 @@ const Team = ({
                           </div>
                       </ReactGA.OutboundLink>
                   </div>
-                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
+         {/*         <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
                           <Image width="100px" src={require('../../assets/images/team/star_3.svg')} alt="Thomas"/>
                           <div className="team-member">
                               <span className="team-info">Star Bud Thomas</span>
                               <p className="team-role">Community Lead</p>
                           </div>
-                  </div>
+  </div>  */}
                   <div className="tiles-item team reveal-from-bottom center-content">
                       <ReactGA.OutboundLink eventLabel="Jack" to="https://twitter.com/jack_giao" target="_blank" rel='noopener noreferrer'>
                           <Image width="100px" src={require('../../assets/images/team/jack.svg')} alt="Jack"/>

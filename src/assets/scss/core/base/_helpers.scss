@@ -602,3 +602,11 @@ img.has-shadow {
 		}
 	}
 }
+
+.give-mt {
+	margin-top: 35px;
+
+	@include media('<=medium') {
+		margin-top: 0;
+	}
+}
