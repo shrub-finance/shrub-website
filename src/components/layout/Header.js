@@ -126,7 +126,7 @@ const Header = ({
                     </ReactGA.OutboundLink>
                   </li>
                   <li className="garden-text">
-                    <ReactGA.OutboundLink eventLabel="Buy Matic App Link" to="https://gardens.shrub.finance" target="_blank" rel='noopener noreferrer'>
+                    <ReactGA.OutboundLink eventLabel="Header Shrub Exchange Link" to="https://exchange.shrub.finance" target="_blank" rel='noopener noreferrer'>
                       Buy Matic
                     </ReactGA.OutboundLink>
                   </li>

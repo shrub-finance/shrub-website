@@ -19,7 +19,7 @@ const FooterNav = ({
     >
       <ul className="list-reset text-xs">
         <li style={{marginBottom: "20px"}}>
-          <ReactGA.OutboundLink eventLabel="Footer Buy MATIC Link" to="/roadmap">
+          <ReactGA.OutboundLink eventLabel="Footer Shrub Exchange Link" to="https://exchange.shrub.finance">
             Buy MATIC
           </ReactGA.OutboundLink>
         </li>
