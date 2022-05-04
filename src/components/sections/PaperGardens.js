@@ -42,6 +42,7 @@ const PaperGardensIntro = ({
 
     const sectionHeader = {
         title: 'Paper Gardens',
+        paragraph: 'Shrub\'s Genesis NFT Series'
     };
   return (
     <section
@@ -59,7 +60,7 @@ const PaperGardensIntro = ({
                 <div className="reveal-from-bottom center-content" data-reveal-delay="600">
                     <Button tag="a" color="primary" wideMobile>
                         <ReactGA.OutboundLink eventLabel="paper gardens main cta" to="https://gardens.shrub.finance/" target="_blank" rel='noopener noreferrer'>
-                            Learn More
+                          Launch Paper Gardens
                         </ReactGA.OutboundLink>
                     </Button>
 

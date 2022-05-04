@@ -19,6 +19,11 @@ const FooterNav = ({
     >
       <ul className="list-reset text-xs">
         <li style={{marginBottom: "20px"}}>
+          <ReactGA.OutboundLink eventLabel="Footer Buy MATIC Link" to="/roadmap">
+            Buy MATIC
+          </ReactGA.OutboundLink>
+        </li>
+        <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Footer Shrub Paper App Link" to="https://paper.shrub.finance" target="_blank" rel='noopener noreferrer'>
             <a title="Go to Shrub Paper App">Shrub Paper</a>
           </ReactGA.OutboundLink>
@@ -28,21 +33,16 @@ const FooterNav = ({
             <a title="Go to Paper Gardens App">Paper Gardens</a>
           </ReactGA.OutboundLink>
         </li>
-        {/*<li style={{marginBottom: "20px"}}>*/}
-        {/*  <ReactGA.OutboundLink eventLabel="Footer Buy MATIC Link" to="/roadmap">*/}
-        {/*    Buy MATIC<span className="new">New</span>*/}
-        {/*  </ReactGA.OutboundLink>*/}
-        {/*</li>*/}
         <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Footer Open Sea Link" to="https://opensea.io/collection/shrub-paper-gardens" target="_blank" rel='noopener noreferrer'>
             <a title="View OpenSea collection">Open Sea</a>
           </ReactGA.OutboundLink>
         </li>
-        <li style={{marginBottom: "20px"}}>
-          <ReactGA.OutboundLink eventLabel="Footer Documentation Link" to="https://docs.shrub.finance/" target="_blank" rel='noopener noreferrer'>
-            <a title="Shrub's official docs">Docs</a>
-          </ReactGA.OutboundLink>
-        </li>
+        {/*<li style={{marginBottom: "20px"}}>*/}
+        {/*  <ReactGA.OutboundLink eventLabel="Footer Documentation Link" to="https://docs.shrub.finance/" target="_blank" rel='noopener noreferrer'>*/}
+        {/*    <a title="Shrub's official docs">Docs</a>*/}
+        {/*  </ReactGA.OutboundLink>*/}
+        {/*</li>*/}
         <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Footer Github Link" to="https://github.com/shrub-finance" target="_blank" rel='noopener noreferrer'>
             <a title="Shrub's github">GitHub</a>
@@ -54,12 +54,11 @@ const FooterNav = ({
           </ReactGA.OutboundLink>
         </li>
 
-        <li style={{marginBottom: "20px"}}>
-          <ReactGA.OutboundLink eventLabel="Footer About Link" to="/about">
-            About Us
-        </ReactGA.OutboundLink>
-
-        </li>
+        {/*<li style={{marginBottom: "20px"}}>*/}
+        {/*  <ReactGA.OutboundLink eventLabel="Footer About Link" to="/about">*/}
+        {/*    About Us*/}
+        {/*</ReactGA.OutboundLink>*/}
+        {/*</li>*/}
 
         <li style={{marginBottom: "20px"}}>
           <ReactGA.OutboundLink eventLabel="Contact Us Email" to="https://forms.gle/XHXU4kTGKyCnuNt87" >
