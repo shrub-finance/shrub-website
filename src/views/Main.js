@@ -20,6 +20,7 @@ const Main = () => {
 
             <Hero className="illustration-section-01" />
             <ShrubStory invertMobile imageFill className="illustration-section-02" />
+            <ShrubExchange/>
             <ShrubPaper/>
             <PaperGardens/>
             <Team/>    
