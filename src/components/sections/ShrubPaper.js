@@ -70,6 +70,7 @@ const ShrubPaper = ({
 
   const sectionHeader = {
     title: 'Shrub Paper',
+    paragraph: 'Try Crypto Options Trading without risking real money'
   };
 
   return (
@@ -88,7 +89,7 @@ const ShrubPaper = ({
           <div className="reveal-from-bottom center-content" data-reveal-delay="600">
             <Button tag="a" color="primary" wideMobile>
               <ReactGA.OutboundLink eventLabel="shrub paper main cta" to="https://paper.shrub.finance/" target="_blank" rel='noopener noreferrer'>
-                Try Shrub Paper
+                Launch Shrub Paper
               </ReactGA.OutboundLink>
             </Button>
 

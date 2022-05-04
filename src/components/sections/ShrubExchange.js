@@ -52,9 +52,8 @@ const ShrubExchange = ({
 
   const sectionHeader = {
     title: 'Shrub Exchange',
-    // paragraph: 'Shrub was created with one fundamental thought at its core - "The only one who should be in control of your money is you".'
+    paragraph: 'Your on-ramp to Polygon MATIC'
   };
-  // With no misaligned incentives, no middleman, the capability of trading options for any ERC-20 token, and an intuitive UI, users are truly in control. Buy, Sell, Calls, Puts - any options trade you would want to do is available on Shrub.
   return (
     <section
       {...props}
@@ -64,9 +63,6 @@ const ShrubExchange = ({
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className="container-xs center-content" style={{fontWeight: "500", color:"#9CA9B3"}}>
-            <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-              Your on-ramp to Polygon MATIC.
-            </p>
             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
               Shrub Exchange is the easiest way to buy Polygon MATIC instantly with your credit card, debit card or Apple Pay.
             </p>
@@ -78,7 +74,7 @@ const ShrubExchange = ({
           <div className="reveal-from-bottom center-content" data-reveal-delay="600">
               <Button tag="a" color="primary" wideMobile>
                 <ReactGA.OutboundLink eventLabel="Documentation" to="https://exchange.shrub.finance/" target="_blank" rel='noopener noreferrer'>
-                  Buy MATIC
+                  Launch Shrub Exchange
                 </ReactGA.OutboundLink>
               </Button>
 
