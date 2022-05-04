@@ -85,7 +85,7 @@ const Hero = ({
             </h1>
             <div className="container-xs" style={{marginTop: "70px", fontWeight: "500", color:"#9CA9B3"}}>
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                  Shrub is building a user centric crypto options platform for the Polygon blockchain.
+                  Shrub is building an integrated crypto options platform for the Polygon blockchain.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg">

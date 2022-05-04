@@ -127,7 +127,7 @@ const Header = ({
                   </li>
                   <li className="garden-text">
                     <ReactGA.OutboundLink eventLabel="Buy Matic App Link" to="https://gardens.shrub.finance" target="_blank" rel='noopener noreferrer'>
-                      Buy Matic<span className="new">New</span>
+                      Buy Matic
                     </ReactGA.OutboundLink>
                   </li>
                   {/*<li>*/}

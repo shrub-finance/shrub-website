@@ -9,6 +9,7 @@ import ShrubPaper from "../components/sections/ShrubPaper";
 import PaperGardens from "../components/sections/PaperGardens";
 import ReactGA from "react-ga";
 import {isMobile} from "react-device-detect";
+import ShrubExchange from "../components/sections/ShrubExchange";
 
 
 const Main = () => {
@@ -19,13 +20,13 @@ const Main = () => {
         </ReactGA.OutboundLink></div>}
 
             <Hero className="illustration-section-01" />
-            <ShrubStory invertMobile imageFill className="illustration-section-02" />
             <ShrubExchange/>
             <ShrubPaper/>
             <PaperGardens/>
-            <Team/>    
             <Partnerships/>
             <Grants/>
+            <ShrubStory invertMobile imageFill className="illustration-section-02" />
+            <Team/>
         </>
     );
 }
