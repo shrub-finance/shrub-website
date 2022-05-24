@@ -54,13 +54,14 @@ const PaperGardensIntro = ({
                 <SectionHeader data={sectionHeader} className="center-content" />
                 <div className="container-xs center-content" style={{fontWeight: "500", color:"#9CA9B3"}}>
                     <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                        Paper Gardens is an interactive multi-chapter story, full of NFTs, rewards, and fun tied to Shrub Paper.
+                        The first ever on-chain growth NFT series featuring NFTs that will grow dynamically on-chain.
+
                     </p>
                 </div>
                 <div className="reveal-from-bottom center-content" data-reveal-delay="600">
                     <Button tag="a" color="primary" wideMobile>
                         <ReactGA.OutboundLink eventLabel="paper gardens main cta" to="https://gardens.shrub.finance/" target="_blank" rel='noopener noreferrer'>
-                          Launch Paper Gardens
+                          Check out Paper Gardens
                         </ReactGA.OutboundLink>
                     </Button>
 
