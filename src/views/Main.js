@@ -25,7 +25,7 @@ const Main = () => {
             <PaperGardens/>
             <Partnerships/>
             <Grants/>
-            <ShrubStory invertMobile imageFill className="illustration-section-02" />
+            {/*<ShrubStory invertMobile imageFill className="illustration-section-02" />*/}
             <Team/>
         </>
     );
