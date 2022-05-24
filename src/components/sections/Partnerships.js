@@ -62,12 +62,11 @@ const Partnerships = ({
           <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-right center-content give-mt" data-reveal-delay="200">
-
               <ReactGA.OutboundLink eventLabel="Polygon" to="https://polygon.technology/" target="_blank" rel='noopener noreferrer'>
                 <Image src={require('../../assets/images/partners/polygon.svg')} alt="Polygon"/>
               </ReactGA.OutboundLink>
-
             </div>
+
 
             <div className="tiles-item reveal-from-bottom center-content give-mt" data-reveal-delay="200">
               <ReactGA.OutboundLink eventLabel="OWC" to="https://www.openwebcollective.com/" target="_blank" rel='noopener noreferrer'>
@@ -84,11 +83,20 @@ const Partnerships = ({
             </div>
 
             <div className="tiles-item reveal-from-left center-content give-mt" data-reveal-delay="200">
+              <ReactGA.OutboundLink eventLabel="Polygon Studios" to="https://polygonstudios.com/" target="_blank" rel='noopener noreferrer'>
+                <Image src={require('../../assets/images/partners/polygon-studios.svg')} alt="Polygon Studios"/>
+              </ReactGA.OutboundLink>
+            </div>
+
+
+
+            <div className="tiles-item reveal-from-left center-content give-mt" data-reveal-delay="200">
               <ReactGA.OutboundLink eventLabel="Wyre" to="https://www.sendwyre.com/" target="_blank" rel='noopener noreferrer'>
                 <Image src={require('../../assets/images/partners/wyre.svg')} alt="Wyre"/>
               </ReactGA.OutboundLink>
 
             </div>
+
 
           </div>
         </div>
