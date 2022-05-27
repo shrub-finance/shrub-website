@@ -9,6 +9,7 @@ import PaperGardens from "../components/sections/PaperGardens";
 import ReactGA from "react-ga";
 import {isMobile} from "react-device-detect";
 import ShrubExchange from "../components/sections/ShrubExchange";
+import Tickets from "../components/sections/Tickets";
 
 
 
@@ -23,6 +24,7 @@ const Main = () => {
             <ShrubExchange/>
             <ShrubPaper/>
             <PaperGardens/>
+            <Tickets/>
             <Partnerships/>
             <Grants/>
             {/*<ShrubStory invertMobile imageFill className="illustration-section-02" />*/}

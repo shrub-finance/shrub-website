@@ -56,7 +56,7 @@ const Partnerships = ({
       {...props}
       className={outerClasses}
     >
-      <div className="container">
+      <div className="container" id="partnerships">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={tilesClasses}>
