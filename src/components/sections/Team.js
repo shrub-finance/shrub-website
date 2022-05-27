@@ -56,7 +56,7 @@ const Team = ({
           {...props}
           className={outerClasses}
       >
-        <div className="container">
+        <div className="container" id="team">
           <div className={innerClasses}>
             <SectionHeader data={sectionHeader} className="center-content" />
               {/*core devs*/}
