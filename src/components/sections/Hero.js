@@ -85,7 +85,7 @@ const Hero = ({
             </h1>
             <div className="container-xs" style={{marginTop: "70px", fontWeight: "500", color:"#9CA9B3"}}>
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                  Shrub is building DeFi and NFT products for the Polygon ecosystem.
+                  Shrub Finance is building web3 dApps to bridge the gaps between DeFi and the NFT space.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg">

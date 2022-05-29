@@ -4,6 +4,11 @@
       "source": "/paper-gardens",
       "destination": "https://gardens.shrub.finance",
       "permanent": true
+    },
+    {
+      "source": "/roadmap",
+      "destination": "https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435",
+      "permanent": true
     }
   ]
 }
