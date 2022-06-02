@@ -144,7 +144,7 @@ const Team = ({
                           <Image width="100px" src={require('../../assets/images/team/thomas.svg')} alt="Thomas"/>
                           <div className="team-member">
                               <span className="team-info">Angel Bud Thomas</span>
-                              <p className="team-role">Ambassador</p>
+                              <p className="team-role">Project Manager</p>
                           </div>
                   </div>
                   <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >

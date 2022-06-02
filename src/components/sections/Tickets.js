@@ -69,19 +69,19 @@ const Tickets = ({
                         <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
                             Trailblazed by Paper Gardens. Coming soon to everyone.
                         </p>
-                        <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                            Want to partner?
-                        </p>
+                        {/*<p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">*/}
+                        {/*    Want to partner?*/}
+                        {/*</p>*/}
 
                     </div>
-                    <div className="reveal-from-bottom center-content" data-reveal-delay="600">
-                        <Button tag="a" color="primary" wideMobile>
-                            <ReactGA.OutboundLink eventLabel="Documentation" to="https://discord.com/invite/csusZhYgTg" target="_blank" rel='noopener noreferrer'>
-                                Get in touch
-                            </ReactGA.OutboundLink>
-                        </Button>
+                    {/*<div className="reveal-from-bottom center-content" data-reveal-delay="600">*/}
+                    {/*    <Button tag="a" color="primary" wideMobile>*/}
+                    {/*        <ReactGA.OutboundLink eventLabel="Documentation" to="https://discord.com/invite/csusZhYgTg" target="_blank" rel='noopener noreferrer'>*/}
+                    {/*            Get in touch*/}
+                    {/*        </ReactGA.OutboundLink>*/}
+                    {/*    </Button>*/}
 
-                    </div>
+                    {/*</div>*/}
                 </div>
             </div>
         </section>
