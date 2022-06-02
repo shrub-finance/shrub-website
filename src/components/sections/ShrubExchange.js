@@ -73,7 +73,7 @@ const ShrubExchange = ({
           </div>
           <div className="reveal-from-bottom center-content" data-reveal-delay="600">
               <Button tag="a" color="primary" wideMobile>
-                <ReactGA.OutboundLink eventLabel="Documentation" to="https://exchange.shrub.finance/" target="_blank" rel='noopener noreferrer'>
+                <ReactGA.OutboundLink eventLabel="go to shrub exchange" to="https://exchange.shrub.finance/" target="_blank" rel='noopener noreferrer'>
                   Launch Shrub Exchange
                 </ReactGA.OutboundLink>
               </Button>

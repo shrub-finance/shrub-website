@@ -74,14 +74,14 @@ const Tickets = ({
                         {/*</p>*/}
 
                     </div>
-                    {/*<div className="reveal-from-bottom center-content" data-reveal-delay="600">*/}
-                    {/*    <Button tag="a" color="primary" wideMobile>*/}
-                    {/*        <ReactGA.OutboundLink eventLabel="Documentation" to="https://discord.com/invite/csusZhYgTg" target="_blank" rel='noopener noreferrer'>*/}
-                    {/*            Get in touch*/}
-                    {/*        </ReactGA.OutboundLink>*/}
-                    {/*    </Button>*/}
+                    <div className="reveal-from-bottom center-content" data-reveal-delay="600">
+                        <Button tag="a" color="primary" wideMobile>
+                            <ReactGA.OutboundLink eventLabel="learn about tickets" to="https://medium.com/@shrubfinance/nft-tickets-the-next-generation-of-distribution-eab1e0fdc317" target="_blank" rel='noopener noreferrer'>
+                                Learn More
+                            </ReactGA.OutboundLink>
+                        </Button>
 
-                    {/*</div>*/}
+                    </div>
                 </div>
             </div>
         </section>
