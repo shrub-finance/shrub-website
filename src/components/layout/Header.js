@@ -137,11 +137,11 @@ const Header = ({
                   {/*  </ReactGA.OutboundLink>*/}
                   {/*</li>*/}
 
-                  {/*<li>*/}
-                  {/*  <ReactGA.OutboundLink eventLabel="Header Blog Link" to="https://medium.com/@shrubfinance" target="_blank" rel='noopener noreferrer'>*/}
-                  {/*    Blog*/}
-                  {/*  </ReactGA.OutboundLink>*/}
-                  {/*</li>*/}
+                  <li>
+                    <ReactGA.OutboundLink eventLabel="Header Blog Link" to="https://medium.com/@shrubfinance" target="_blank" rel='noopener noreferrer'>
+                      Blog
+                    </ReactGA.OutboundLink>
+                  </li>
 
                   {/*<li>*/}
                   {/*  <ReactGA.OutboundLink eventLabel="Header Docs Link" to="https://docs.shrub.finance" target="_blank" rel='noopener noreferrer'>*/}
