@@ -16,7 +16,7 @@ import Tickets from "../components/sections/Tickets";
 const Main = () => {
 
     return (
-        <>{!isMobile ?<ReactGA.OutboundLink eventLabel="Banner link to paper gardens" to="https://gardens.shrub.finance/presale" target="_blank" rel='noopener noreferrer'><div className="banner">🎉 Shrub Genesis NFT Series pre-sale now live! &nbsp; <span style={{textDecoration: "underline"}}>See details</span></div>
+        <>{!isMobile ?<ReactGA.OutboundLink eventLabel="Banner link to paper gardens" to="https://gardens.shrub.finance/presale" target="_blank" rel='noopener noreferrer'><div className="banner">🎉 Shrub Genesis NFT Series pre-sale now live! &nbsp; <span style={{textDecoration: "underline"}}>Mint Now</span></div>
         </ReactGA.OutboundLink>: <ReactGA.OutboundLink eventLabel="Banner link to paper gardens" to="https://gardens.shrub.finance/presale" target="_blank" rel='noopener noreferrer'><div className="banner">🎉 Shrub Genesis NFT Series pre-sale now live!</div>
         </ReactGA.OutboundLink>}
 
