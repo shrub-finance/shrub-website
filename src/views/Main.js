@@ -16,9 +16,10 @@ import Tickets from "../components/sections/Tickets";
 const Main = () => {
 
     return (
-        <>{!isMobile ?<ReactGA.OutboundLink eventLabel="Banner link to paper gardens" to="https://gardens.shrub.finance/mint" target="_blank" rel='noopener noreferrer'><div className="banner">🎉 Shrub's Genesis NFT sale is live! &nbsp; <span style={{textDecoration: "underline"}}>Mint Now</span></div>
-        </ReactGA.OutboundLink>: <ReactGA.OutboundLink eventLabel="Banner link to paper gardens" to="https://gardens.shrub.finance/mint" target="_blank" rel='noopener noreferrer'><div className="banner">🎉 Shrub Genesis NFT sale is live!</div>
-        </ReactGA.OutboundLink>}
+        <>
+         {/*{!isMobile ?<ReactGA.OutboundLink eventLabel="Banner link to paper gardens" to="https://gardens.shrub.finance/mint" target="_blank" rel='noopener noreferrer'><div className="banner">🎉 Shrub's Genesis NFT sale is live! &nbsp; <span style={{textDecoration: "underline"}}>Mint Now</span></div>*/}
+         {/*</ReactGA.OutboundLink>: <ReactGA.OutboundLink eventLabel="Banner link to paper gardens" to="https://gardens.shrub.finance/mint" target="_blank" rel='noopener noreferrer'><div className="banner">🎉 Shrub Genesis NFT sale is live!</div>*/}
+         {/*</ReactGA.OutboundLink>}*/}
 
             <Hero className="illustration-section-01" />
             <ShrubExchange/>
