@@ -63,7 +63,7 @@ const Team = ({
             <div className={tilesClasses}>
               <div className="tiles-item team reveal-from-right center-content" data-reveal-delay="200" >
 
-                <ReactGA.OutboundLink eventLabel="John" to="https://twitter.com/jguthrie7" target="_blank" rel='noopener noreferrer'>
+                <ReactGA.OutboundLink eventLabel="John" to="https://twitter.com/chefbud_eth" target="_blank" rel='noopener noreferrer'>
                   <Image width="100px" src={require('../../assets/images/team/john.svg')} alt="John"/>
                     <div className="team-member">
                         <span className="team-info">Chef Bud John</span>
@@ -73,7 +73,7 @@ const Team = ({
               </div>
 
               <div className="tiles-item team reveal-from-left center-content" data-reveal-delay="200">
-                <ReactGA.OutboundLink eventLabel="Rachita" to="https://twitter.com/way2rach" target="_blank" rel='noopener noreferrer'>
+                <ReactGA.OutboundLink eventLabel="Rachita" to="https://twitter.com/0xqueenbud" target="_blank" rel='noopener noreferrer'>
                   <Image width="100px" src={require('../../assets/images/team/rachita.svg')} alt="Rachita"/>
                     <div className="team-member">
                         <span className="team-info">Queen Bud Rachita</span>
