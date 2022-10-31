@@ -83,22 +83,14 @@ const Team = ({
               </div>
             </div>
             {/*dev-team*/}
-            <div className={tilesClasses}>
-              <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
-                          <Image width="100px" src={require('../../assets/images/team/cog.svg')} alt="engineer"/>
-                          <div className="team-member">
-                              <span className="team-info">Engineer Bud Amrinder</span>
-                              <p className="team-role">Dev</p>
-                          </div>
-              </div>
-              <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
-                          <Image width="100px" src={require('../../assets/images/team/neeta.svg')} alt="Neetta"/>
-                          <div className="team-member">
-                              <span className="team-info">Engineer Bud Neetta</span>
-                              <p className="team-role">Dev</p>
-                          </div>
-              </div>
-            </div>
+            
+            
+                        
+        
+                              
+                          
+              
+            
               {/*designers*/}
               <div className={tilesClasses}>
                   <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
@@ -151,7 +143,7 @@ const Team = ({
                           <Image width="100px" src={require('../../assets/images/team/snapback.svg')} alt="Sunita"/>
                           <div className="team-member">
                               <span className="team-info">Snapback Bud Sunita</span>
-                              <p className="team-role">Project Manager</p>
+                              <p className="team-role">Program Manager</p>
                           </div>
                   </div>
               </div>
