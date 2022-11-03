@@ -121,11 +121,7 @@ const Header = ({
                       Paper Gardens
                     </ReactGA.OutboundLink>
                   </li>
-                  <li className="garden-text">
-                    <ReactGA.OutboundLink eventLabel="Header Shrub Paper App Link" to="https://paper.shrub.finance" target="_blank" rel='noopener noreferrer'>
-                      Shrub Paper
-                    </ReactGA.OutboundLink>
-                  </li>
+                  
                   <li className="garden-text">
                     <ReactGA.OutboundLink eventLabel="Header Shrub Exchange Link" to="https://exchange.shrub.finance" target="_blank" rel='noopener noreferrer'>
                       Buy Matic
