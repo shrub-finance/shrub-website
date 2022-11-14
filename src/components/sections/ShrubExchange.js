@@ -66,9 +66,9 @@ const ShrubExchange = ({
             <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
               Shrub Exchange is the easiest way to buy Polygon MATIC instantly with your credit card, debit card or Apple Pay.
             </p>
-            <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+            
         
-            </p>
+          
 
           </div>
           <div className="reveal-from-bottom center-content" data-reveal-delay="600">
