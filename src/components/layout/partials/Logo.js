@@ -2,6 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Image from '../../elements/Image';
+import ShrubLogo from '../../../assets/images/bud/logo.svg';
+
 
 const Logo = ({
   className,
@@ -20,7 +22,7 @@ const Logo = ({
     >
         <Link to="/">
           <Image
-            src={require('../../../assets/images/bud/logo.svg')}
+            src={ShrubLogo}
             alt="Shrub"
             width={30}
             height={30} className={'logo'}/>

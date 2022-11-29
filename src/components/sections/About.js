@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 
@@ -22,17 +22,6 @@ const About = ({
   ...props
 }) => {
 
-  const [videoModalActive, setVideomodalactive] = useState(false);
-
-  const openModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(true);
-  }
-
-  const closeModal = (e) => {
-    e.preventDefault();
-    setVideomodalactive(false);
-  }    
 
   const outerClasses = classNames(
     'hero section center-content',
@@ -49,19 +38,6 @@ const About = ({
     bottomDivider && 'has-bottom-divider'
   );
 
-  const ImgWithFallback = ({
-                             src,
-                             fallback,
-                             type = 'image/avif',
-                             ...delegated
-                           }) => {
-    return (
-        <picture>
-          <source srcSet={src} type={type} />
-          <img src={fallback} {...delegated} />
-        </picture>
-    );
-  };
 
   return (
     <section

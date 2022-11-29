@@ -1,12 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import {SectionProps} from '../../utils/SectionProps';
-import ButtonGroup from "../elements/ButtonGroup";
-import Button from "../elements/Button";
 import ReactGA from "react-ga";
-import Image from "../elements/Image";
-import {isMobile, isSafari} from "react-device-detect";
-import SectionHeader from "./partials/SectionHeader";
 
 const propTypes = {
     ...SectionProps.types
