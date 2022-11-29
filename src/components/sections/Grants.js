@@ -4,6 +4,7 @@ import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import ReactGA from "react-ga";
 import Image from "../elements/Image";
+import PolygonLogo from '../../assets/images/partners/polygon.svg'; // Tell webpack this JS file uses this image
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -63,7 +64,7 @@ const Partnerships = ({
             <div className="tiles-item reveal-from-right center-content" data-reveal-delay="200">
 
               <ReactGA.OutboundLink eventLabel="grants" to="https://polygon.technology/" target="_blank" rel='noopener noreferrer'>
-                <Image src={require('../../assets/images/partners/polygon.svg')} alt="Polygon"/>
+                <Image src={PolygonLogo} alt="Polygon"/>
               </ReactGA.OutboundLink>
             </div>
           </div>
