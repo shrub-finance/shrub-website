@@ -83,17 +83,17 @@ const Hero = ({
             </h1>
             <div className="container-xs" style={{marginTop: "70px", fontWeight: "500", color:"#9CA9B3"}}>
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                  Shrub is building web3 dApps to bridge the gaps between DeFi and the NFT space.
+                  Shrub in on a mission to create products that enable true ownership through innovation, beauty and simplicity.
               </p>
-                <div className="reveal-from-bottom" data-reveal-delay="600">
-                    <ReactGA.OutboundLink eventLabel="main CTA to Shrub Roadmap" to="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435" target="_blank" rel='noopener noreferrer'>
-                    <Button tag="a" color="primary" wideMobile href="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435">
+                {/*<div className="reveal-from-bottom" data-reveal-delay="600">*/}
+                {/*    <ReactGA.OutboundLink eventLabel="main CTA to Shrub Roadmap" to="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435" target="_blank" rel='noopener noreferrer'>*/}
+                {/*    <Button tag="a" color="primary" wideMobile href="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435">*/}
 
-                            Shrub Roadmap
+                {/*            Shrub Roadmap*/}
 
-                    </Button>
-                    </ReactGA.OutboundLink>
-                </div>
+                {/*    </Button>*/}
+                {/*    </ReactGA.OutboundLink>*/}
+                {/*</div>*/}
           {/*    <div className="reveal-from-bottom" data-reveal-delay="600">*/}
           {/*      <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg">*/}
           {/*      <ReactGA.OutboundLink eventLabel="main CTA to Shrub discord" to="https://discord.gg/csusZhYgTg" target="_blank" rel='noopener noreferrer'>*/}

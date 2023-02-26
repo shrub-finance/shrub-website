@@ -3,7 +3,7 @@ import React from 'react';
 import Hero from '../components/sections/Hero';
 import Partnerships from "../components/sections/Partnerships";
 import Team from "../components/sections/Team";
-import Grants from "../components/sections/Grants";
+// import Grants from "../components/sections/Grants";
 import ShrubPaper from "../components/sections/ShrubPaper";
 import PaperGardens from "../components/sections/PaperGardens";
 import ReactGA from "react-ga";
@@ -27,7 +27,7 @@ const Main = () => {
             <PaperGardens/>
             <Tickets/>
             <Partnerships/>
-            <Grants/>
+            {/*<Grants/>*/}
             {/*<ShrubStory invertMobile imageFill className="illustration-section-02" />*/}
             <Team/>
         </>
