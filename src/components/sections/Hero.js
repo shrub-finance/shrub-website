@@ -83,7 +83,7 @@ const Hero = ({
             </h1>
             <div className="container-xs" style={{marginTop: "70px", fontWeight: "500", color:"#9CA9B3"}}>
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                  Shrub in on a mission to create products that enable true ownership through innovation, beauty and simplicity.
+                  At Shrub, we envision a world where users are in control of their own money.
               </p>
                 {/*<div className="reveal-from-bottom" data-reveal-delay="600">*/}
                 {/*    <ReactGA.OutboundLink eventLabel="main CTA to Shrub Roadmap" to="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435" target="_blank" rel='noopener noreferrer'>*/}
