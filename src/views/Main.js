@@ -3,13 +3,14 @@ import React from 'react';
 import Hero from '../components/sections/Hero';
 import Partnerships from "../components/sections/Partnerships";
 import Team from "../components/sections/Team";
-// import Grants from "../components/sections/Grants";
+import Grants from "../components/sections/Grants";
 import ShrubPaper from "../components/sections/ShrubPaper";
 import PaperGardens from "../components/sections/PaperGardens";
 import ReactGA from "react-ga";
 import {isMobile} from "react-device-detect";
 import ShrubExchange from "../components/sections/ShrubExchange";
 import Tickets from "../components/sections/Tickets";
+import ShrubStory from "../components/sections/ShrubStory";
 
 
 
@@ -22,14 +23,14 @@ const Main = () => {
          {/*</ReactGA.OutboundLink>}*/}
 
             <Hero className="illustration-section-01" />
-            <ShrubExchange/>
-            <ShrubPaper/>
-            <PaperGardens/>
-            <Tickets/>
-            <Partnerships/>
+            {/*<ShrubExchange/>*/}
+            {/*<ShrubPaper/>*/}
+            {/*<PaperGardens/>*/}
+            {/*<Tickets/>*/}
+            {/*<Partnerships/>*/}
             {/*<Grants/>*/}
             {/*<ShrubStory invertMobile imageFill className="illustration-section-02" />*/}
-            <Team/>
+            {/*<Team/>*/}
         </>
     );
 }
