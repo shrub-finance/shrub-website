@@ -1,7 +1,11 @@
 .hero {
 
-.paper {
-	font-size: 90px;
+	.no-select {
+		user-select: none;
+	}
+
+.jumbo {
+	font-size: 80px;
 
 	.split-name {
 		margin-top: 30px;
@@ -132,7 +136,7 @@
 	margin-bottom:40px;
 	width: 84%;
 	height: 90px;
-	margin-left: 105px;
+	//margin-left: 105px;
 
 	@include media( '<=medium' ) {
 
@@ -143,7 +147,7 @@
 			display: none;
 		}
 
-		.search-placeholder {
+		.input-placeholder {
 			font-size: 16px;
 		}
 
@@ -168,14 +172,13 @@
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
 		left: -20px;
+		cursor: pointer;
 	}
 
 	input {
 		font-size: 28px;
-		width: 100%;
 		outline: none;
 		padding: 20px 0 20px 55px;
-		width: 100%;
 		border: none;
 		font-weight: 100;
 		border-top-left-radius: 12px;
@@ -228,8 +231,7 @@
 
 	.search-result-heading {
 		margin-top: 100px;
-		margin-left: 167px;
-		width: 70%;
+
 
 		@include media( '<=medium' ) {
 			margin-left: auto;

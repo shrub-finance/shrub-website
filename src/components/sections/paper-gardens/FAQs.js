@@ -108,7 +108,7 @@ const Partnerships = ({
                                     <ReactGA.OutboundLink eventLabel="Clicked Open Sea collection link" target="_blank"
                                                           rel='noopener noreferrer'
                                                           to="https://opensea.io/collection/shrub-paper-gardens">
-                                        Buy a Seed
+                                        Buy Shrub Seed
                                     </ReactGA.OutboundLink>
                                 </Button>
                             </div>
