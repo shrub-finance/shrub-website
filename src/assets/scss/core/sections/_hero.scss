@@ -1,5 +1,9 @@
 .hero {
 
+	.no-select {
+		user-select: none;
+	}
+
 .jumbo {
 	font-size: 80px;
 
@@ -168,6 +172,7 @@
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
 		left: -20px;
+		cursor: pointer;
 	}
 
 	input {
@@ -226,8 +231,7 @@
 
 	.search-result-heading {
 		margin-top: 100px;
-		margin-left: 167px;
-		width: 70%;
+
 
 		@include media( '<=medium' ) {
 			margin-left: auto;
