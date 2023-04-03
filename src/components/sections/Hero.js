@@ -5,6 +5,7 @@ import Button from "../elements/Button";
 import ReactGA from "react-ga";
 import {isMobile} from "react-device-detect";
 import * as list from "../../assets/json/airdroplist.json";
+import axios from "axios";
 
 const propTypes = {
   ...SectionProps.types
@@ -67,17 +68,29 @@ const Hero = ({
     );
   };
 
-    const [input, updateInput] = React.useState('');
+    const [email, updateEmail] = React.useState('');
 
     const handleChange = (e) => {
-        updateInput(e.target.value.trim());
+        updateEmail(e.target.value.trim());
     };
-    const handleSubmit = async (e) => {
-        if(input.length) {
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const formId = '230897134126053';
 
+        try {
+            const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', null, {
+                params: {
+                    email: email,
+                },
+            });
+            console.log('success');
+        } catch (error) {
+            console.error('Error:', error);
+            console.error('failed to submit');
         }
     };
+
   return (
     <section
       {...props}
@@ -101,7 +114,7 @@ const Hero = ({
               }}>
                   <div className="reveal-from-bottom" data-reveal-delay="600">
                       <form className="search" onSubmit={handleSubmit}  action="..">
-                          <input placeholder="Enter your email" aria-label="input" type="input"
+                          <input name="email" placeholder="Enter your email" aria-label="email" type="email"
                                  autoCapitalize="off" className="input-placeholder" onChange={handleChange}
                           />
                           <Button className="search-button" color="primary" wideMobile
