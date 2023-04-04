@@ -153,17 +153,17 @@
 
 	}
 
-	&::before {
-		content: "";
-		position: absolute;
-		left: 20px;
-		top: 50%;
-		transform: translate(0px, -50%);
-		display: block;
-		width: 27px;
-		height: 27px;
-		background: url(../../../images/misc/search.svg) no-repeat;
-	}
+	//&::before {
+	//	content: "";
+	//	position: absolute;
+	//	left: 20px;
+	//	top: 50%;
+	//	transform: translate(0px, -50%);
+	//	display: block;
+	//	width: 27px;
+	//	height: 27px;
+	//	background: url(../../../images/misc/search.svg) no-repeat;
+	//}
 
 	.search-button {
 		position: relative;
