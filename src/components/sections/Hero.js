@@ -168,7 +168,7 @@ const Hero = ({
 
                             </div>
 
-                            {isMobile && <p style={{paddingTop: "120px", fontWeight: "500", fontSize: "40px", lineHeight:"1.5"}}> Lending <br/>Re<span
+                            {isMobile && <p style={{paddingTop: "120px", fontWeight: "500", fontSize: "40px", lineHeight:"1.5"}}> Lending <br/>re<span
                                 style={{position: "relative"}}>DeFi
                                 <svg style={{position: "absolute", left: "0", bottom: "-8px"}} viewBox="0 0 180 22"
                                      xmlns="http://www.w3.org/2000/Box">
