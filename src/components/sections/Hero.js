@@ -88,11 +88,12 @@ const Hero = ({
             if (isValidEmail(email)) {
                 try {
 
-                    const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', null, {
-                        params: {
-                            email: email,
-                        },
-                    });
+                    // const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', null, {
+                    //     params: {
+                    //         email: email,
+                    //     },
+                    // });
+
                     console.log('success');
                     updateMessage('');
                     updateEmail(email.trim());
@@ -133,7 +134,7 @@ const Hero = ({
                         <div className="container-xs" style={{marginTop: "10%"}}>
                             <div className="reveal-from-bottom" data-reveal-delay="600">
                                 <p className="search-result-heading">{message}</p>
-                                {!toggle && <div>
+                                {!toggle &&
                                     <form className="search" onSubmit={handleSubmit} action="..">
                                         <input name="email" placeholder="Enter your email" aria-label="email"
                                                type="email"
@@ -144,15 +145,16 @@ const Hero = ({
                                                 type="submit" onClick={handleSubmit}>
                                             Join the waitlist
                                         </Button>
-                                    </form>
-                                    {isMobile && <Button className="search-button-mobile no-select" color="primary" wideMobile
+                                    </form>}
+                                    {isMobile && !toggle && <Button className="search-button-mobile no-select" color="primary" wideMobile
                                                          type="submit" onClick={handleSubmit}>
-                                        Join the waitlist!
+                                        Join the waitlist
                                     </Button>}
-                                </div>}
+
                                 {toggle && <div>
-                                    <p>Thanks for signing up 🔥. You are all set.</p>
-                                    <div> Next?
+
+                                  <p>Thanks for signing up 🔥. Next?</p>
+                                    <div>
                                         <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg" className="no-select">
                                             <ReactGA.OutboundLink eventLabel="via lend waitlist"
                                                                   to="https://discord.gg/csusZhYgTg" target="_blank"
@@ -166,7 +168,7 @@ const Hero = ({
 
                             </div>
 
-                            {isMobile && <p style={{paddingTop: "180px", fontWeight: "500", fontSize: "40px", lineHeight:"1.5"}}> Lending <br/>Re<span
+                            {isMobile && <p style={{paddingTop: "120px", fontWeight: "500", fontSize: "40px", lineHeight:"1.5"}}> Lending <br/>Re<span
                                 style={{position: "relative"}}>DeFi
                                 <svg style={{position: "absolute", left: "0", bottom: "-8px"}} viewBox="0 0 180 22"
                                      xmlns="http://www.w3.org/2000/Box">
@@ -180,7 +182,7 @@ const Hero = ({
                               </span>ned
                             </p>}
 
-                            {!isMobile &&  <p style={{paddingTop: "180px", fontWeight: "500", fontSize: "40px"}}> Lending Re<span
+                            {!isMobile &&  <p style={{paddingTop: "180px", fontWeight: "500", fontSize: "40px"}}> Lending re<span
                                 style={{position: "relative"}}>DeFi
                                 <svg style={{position: "absolute", left: "0", bottom: "-8px"}} viewBox="0 0 180 22"
                                      xmlns="http://www.w3.org/2000/Box">
@@ -193,19 +195,19 @@ const Hero = ({
                                 </svg>
                               </span>ned
                             </p>}
-                            {/*<div className="reveal-from-bottom" data-reveal-delay="600">*/}
-                            {/*    <ReactGA.OutboundLink eventLabel="main CTA to Shrub Roadmap" to="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435" target="_blank" rel='noopener noreferrer'>*/}
-                            {/*    <Button tag="a" color="primary" wideMobile href="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435">*/}
-
-                            {/*            Shrub Roadmap*/}
-
-                            {/*    </Button>*/}
-                            {/*    </ReactGA.OutboundLink>*/}
                         </div>
                         {/*waitlist*/}
                         <p className="m-0 mb-32" style={{marginTop: "5%"}}>
                             Coming 2023
                         </p>
+                        {/*<div className="reveal-from-bottom" data-reveal-delay="600">*/}
+                        {/*    <ReactGA.OutboundLink eventLabel="main CTA to Shrub Roadmap" to="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435" target="_blank" rel='noopener noreferrer'>*/}
+                        {/*    <Button tag="a" color="primary" wideMobile href="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435">*/}
+
+                        {/*            Shrub Roadmap*/}
+
+                        {/*    </Button>*/}
+                        {/*    </ReactGA.OutboundLink>*/}
                         {/*            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">*/}
                         {/*              DeFi crypto products for <span style={{position: "relative"}}>everyone*/}
                         {/*              <svg style={{position:"absolute", left:"1%"}} viewBox="0 0 180 22" xmlns="http://www.w3.org/2000/Box">*/}
