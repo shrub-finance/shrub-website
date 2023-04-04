@@ -88,11 +88,11 @@ const Hero = ({
             if (isValidEmail(email)) {
                 try {
 
-                    // const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', null, {
-                    //     params: {
-                    //         email: email,
-                    //     },
-                    // });
+                    const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', null, {
+                        params: {
+                            email: email,
+                        },
+                    });
 
                     console.log('success');
                     updateMessage('');
@@ -153,16 +153,17 @@ const Hero = ({
 
                                 {toggle && <div>
 
-                                  <p>Thanks for signing up 🔥. Next?</p>
-                                    <div>
-                                        <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg" className="no-select">
-                                            <ReactGA.OutboundLink eventLabel="via lend waitlist"
-                                                                  to="https://discord.gg/csusZhYgTg" target="_blank"
-                                                                  rel='noopener noreferrer'>
-                                                Go to Shrub Discord
-                                            </ReactGA.OutboundLink>
-                                        </Button>
-                                    </div>
+                                  {/*<p>Thanks for signing up 🔥. Next?</p>*/}
+                                    <p>Thanks for signing up 🔥.</p>
+                                    {/*<div>*/}
+                                    {/*    <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg" className="no-select">*/}
+                                    {/*        <ReactGA.OutboundLink eventLabel="via lend waitlist"*/}
+                                    {/*                              to="https://discord.gg/csusZhYgTg" target="_blank"*/}
+                                    {/*                              rel='noopener noreferrer'>*/}
+                                    {/*            Go to Shrub Discord*/}
+                                    {/*        </ReactGA.OutboundLink>*/}
+                                    {/*    </Button>*/}
+                                    {/*</div>*/}
                                 </div>}
 
 
