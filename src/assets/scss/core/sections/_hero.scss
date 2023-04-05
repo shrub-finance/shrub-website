@@ -146,6 +146,7 @@
 	input::placeholder {
 		font-weight:100 ;
 		font-size: 24px;
+		color:#000;
 	}
 
 	@include media( '<=medium' ) {
@@ -184,6 +185,12 @@
 		border-bottom-left-radius: 0;
 		left: -21px;
 		cursor: pointer;
+	}
+
+	.search-button2 {
+		background: #000;
+		border: 3px solid #31FFA6;
+		color: #fff;
 	}
 
 	input {
