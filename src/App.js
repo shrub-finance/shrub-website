@@ -56,7 +56,7 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Main} layout={LayoutDefaultSlim} />
-            <AppRoute exact path="/success" component={Thanks} layout={LayoutDefaultSlim} />
+            <AppRoute exact path="/success" component={Thanks} layout={LayoutDefault} />
           <AppRoute exact path="/main" component={Main} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/roadmap" component={Main} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/airdrop" component={Main} layout={LayoutDefaultSlim} />
