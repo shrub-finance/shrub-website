@@ -88,11 +88,7 @@ const Hero = ({
             if (isValidEmail(email)) {
                 try {
 
-                    const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', null, {
-                        params: {
-                            email: email,
-                        },
-                    });
+                    const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', {email});
 
                     console.log('success');
                     updateMessage('');
@@ -100,7 +96,7 @@ const Hero = ({
                     updateToggle(!toggle);
                 } catch (error) {
                     console.error('Error:', error);
-                    updateMessage('🙁Something went wrong. Please try again later.');
+                    updateMessage('🙁 Something went wrong. Please try again.');
                 }
 
             } else {
