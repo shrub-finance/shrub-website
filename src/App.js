@@ -14,6 +14,7 @@ import Chapters from "./components/sections/Chapters";
 import AirDrop from "./components/sections/AirDrop";
 import RoadMap from "./components/sections/RoadMap";
 import About from "./components/sections/About";
+import Thanks from "./components/sections/Thanks";
 
 
 // Initialize Google Analytics
@@ -55,6 +56,7 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Main} layout={LayoutDefaultSlim} />
+            <AppRoute exact path="/success" component={Thanks} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/main" component={Main} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/roadmap" component={Main} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/airdrop" component={Main} layout={LayoutDefaultSlim} />
