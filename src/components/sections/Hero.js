@@ -100,7 +100,7 @@ const Hero = ({
                     updateToggle(!toggle);
                 } catch (error) {
                     console.error('Error:', error);
-                    console.error('failed to submit');
+                    updateMessage('🙁Something went wrong. Please try again later.');
                 }
 
             } else {
