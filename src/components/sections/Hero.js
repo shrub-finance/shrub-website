@@ -148,9 +148,8 @@ const Hero = ({
                                     </Button>}
 
                                 {toggle && <div>
-
-
-                                    <p>Thanks for signing up 🔥.</p>
+                                    <h3>📨 Check your inbox</h3>
+                                    <p>To complete the sign up, please verify your email.</p>
                                     {/*<div>*/}
                                     {/*    <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg" className="no-select">*/}
                                     {/*        <ReactGA.OutboundLink eventLabel="via lend waitlist"*/}
