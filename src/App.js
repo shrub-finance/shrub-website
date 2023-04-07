@@ -10,6 +10,7 @@ import LayoutDefault from './layouts/LayoutDefault';
 // Views 
 import Main from './views/Main';
 import Status from "./components/sections/Status";
+import Rockies from "./components/sections/Rockies";
 
 
 // Initialize Google Analytics
@@ -51,6 +52,7 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Main} layout={LayoutDefaultSlim} />
+            <AppRoute exact path="/rockies" component={Rockies} layout={LayoutDefaultSlim} />
             <AppRoute exact path="/status" component={Status} layout={LayoutDefault} />
             <AppRoute exact path="/main" component={Main} layout={LayoutDefaultSlim} />
           <AppRoute exact path="/roadmap" component={Main} layout={LayoutDefaultSlim} />
