@@ -128,41 +128,31 @@ const Hero = ({
 
                         {/*subtitle*/}
                         <div className="container-xs" style={{marginTop: "10%"}}>
-                            <div className="reveal-from-bottom" data-reveal-delay="600">
-                                <p className="search-result-heading">{message}</p>
-                                {!toggle &&
-                                    <form className="search" onSubmit={handleSubmit} action="..">
-                                        <input name="email" placeholder="Enter your email" aria-label="email"
-                                               type="email"
-                                               autoCapitalize="off" className="input-placeholder"
-                                               onChange={handleChange}
-                                        />
-                                        <Button className="search-button search-button2 no-select" wideMobile
-                                                type="submit" onClick={handleSubmit}>
-                                            Join the waitlist
-                                        </Button>
-                                    </form>}
-                                    {isMobile && !toggle && <Button className="search-button-mobile no-select" color="primary" wideMobile
-                                                         type="submit" onClick={handleSubmit}>
-                                        Join the waitlist
-                                    </Button>}
+                            <p style={{color:"#31FFA6"}}>Waitlist coming soon.</p>
+                            {/*<div className="reveal-from-bottom" data-reveal-delay="600">*/}
+                            {/*    <p className="search-result-heading">{message}</p>*/}
+                            {/*    {!toggle &&*/}
+                            {/*        <form className="search" onSubmit={handleSubmit} action="..">*/}
+                            {/*            <input name="email" placeholder="Enter your email" aria-label="email"*/}
+                            {/*                   type="email"*/}
+                            {/*                   autoCapitalize="off" className="input-placeholder"*/}
+                            {/*                   onChange={handleChange}*/}
+                            {/*            />*/}
+                            {/*            <Button className="search-button search-button2 no-select" wideMobile*/}
+                            {/*                    type="submit" onClick={handleSubmit}>*/}
+                            {/*                Join the waitlist*/}
+                            {/*            </Button>*/}
+                            {/*        </form>}*/}
+                            {/*        {isMobile && !toggle && <Button className="search-button-mobile no-select" color="primary" wideMobile*/}
+                            {/*                             type="submit" onClick={handleSubmit}>*/}
+                            {/*            Join the waitlist*/}
+                            {/*        </Button>}*/}
 
-                                {toggle && <div>
-                                    <h3>📨 Check your inbox</h3>
-                                    <p>To complete the sign up, please verify your email.</p>
-                                    {/*<div>*/}
-                                    {/*    <Button tag="a" color="primary" wideMobile href="https://discord.gg/csusZhYgTg" className="no-select">*/}
-                                    {/*        <ReactGA.OutboundLink eventLabel="via lend waitlist"*/}
-                                    {/*                              to="https://discord.gg/csusZhYgTg" target="_blank"*/}
-                                    {/*                              rel='noopener noreferrer'>*/}
-                                    {/*            Go to Shrub Discord*/}
-                                    {/*        </ReactGA.OutboundLink>*/}
-                                    {/*    </Button>*/}
-                                    {/*</div>*/}
-                                </div>}
-
-
-                            </div>
+                            {/*    {toggle && <div>*/}
+                            {/*        <h3>📨 Check your inbox</h3>*/}
+                            {/*        <p>To complete the sign up, please verify your email.</p>*/}
+                            {/*    </div>}*/}
+                            {/*</div>*/}
 
                             {isMobile && <p style={{paddingTop: "120px", fontWeight: "500", fontSize: "40px", lineHeight:"1.5"}}> Lending <br/>re<span
                                 style={{position: "relative"}}>DeFi
