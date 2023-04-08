@@ -150,7 +150,7 @@ const Hero = ({
 
                                 {toggle && <div>
                                     <h3>📨 Check your inbox</h3>
-                                    <p>To complete the sign up, please verify your email.</p>
+                                    <p>Almost there! Verify you email and complete sign up.</p>
                                 </div>}
                             </div>
 
