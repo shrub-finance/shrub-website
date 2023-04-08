@@ -128,30 +128,30 @@ const Hero = ({
 
                         {/*subtitle*/}
                         <div className="container-xs" style={{marginTop: "10%"}}>
-                            {/*<p style={{color:"#31FFA6"}}>Waitlist coming soon.</p>*/}
-                            <div className="reveal-from-bottom" data-reveal-delay="600">
-                                <p className="search-result-heading">{message}</p>
-                                {!toggle &&
-                                    <form className="search" onSubmit={handleSubmit} action="..">
-                                        <input name="email" placeholder="Enter your email" aria-label="email"
-                                               type="email"
-                                               autoCapitalize="off" className="input-placeholder"
-                                               onChange={handleChange}
-                                        />
-                                        <Button className="search-button search-button2 no-select" wideMobile
-                                                type="submit" onClick={handleSubmit}>
-                                            Join the waitlist
-                                        </Button>
-                                    </form>}
-                                    {isMobile && !toggle && <Button className="search-button-mobile no-select" color="primary" wideMobile
-                                                         type="submit" onClick={handleSubmit}>
-                                        Join the waitlist
-                                    </Button>}
+                            <p style={{color:"#31FFA6"}}>Waitlist coming soon.</p>
+                            {/*<div className="reveal-from-bottom" data-reveal-delay="600">*/}
+                            {/*    <p className="search-result-heading">{message}</p>*/}
+                            {/*    {!toggle &&*/}
+                            {/*        <form className="search" onSubmit={handleSubmit} action="..">*/}
+                            {/*            <input name="email" placeholder="Enter your email" aria-label="email"*/}
+                            {/*                   type="email"*/}
+                            {/*                   autoCapitalize="off" className="input-placeholder"*/}
+                            {/*                   onChange={handleChange}*/}
+                            {/*            />*/}
+                            {/*            <Button className="search-button search-button2 no-select" wideMobile*/}
+                            {/*                    type="submit" onClick={handleSubmit}>*/}
+                            {/*                Join the waitlist*/}
+                            {/*            </Button>*/}
+                            {/*        </form>}*/}
+                            {/*        {isMobile && !toggle && <Button className="search-button-mobile no-select" color="primary" wideMobile*/}
+                            {/*                             type="submit" onClick={handleSubmit}>*/}
+                            {/*            Join the waitlist*/}
+                            {/*        </Button>}*/}
 
-                                {toggle && <div>
-                                    <h3>📨 Check your inbox</h3>
-                                    <p>Almost there! Verify you email and complete sign up.</p>
-                                </div>}
+                                {/*{toggle && <div>*/}
+                                {/*    <h3>📨 Check your inbox</h3>*/}
+                                {/*    <p>Almost there! Verify you email and complete sign up.</p>*/}
+                                {/*</div>}*/}
                             </div>
 
                             {isMobile && <p style={{paddingTop: "120px", fontWeight: "500", fontSize: "40px", lineHeight:"1.5"}}> Lending <br/>re<span
@@ -242,7 +242,8 @@ const Hero = ({
                     {/*        <path fill="#50514F" d="M88.9559 214.79c-2.884 0-5.6833-.356-8.3977-1.069-2.7144-.712-4.9199-1.662-6.6164-2.85l3.3082-7.43c1.5947 1.051 3.4439 1.9 5.5476 2.544 2.1037.645 4.1734.967 6.2092.967 3.8681 0 5.8021-.967 5.8021-2.901 0-1.018-.5599-1.764-1.6796-2.239-1.0857-.509-2.8501-1.035-5.2931-1.578-2.6805-.577-4.9199-1.187-6.7182-1.832-1.7983-.679-3.3421-1.747-4.6314-3.206-1.2894-1.459-1.9341-3.427-1.9341-5.904 0-2.172.5938-4.123 1.7814-5.853 1.1875-1.765 2.9519-3.156 5.2931-4.174 2.3751-1.018 5.2761-1.527 8.7031-1.527 2.3412 0 4.6484.272 6.9218.815 2.2733.509 4.2751 1.272 6.0061 2.29l-3.105 7.482c-3.3931-1.833-6.6844-2.749-9.8738-2.749-2.0019 0-3.4609.306-4.377.916-.9161.577-1.3742 1.341-1.3742 2.291s.5429 1.662 1.6287 2.137c1.0858.475 2.8332.967 5.2422 1.476 2.7144.577 4.9538 1.205 6.7182 1.883 1.7983.645 3.3419 1.697 4.6319 3.156 1.323 1.425 1.984 3.376 1.984 5.853 0 2.137-.593 4.072-1.781 5.802-1.187 1.73-2.9687 3.122-5.3439 4.173-2.3751 1.018-5.2592 1.527-8.6522 1.527Zm54.3291-36.339v35.627h-10.078v-13.895h-13.741v13.895h-10.078v-35.627h10.078v13.385h13.741v-13.385h10.078Zm22.682 26.16h-5.497v9.467h-10.077v-35.627h16.286c3.224 0 6.023.543 8.398 1.629 2.375 1.051 4.208 2.578 5.497 4.58 1.289 1.968 1.934 4.292 1.934 6.973 0 2.579-.611 4.835-1.832 6.769-1.188 1.9-2.901 3.393-5.141 4.479l7.685 11.197h-10.789l-6.464-9.467Zm6.362-12.978c0-1.663-.526-2.952-1.578-3.868-1.052-.916-2.613-1.374-4.682-1.374h-5.599v10.433h5.599c2.069 0 3.63-.441 4.682-1.323 1.052-.916 1.578-2.206 1.578-3.868Zm32.178 23.157c-5.293 0-9.416-1.442-12.368-4.326-2.918-2.884-4.377-6.973-4.377-12.266v-19.747h10.077v19.442c0 5.7 2.257 8.55 6.769 8.55 4.479 0 6.719-2.85 6.719-8.55v-19.442h9.924v19.747c0 5.293-1.476 9.382-4.428 12.266-2.918 2.884-7.023 4.326-12.316 4.326Zm50.953-19.289c2.035.712 3.63 1.832 4.784 3.359 1.153 1.493 1.73 3.308 1.73 5.446 0 3.121-1.255 5.53-3.766 7.227-2.511 1.696-6.141 2.545-10.892 2.545h-19.238v-35.627h18.22c4.547 0 8.008.848 10.383 2.545 2.375 1.662 3.563 3.919 3.563 6.769 0 1.696-.424 3.223-1.273 4.58-.814 1.324-1.985 2.376-3.511 3.156Zm-17.407-9.772v6.871h6.922c3.393 0 5.09-1.154 5.09-3.461 0-2.273-1.697-3.41-5.09-3.41h-6.922Zm8.449 21.071c3.529 0 5.293-1.205 5.293-3.614s-1.764-3.613-5.293-3.613h-8.449v7.227h8.449Z"/>*/}
                     {/*    </svg>*/}
                     {/*</div>*/}
-                </div>
+                {/*</div>*/}
+
             </div>
         </section>
     );
