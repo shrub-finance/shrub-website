@@ -129,7 +129,7 @@ const Hero = ({
                         {/*subtitle*/}
                         <div className="container-xs" style={{marginTop: "10%"}}>
                             <p style={{color:"#31FFA6"}}>Waitlist coming soon.</p>
-                            {/*<div className="reveal-from-bottom" data-reveal-delay="600">*/}
+                            {/*<div>*/}
                             {/*    <p className="search-result-heading">{message}</p>*/}
                             {/*    {!toggle &&*/}
                             {/*        <form className="search" onSubmit={handleSubmit} action="..">*/}
