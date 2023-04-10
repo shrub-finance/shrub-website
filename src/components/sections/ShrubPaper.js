@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Button from "../elements/Button";

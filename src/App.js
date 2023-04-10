@@ -8,12 +8,8 @@ import ReactGA from 'react-ga';
 import LayoutDefaultSlim from './layouts/LayoutDefaultSlim';
 import LayoutDefault from './layouts/LayoutDefault';
 // Views 
-import Home from './views/Home';
 import Main from './views/Main';
-import Chapters from "./components/sections/Chapters";
-import AirDrop from "./components/sections/AirDrop";
-import RoadMap from "./components/sections/RoadMap";
-import About from "./components/sections/About";
+import Status from "./components/sections/Status";
 
 
 // Initialize Google Analytics
@@ -54,12 +50,15 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Main} layout={LayoutDefault} />
-          <AppRoute exact path="/main" component={Home} layout={LayoutDefault} />
-          <AppRoute exact path="/roadmap" component={Home} layout={LayoutDefault} />
-          <AppRoute exact path="/airdrop" component={Home} layout={LayoutDefaultSlim} />
-          <AppRoute exact path="/paper-gardens" component={Chapters} layout={LayoutDefaultSlim} />
-          <AppRoute exact path="/about" component={About} layout={LayoutDefault} />
+          <AppRoute exact path="/" component={Main} layout={LayoutDefaultSlim} />
+            {/*<AppRoute exact path="/rockies" component={Rockies} layout={LayoutDefaultSlim} />*/}
+            <AppRoute exact path="/status" component={Status} layout={LayoutDefault} />
+            <AppRoute exact path="/main" component={Main} layout={LayoutDefaultSlim} />
+          <AppRoute exact path="/roadmap" component={Main} layout={LayoutDefaultSlim} />
+          <AppRoute exact path="/airdrop" component={Main} layout={LayoutDefaultSlim} />
+          <AppRoute exact path="/paper-gardens" component={Main} layout={LayoutDefaultSlim} />
+          <AppRoute exact path="/about" component={Main} layout={LayoutDefaultSlim} />
+            {/*<AppRoute exact path="/about" component={About} layout={LayoutDefault} />*/}
         </Switch>
       )} />
   );

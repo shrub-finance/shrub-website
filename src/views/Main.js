@@ -10,6 +10,7 @@ import ReactGA from "react-ga";
 import {isMobile} from "react-device-detect";
 import ShrubExchange from "../components/sections/ShrubExchange";
 import Tickets from "../components/sections/Tickets";
+import ShrubStory from "../components/sections/ShrubStory";
 
 
 
@@ -22,14 +23,14 @@ const Main = () => {
          {/*</ReactGA.OutboundLink>}*/}
 
             <Hero className="illustration-section-01" />
-            <ShrubExchange/>
-            <ShrubPaper/>
-            <PaperGardens/>
-            <Tickets/>
-            <Partnerships/>
-            <Grants/>
+            {/*<ShrubExchange/>*/}
+            {/*<ShrubPaper/>*/}
+            {/*<PaperGardens/>*/}
+            {/*<Tickets/>*/}
+            {/*<Partnerships/>*/}
+            {/*<Grants/>*/}
             {/*<ShrubStory invertMobile imageFill className="illustration-section-02" />*/}
-            <Team/>
+            {/*<Team/>*/}
         </>
     );
 }
