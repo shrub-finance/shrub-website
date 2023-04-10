@@ -65,10 +65,8 @@ const Tickets = ({
                     <SectionHeader data={sectionHeader} className="center-content" />
                     <div className="container-xs center-content" style={{fontWeight: "500", color:"#9CA9B3"}}>
                         <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                            NFT ticket is an innovative distribution system invented by the Shrub team.</p>
-                        <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                            Trailblazed by Paper Gardens. Coming soon to everyone.
-                        </p>
+                            NFT tickets are an innovative distribution system invented by the Shrub team. They were used to power the Paper Gardens presale. </p>
+
                         {/*<p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">*/}
                         {/*    Want to partner?*/}
                         {/*</p>*/}

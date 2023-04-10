@@ -57,7 +57,7 @@ const PaperGardensIntro = ({
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <Button tag="a" color="primary" className="btn-garden" wideMobile href="https://opensea.io/collection/shrub-paper-gardens">
                 <ReactGA.OutboundLink eventLabel="main CTA to Open Sea" to="https://opensea.io/collection/shrub-paper-gardens" target="_blank" rel='noopener noreferrer'>
-                  Open Sea
+                  View Collection
                 </ReactGA.OutboundLink>
                 </Button>
           </div>

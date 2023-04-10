@@ -71,7 +71,7 @@ const What = ({
               <Button tag="a" color="primary" wideMobile className="btn-garden">
                 <ReactGA.OutboundLink eventLabel="Clicked on read more" to="https://gardens.shrub.finance/" target="_blank"
                                       rel='noopener noreferrer'>
-                  Read more
+                  Read all chapters
                 </ReactGA.OutboundLink>
               </Button>
           </div>

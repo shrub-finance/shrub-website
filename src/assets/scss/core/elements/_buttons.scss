@@ -68,7 +68,7 @@
 }
 
 .button-sm {
-    padding: (($button-form-sm--height - get-line-height(button) - ($button-form--border-width * 2)) / 2) ($button-sm--padding-h - $button-form--border-width);
+	padding: (($button-form-sm--height - get-line-height(button) - ($button-form--border-width * 2)) / 2) ($button-sm--padding-h - $button-form--border-width);
 	height: $button-form-sm--height;
 }
 
