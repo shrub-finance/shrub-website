@@ -10,7 +10,6 @@ import LayoutDefault from './layouts/LayoutDefault';
 // Views 
 import Main from './views/Main';
 import Status from "./components/sections/Status";
-import Rockies from "./components/sections/Rockies";
 
 
 // Initialize Google Analytics
