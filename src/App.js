@@ -7,10 +7,9 @@ import ReactGA from 'react-ga';
 // Layouts
 import LayoutDefaultSlim from './layouts/LayoutDefaultSlim';
 import LayoutDefault from './layouts/LayoutDefault';
-// Views 
+// Views
 import Main from './views/Main';
 import Status from "./components/sections/Status";
-import Rockies from "./components/sections/Rockies";
 
 
 // Initialize Google Analytics
