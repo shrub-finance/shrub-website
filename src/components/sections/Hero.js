@@ -128,30 +128,28 @@ const Hero = ({
 
                         {/*subtitle*/}
                         <div className="container-xs" style={{marginTop: "10%"}}>
-                            <p style={{color:"#31FFA6"}}>Waitlist coming soon.</p>
-                            {/*<div>*/}
-                            {/*    <p className="search-result-heading">{message}</p>*/}
-                            {/*    {!toggle &&*/}
-                            {/*        <form className="search" onSubmit={handleSubmit} action="..">*/}
-                            {/*            <input name="email" placeholder="Enter your email" aria-label="email"*/}
-                            {/*                   type="email"*/}
-                            {/*                   autoCapitalize="off" className="input-placeholder"*/}
-                            {/*                   onChange={handleChange}*/}
-                            {/*            />*/}
-                            {/*            <Button className="search-button search-button2 no-select" wideMobile*/}
-                            {/*                    type="submit" onClick={handleSubmit}>*/}
-                            {/*                Join the waitlist*/}
-                            {/*            </Button>*/}
-                            {/*        </form>}*/}
-                            {/*        {isMobile && !toggle && <Button className="search-button-mobile no-select" color="primary" wideMobile*/}
-                            {/*                             type="submit" onClick={handleSubmit}>*/}
-                            {/*            Join the waitlist*/}
-                            {/*        </Button>}*/}
+                            
+                                {!toggle &&
+                                    <form className="search" onSubmit={handleSubmit} action="..">
+                                        <input name="email" placeholder="Enter your email" aria-label="email"
+                                               type="email"
+                                               autoCapitalize="off" className="input-placeholder"
+                                               onChange={handleChange}
+                                        />
+                                        <Button className="search-button search-button2 no-select" wideMobile
+                                                type="submit" onClick={handleSubmit}>
+                                            Join the waitlist
+                                        </Button>
+                                    </form>}
+                                    {isMobile && !toggle && <Button className="search-button-mobile no-select" color="primary" wideMobile
+                                                         type="submit" onClick={handleSubmit}>
+                                        Join the waitlist
+                                    </Button>}
 
-                                {/*{toggle && <div>*/}
-                                {/*    <h3>📨 Check your inbox</h3>*/}
-                                {/*    <p>Almost there! Verify you email and complete sign up.</p>*/}
-                                {/*</div>}*/}
+                                {toggle && <div>
+                                    <h3>📨 Check your inbox</h3>
+                                    <p>Almost there! Verify you email and complete sign up.</p>
+                                </div>}
                             </div>
 
                             {isMobile && <p style={{paddingTop: "120px", fontWeight: "500", fontSize: "40px", lineHeight:"1.5"}}> Lending <br/>re<span
