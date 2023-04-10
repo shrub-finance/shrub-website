@@ -4,7 +4,6 @@ import {SectionProps} from '../../utils/SectionProps';
 import Button from "../elements/Button";
 import ReactGA from "react-ga";
 import {isMobile, isTablet} from "react-device-detect";
-import * as list from "../../assets/json/airdroplist.json";
 import axios from "axios";
 
 const propTypes = {
@@ -128,7 +127,7 @@ const Hero = ({
 
                         {/*subtitle*/}
                         <div className="container-xs" style={{marginTop: "10%"}}>
-                            
+
                                 {!toggle &&
                                     <form className="search" onSubmit={handleSubmit} action="..">
                                         <input name="email" placeholder="Enter your email" aria-label="email"
