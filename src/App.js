@@ -50,7 +50,7 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Main} layout={LayoutDefaultSlim} />
+          <AppRoute exact path="/" component={Main} layout={LayoutDefault} />
             {/*<AppRoute exact path="/rockies" component={Rockies} layout={LayoutDefaultSlim} />*/}
             <AppRoute exact path="/status" component={Status} layout={LayoutDefault} />
             <AppRoute exact path="/main" component={Main} layout={LayoutDefaultSlim} />

@@ -116,7 +116,7 @@ const Hero = ({
         >
             <div className="container">
                 <div className={innerClasses}>
-                    <div className="hero-content" style={{marginTop: "20%"}}>
+                    <div className="hero-content" style={{marginTop: "10%"}}>
                         {/*opening*/}
                         {!isMobile && <h1 className="mt-0 mb-16 jumbo feather">
                             Your Crypto. Your Terms.
