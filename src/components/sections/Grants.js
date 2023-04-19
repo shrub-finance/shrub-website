@@ -14,7 +14,7 @@ const defaultProps = {
   ...SectionTilesProps.defaults
 }
 
-const Partnerships = ({
+const Grants = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -74,7 +74,8 @@ const Partnerships = ({
   );
 }
 
-Partnerships.propTypes = propTypes;
-Partnerships.defaultProps = defaultProps;
 
-export default Partnerships;
+Grants.propTypes = propTypes;
+Grants.defaultProps = defaultProps;
+
+export default Grants;

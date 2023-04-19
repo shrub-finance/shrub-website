@@ -8,9 +8,10 @@ import ShrubExchange from "../components/sections/ShrubExchange";
 import ShrubPaper from "../components/sections/ShrubPaper";
 import PaperGardens from "../components/sections/PaperGardens";
 import Tickets from "../components/sections/Tickets";
-import Partnerships from "../components/sections/Grants";
+import Partnerships from "../components/sections/Partnerships";
 import Team from "../components/sections/Team";
 import Main from "../components/sections/Main";
+import Grants from "../components/sections/Grants";
 
 
 const Home = () => {
@@ -22,13 +23,14 @@ const Home = () => {
         <ShrubPaper/>
         <PaperGardens/>
         <Tickets/>
-        <Partnerships/>
+
         {/*<ShrubExchange/>*/}
         {/*<ShrubPaper/>*/}
         {/*<PaperGardens/>*/}
         {/*<Tickets/>*/}
         {/*<Partnerships/>*/}
-        {/*<Grants/>*/}
+        <Grants/>
+        <Partnerships/>
         {/*<ShrubStory invertMobile imageFill className="illustration-section-02" />*/}
         <Team/>
         {/*<Team/>*/}
