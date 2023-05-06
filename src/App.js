@@ -53,6 +53,7 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Main} layout={LayoutDefault} />
+            <AppRoute exact path="/waitlist" component={Main} layout={LayoutDefault} />
             <AppRoute exact path="/main" component={Home} layout={LayoutDefaultFull} />
             {/*<AppRoute exact path="/rockies" component={Rockies} layout={LayoutDefaultSlim} />*/}
             <AppRoute exact path="/status" component={Status} layout={LayoutDefault} />
