@@ -149,7 +149,7 @@ const Hero = ({
 
                             {toggle && <div>
                                 <h3>📨 Check your inbox</h3>
-                                <p>Almost there! Verify you email and complete sign up.</p>
+                                <p>Almost there! Verify you email to complete sign up.</p>
                             </div>}
                         </div>
 
@@ -174,7 +174,7 @@ const Hero = ({
                         </p>}
 
                         {!isMobile &&
-                            <p style={{paddingTop: "180px", fontWeight: "500", fontSize: "40px"}}> DeFi Lending <span
+                            <p style={{paddingTop: "150px", fontWeight: "500", fontSize: "40px"}}> DeFi Lending <span
                                 style={{position: "relative", lineHeight:"2"}}>Simplified
                                 <svg style={{position: "absolute", left: "0", bottom: "-27px"}} viewBox="0 0 180 22"
                                      xmlns="http://www.w3.org/2000/Box">
@@ -192,6 +192,18 @@ const Hero = ({
                     <p className="m-0 mb-32 " style={{marginTop: "6%"}}>
                         Coming 2023
                     </p>
+
+                {/*========================================================================  */}
+
+
+
+
+
+
+
+
+
+
                     {/*<div className="reveal-from-bottom" data-reveal-delay="600">*/}
                     {/*    <ReactGA.OutboundLink eventLabel="main CTA to Shrub Roadmap" to="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435" target="_blank" rel='noopener noreferrer'>*/}
                     {/*    <Button tag="a" color="primary" wideMobile href="https://medium.com/@shrubfinance/shrub-roadmap-2022-b947b5ce1435">*/}
