@@ -128,7 +128,7 @@ const Hero = ({
 
                         {/*subtitle*/}
                         <div className="container-xs" style={{marginTop: "10%"}}>
-
+                            <p className="search-result-heading">{message}</p>
                             {!toggle &&
                                 <form className="search" onSubmit={handleSubmit} action="..">
                                     <input name="email" placeholder="Enter your email" aria-label="email"
