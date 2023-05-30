@@ -88,7 +88,7 @@ const Hero = ({
             if (isValidEmail(email)) {
                 try {
 
-                    const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', {email});
+                    const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', {email}, { mode: 'cors' });
 
                     console.log('success');
                     updateMessage('');
