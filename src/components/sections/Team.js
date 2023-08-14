@@ -91,24 +91,6 @@ const Team = ({
               </div>
             </div>
 
-              {/*designers*/}
-              <div className={tilesClasses}>
-                  <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
-                          <Image width="100px" src={PrincessBud} alt="Anastasi"/>
-                          <div className="team-member">
-                              <span className="team-info">Princess Bud Anastasi</span>
-                              <p className="team-role">Artist</p>
-                          </div>
-                  </div>
-
-                  <div className="tiles-item team team-nohover reveal-from-left center-content" data-reveal-delay="200">
-                          <Image width="100px" src={CloudBud} alt="Arkilabot"/>
-                          <div className="team-member" >
-                              <span className="team-info">Cloud Bud Arkilabot</span>
-                              <p className="team-role">Artist</p>
-                          </div>
-                  </div>
-              </div>
               {/*community leads*/}
               <div className={tilesClasses}>
                   <div className="tiles-item team reveal-from-right center-content" data-reveal-delay="200" >
@@ -136,17 +118,30 @@ const Team = ({
                           <Image width="100px" src={AngelBud} alt="Thomas"/>
                           <div className="team-member">
                               <span className="team-info">Angel Bud Thomas</span>
-                              <p className="team-role">Project Manager</p>
+                              <p className="team-role">Moderator</p>
                           </div>
                   </div>
                   <div className="tiles-item team team-nohover reveal-from-right center-content" data-reveal-delay="200" >
                           <Image width="100px" src={SnapbackBud} alt="Sunita"/>
                           <div className="team-member">
                               <span className="team-info">Snapback Bud Sunita</span>
-                              <p className="team-role">Program Manager</p>
+                              <p className="team-role">Community Manager</p>
                           </div>
                   </div>
               </div>
+
+
+            {/*designers*/}
+            <div className={tilesClasses}>
+
+              <div className="tiles-item team team-nohover reveal-from-left center-content" data-reveal-delay="200">
+                <Image width="100px" src={CloudBud} alt="Arkilabot"/>
+                <div className="team-member" >
+                  <span className="team-info">Cloud Bud Arkilabot</span>
+                  <p className="team-role">Artist</p>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
