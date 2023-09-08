@@ -190,7 +190,7 @@ const Hero = ({
                     </div>
                     {/*waitlist*/}
                     <p className="m-0 mb-32 " style={{marginTop: "6%"}}>
-                        Coming 2023
+                        Coming 2024
                     </p>
 
                 </div>
