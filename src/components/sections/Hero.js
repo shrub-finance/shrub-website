@@ -82,32 +82,37 @@ const Hero = ({
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const formId = '230897134126053';
 
         if (email.length) {
             if (isValidEmail(email)) {
                 try {
+                    const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', { email });
 
-                    const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', {email}, { mode: 'cors' });
+                    // Check for specific server response about email verification
+                    if (response.status === 200 && response.data.message === 'Email already verified') {
+                        updateMessage('🔔 Email is already verified!');
+                        return; // Exit the function early to prevent further execution
+                    }
 
-                    console.log('success');
                     updateMessage('');
                     updateEmail(email.trim());
                     updateToggle(!toggle);
                 } catch (error) {
-                    console.error('Error:', error);
-                    updateMessage('🙁 Something went wrong. Please try again.');
-                }
 
+                    if (error.response && error.response.data.message) {
+                        updateMessage(`🙁 ${error.response.data.message}`);
+                    } else {
+                    updateMessage('🙁 Something went wrong. Please try again.');
+                    }
+                }
             } else {
                 updateMessage('❗Please enter a valid email address');
             }
-
         } else {
             updateMessage('👇Please enter an email below!');
         }
-
     };
+
 
     return (
         <section
