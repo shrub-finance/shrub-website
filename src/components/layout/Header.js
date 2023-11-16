@@ -120,17 +120,6 @@ const Header = ({
                  {/*     Paper Gardens*/}
                  {/*   </ReactGA.OutboundLink>*/}
                  {/* </li>*/}
-                  
-                  {/*<li className="garden-text">*/}
-                  {/*  <ReactGA.OutboundLink eventLabel="Header Shrub Exchange Link" to="https://exchange.shrub.finance" target="_blank" rel='noopener noreferrer'>*/}
-                  {/*    Buy Matic*/}
-                  {/*  </ReactGA.OutboundLink>*/}
-                  {/*</li>*/}
-                  {/*<li>*/}
-                  {/*  <ReactGA.OutboundLink eventLabel="Header Roadmap Link" to="/roadmap">*/}
-                  {/*    Roadmap <span className="new">New</span>*/}
-                  {/*  </ReactGA.OutboundLink>*/}
-                  {/*</li>*/}
 
                   {/*<li>*/}
                   {/*  <ReactGA.OutboundLink eventLabel="Header Blog Link" to="https://medium.com/@shrubfinance" target="_blank" rel='noopener noreferrer'>*/}
@@ -168,9 +157,6 @@ const Header = ({
                         </defs>
                       </svg>
                     </ReactGA.OutboundLink>
-                    {/*<ReactGA.OutboundLink eventLabel="Header Shrub discord link" to="https://discord.gg/csusZhYgTg" target="_blank" rel='noopener noreferrer' className="button button-primary button-wide-mobile button-md">*/}
-                    {/*  Join Shrub Discord*/}
-                    {/*</ReactGA.OutboundLink>*/}
                   </li> }
                 </ul>}
               </div>

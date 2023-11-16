@@ -163,8 +163,8 @@ const Hero = ({
                             fontWeight: "500",
                             fontSize: "30px",
                             lineHeight: "1.5"
-                        }}> DeFi Lending <br/><span
-                            style={{position: "relative", lineHeight:"1.8"}}>Simplified
+                        }}> Making Lending <br/><span
+                            style={{position: "relative", lineHeight:"1.8"}}>Accessible
                                <svg style={{position: "absolute", left: "0", bottom: "-27px", lineHeight:"2"}} viewBox="0 0 180 22"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -179,8 +179,8 @@ const Hero = ({
                         </p>}
 
                         {!isMobile &&
-                            <p style={{paddingTop: "150px", fontWeight: "500", fontSize: "40px"}}> DeFi Lending <span
-                                style={{position: "relative", lineHeight:"2"}}>Simplified
+                            <p style={{paddingTop: "150px", fontWeight: "500", fontSize: "40px"}}> Making Lending <span
+                                style={{position: "relative", lineHeight:"2"}}>Accessible
                                 <svg style={{position: "absolute", left: "0", bottom: "-27px"}} viewBox="0 0 180 22"
                                      xmlns="http://www.w3.org/2000/Box">
                                   <path fillRule="evenodd" clipRule="evenodd"

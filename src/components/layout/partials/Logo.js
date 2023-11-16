@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Image from '../../elements/Image';
 import ShrubLogo from '../../../assets/images/bud/logo-default.svg';
-// import ShrubLogo from '../../../assets/images/bud/logo.png';
 
 
 
