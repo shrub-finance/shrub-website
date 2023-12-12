@@ -25,8 +25,7 @@ const Logo = ({
           <Image
             src={ShrubLogo}
             alt="Shrub"
-            width={30}
-            height={30} className={'logo'}/>
+            className={'logo'}/>
         </Link>
     </div>
   );
