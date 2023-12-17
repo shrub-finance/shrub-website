@@ -91,16 +91,16 @@ const Header = ({
           <Logo />
           {!hideNav &&
           <>
-         <button
-                ref={hamburger}
-                className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
-            >
-              <span className="screen-reader">Menu</span>
-              <span className="hamburger">
-                  <span className="hamburger-inner"></span>
-                </span>
-            </button>
+         {/*<button*/}
+         {/*       ref={hamburger}*/}
+         {/*       className="header-nav-toggle"*/}
+         {/*       onClick={isActive ? closeMenu : openMenu}*/}
+         {/*   >*/}
+         {/*     <span className="screen-reader">Menu</span>*/}
+         {/*     <span className="hamburger">*/}
+         {/*         <span className="hamburger-inner"></span>*/}
+         {/*       </span>*/}
+         {/*   </button>*/}
             <nav
                 ref={nav}
                 className={
@@ -114,24 +114,6 @@ const Header = ({
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                   )}>
-
-                 {/*<li className="garden-text">*/}
-                 {/*   <ReactGA.OutboundLink eventLabel="Header Paper Gardens App Link" to="https://gardens.shrub.finance" target="_blank" rel='noopener noreferrer'>*/}
-                 {/*     Paper Gardens*/}
-                 {/*   </ReactGA.OutboundLink>*/}
-                 {/* </li>*/}
-
-                  {/*<li>*/}
-                  {/*  <ReactGA.OutboundLink eventLabel="Header Blog Link" to="https://medium.com/@shrubfinance" target="_blank" rel='noopener noreferrer'>*/}
-                  {/*    Blog*/}
-                  {/*  </ReactGA.OutboundLink>*/}
-                  {/*</li>*/}
-
-                  {/*<li>*/}
-                  {/*  <ReactGA.OutboundLink eventLabel="Header Docs Link" to="https://docs.shrub.finance" target="_blank" rel='noopener noreferrer'>*/}
-                  {/*    Docs*/}
-                  {/*  </ReactGA.OutboundLink>*/}
-                  {/*</li>*/}
                 </ul>
                 {!hideSignin &&
                 <ul className="list-reset header-nav-right">
@@ -144,7 +126,7 @@ const Header = ({
                         </svg>
                     </ReactGA.OutboundLink>
                   </li>
-                  {!isMobile  && <li>
+                 <li>
                     <ReactGA.OutboundLink eventLabel="Footer Discord Link" to="https://discord.gg/csusZhYgTg" target="_blank" rel='noopener noreferrer'>
                       <svg width="30" height="30" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0)">
@@ -157,7 +139,7 @@ const Header = ({
                         </defs>
                       </svg>
                     </ReactGA.OutboundLink>
-                  </li> }
+                  </li>
                 </ul>}
               </div>
             </nav>
