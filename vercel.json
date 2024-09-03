@@ -1,4 +1,7 @@
-{
+{"build": {
+  "env": {
+    "NODE_OPTIONS": "--openssl-legacy-provider"
+  }},
   "redirects": [
     {
       "source": "/paper-gardens",
