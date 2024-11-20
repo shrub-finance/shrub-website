@@ -119,7 +119,7 @@ const Header = ({
                 {!hideSignin &&
                 <ul className="list-reset header-nav-right">
 
-                  <li>
+                  {!isMobile && <li>
 
                       <Button tag="a" color="primary" wideMobile>
                         <ReactGA.OutboundLink eventLabel="lend" to="https://lend.shrub.finance/"
@@ -128,7 +128,7 @@ const Header = ({
                         </ReactGA.OutboundLink>
                       </Button>
 
-                  </li>
+                  </li>}
 
                   <li>
                     <ReactGA.OutboundLink eventLabel="Header Twitter Link" to="https://twitter.com/shrubfinance"
