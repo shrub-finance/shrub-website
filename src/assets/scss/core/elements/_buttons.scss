@@ -7,7 +7,8 @@
     letter-spacing: inherit;
     white-space: nowrap;
 	transition: background .15s ease;
-	background: linear-gradient(128.17deg, #64a56a -14.78%, #121227 110.05%);
+	//background: linear-gradient(128.17deg, #64a56a -14.78%, #121227 110.05%);
+	background: linear-gradient(128.17deg, #31FFA6 -14.78%, #121227 110.05%);
 	 padding: 0.25rem 0.75rem;
 	 text-decoration: none;
 	 color: #fff;
@@ -17,7 +18,7 @@
 	 margin-left: 1rem;
 	 border: 1px solid transparent;
 	 box-shadow: rgba(0, 0, 0, .1) 0 2px 4px;
-	font-size: 16px;
+	font-size: 20px;
 
 &:active {
         outline: 0;
