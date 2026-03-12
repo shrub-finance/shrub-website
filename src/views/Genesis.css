@@ -22,7 +22,7 @@
   --surface2:    #111a15;
   --text:        #EFF0F6;
   --text-dim:    rgba(239,240,246,0.55);
-  --text-faint:  rgba(239,240,246,0.18);
+  --text-faint:  rgba(239,240,246,0.30);
   --mono:        'IBM Plex Mono', monospace;
   --display:     'DM Serif Display', serif;
   --sans:        'Syne', sans-serif;
@@ -151,7 +151,7 @@ body.genesis-active::after {
 .genesis-nav-tag {
   font-family: var(--mono);
   font-size: 10px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.18em;
   color: var(--text-faint);
   text-transform: uppercase;
 }
@@ -189,9 +189,10 @@ body.genesis-active::after {
 .genesis-hero-eyebrow {
   font-family: var(--mono);
   font-size: 10px;
-  letter-spacing: 0.4em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   color: var(--mint);
-  opacity: 0.65;
+  opacity: 0.75;
   text-transform: uppercase;
   margin-bottom: 52px;
   display: flex;
@@ -232,7 +233,7 @@ body.genesis-active::after {
   font-family: var(--sans);
   font-weight: 600;
   font-size: clamp(11px, 1.5vw, 15px);
-  letter-spacing: 0.55em;
+  letter-spacing: 0.25em;
   color: var(--text-faint);
   text-transform: uppercase;
   animation: genesis-fadeUp 1s ease 0.7s both;
@@ -265,10 +266,10 @@ body.genesis-active::after {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.28em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink);
   background: var(--mint);
@@ -336,7 +337,7 @@ body.genesis-active::after {
 .genesis-scroll-label {
   font-family: var(--mono);
   font-size: 9px;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.2em;
   color: var(--text-faint);
   text-transform: uppercase;
 }
@@ -351,9 +352,10 @@ body.genesis-active::after {
 .genesis-s-label {
   font-family: var(--mono);
   font-size: 9px;
-  letter-spacing: 0.5em;
+  font-weight: 500;
+  letter-spacing: 0.22em;
   color: var(--mint);
-  opacity: 0.6;
+  opacity: 0.75;
   text-transform: uppercase;
   margin-bottom: 36px;
   display: flex;
@@ -464,13 +466,13 @@ body.genesis-active::after {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.22em;
-  color: rgba(56,246,201,0.45);
+  color: rgba(56,246,201,0.55);
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .genesis-tier:nth-child(4) .genesis-tier-ltv {
-  color: rgba(202,141,251,0.45);
+  color: rgba(202,141,251,0.55);
 }
 
 .genesis-tier-name {
@@ -494,6 +496,7 @@ body.genesis-active::after {
   margin-top: 18px;
   font-family: var(--mono);
   font-size: 9px;
+  font-weight: 500;
   letter-spacing: 0.18em;
   padding: 4px 10px;
   border: 1px solid rgba(56,246,201,0.12);
@@ -537,9 +540,10 @@ body.genesis-active::after {
 .genesis-creed-label {
   font-family: var(--mono);
   font-size: 10px;
-  letter-spacing: 0.5em;
+  font-weight: 500;
+  letter-spacing: 0.22em;
   color: var(--mint);
-  opacity: 0.45;
+  opacity: 0.65;
   text-transform: uppercase;
   margin-bottom: 72px;
 }
@@ -668,7 +672,7 @@ body.genesis-active::after {
 .genesis-arch-role {
   font-size: 13px;
   color: var(--text-faint);
-  font-style: italic;
+  font-style: normal;
 }
 
 .genesis-arch-icon {
@@ -749,7 +753,8 @@ body.genesis-active::after {
   display: inline-block;
   font-family: var(--mono);
   font-size: 10px;
-  letter-spacing: 0.35em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   color: var(--text-faint);
   border: 1px solid rgba(56,246,201,0.1);
   padding: 12px 28px;
@@ -798,7 +803,7 @@ body.genesis-active::after {
 .genesis-f-meta {
   font-family: var(--mono);
   font-size: 9px;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.18em;
   color: var(--text-faint);
   text-transform: uppercase;
   line-height: 2.2;

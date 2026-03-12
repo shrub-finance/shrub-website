@@ -8,6 +8,7 @@ import ReactGA from 'react-ga';
 import LayoutDefaultSlim from './layouts/LayoutDefaultSlim';
 import LayoutDefault from './layouts/LayoutDefault';
 // Views
+import Genesis from './views/Genesis';
 import Main from './views/Main';
 import Status from "./components/sections/Status";
 import Home from "./views/Home";
@@ -52,7 +53,7 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Main} layout={LayoutDefault} />
+          <AppRoute exact path="/" component={Genesis} layout={LayoutDefaultSlim} />
             <AppRoute exact path="/waitlist" component={Main} layout={LayoutDefault} />
             <AppRoute exact path="/main" component={Home} layout={LayoutDefaultFull} />
             {/*<AppRoute exact path="/rockies" component={Rockies} layout={LayoutDefaultSlim} />*/}
