@@ -288,6 +288,13 @@ const Genesis = () => {
           <p className="genesis-hero-label">Base Sepolia &nbsp;&middot;&nbsp; Five Seats &nbsp;&middot;&nbsp; Genesis Week</p>
           <h1 className="genesis-hero-title">SHRUB<br /><span>LEND</span></h1>
           <p className="genesis-hero-tag">Genesis Protocol</p>
+          <div className="genesis-hero-divider">
+            <div className="genesis-hero-divider-line"></div>
+            <div className="genesis-hero-divider-dot"></div>
+            <div className="genesis-hero-divider-dot" style={{ opacity: 0.4 }}></div>
+            <div className="genesis-hero-divider-dot" style={{ opacity: 0.15 }}></div>
+            <div className="genesis-hero-divider-line" style={{ transform: 'scaleX(-1)' }}></div>
+          </div>
           <p className="genesis-hero-desc">
             Borrow USDC against your ETH at a <em>fixed rate</em>.<br />
             <strong>No variable surprises. No selling your assets.</strong><br />
@@ -309,7 +316,9 @@ const Genesis = () => {
         <div className="genesis-page-section">
           <div className="genesis-sec-label genesis-reveal">The Engine</div>
           <h2 className="genesis-sec-title genesis-reveal">
-            Four tiers. Four fixed rates. <em>Your rate locks at entry. It never moves.</em>
+            Four tiers. Four fixed rates.<br />
+            <em>Your rate locks at entry.</em><br />
+            <strong>It never changes.</strong>
           </h2>
           <div className="genesis-tiers genesis-reveal">
             <div className="genesis-tier">
@@ -354,7 +363,7 @@ const Genesis = () => {
             <div className="genesis-creed-tag">The Creed of the Last Builders</div>
             <div className="genesis-creed-lines">
               <div className="genesis-creed-line" data-creed=""><strong>Activate</strong> the engine.</div>
-              <div className="genesis-creed-line" data-creed="">Forge the system that <em>outlasts its builders.</em></div>
+              <div className="genesis-creed-line" data-creed="">Forge what <em>outlasts its builders.</em></div>
               <div className="genesis-creed-line" data-creed=""><strong>Focus</strong> our armor.</div>
               <div className="genesis-creed-line" data-creed=""><em>Completion</em> is the signal.</div>
             </div>
@@ -363,7 +372,7 @@ const Genesis = () => {
 
         {/* ARCHETYPES */}
         <div className="genesis-page-section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
-          <div className="genesis-sec-label genesis-reveal">The Genesis Cell</div>
+          <div className="genesis-sec-label genesis-reveal" style={{ marginBottom: '20px' }}>The Genesis Cell</div>
           <h2 className="genesis-sec-title genesis-reveal" style={{ marginBottom: '40px' }}>Five Were Chosen</h2>
           <div className="genesis-arch-list">
             <div className="genesis-arch-row genesis-reveal">
