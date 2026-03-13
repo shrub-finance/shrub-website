@@ -46,7 +46,6 @@ const Genesis = () => {
     document.addEventListener('mousemove', onMouseMove);
     rafId = requestAnimationFrame(ring);
 
-    // Event delegation for hover scaling
     const onOver = (e) => {
       if (e.target.closest('a, button')) onEnter();
     };
@@ -200,11 +199,11 @@ const Genesis = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('on'), i * 90);
+          setTimeout(() => entry.target.classList.add('on'), i * 80);
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
@@ -220,8 +219,8 @@ const Genesis = () => {
 
     const animCreed = (lines, i) => {
       if (i >= lines.length) return;
-      lines[i].classList.add('active');
-      const tid = setTimeout(() => animCreed(lines, i + 1), 680);
+      lines[i].classList.add('on');
+      const tid = setTimeout(() => animCreed(lines, i + 1), 650);
       timeouts.push(tid);
     };
 
@@ -284,109 +283,88 @@ const Genesis = () => {
       <canvas id="genesis-flow" ref={canvasRef} />
 
       <div className="genesis-wrapper">
-        {/* NAV */}
-        <nav className="genesis-nav">
-          <div className="genesis-nav-logo">
-            <div className="genesis-nav-dot"></div>
-            Shrub Lend
-          </div>
-          <div className="genesis-nav-tag">Genesis Protocol &middot; Base Sepolia</div>
-        </nav>
-
         {/* HERO */}
         <section className="genesis-hero">
-          <p className="genesis-hero-eyebrow">Base Sepolia &middot; Five Seats &middot; Genesis Week</p>
+          <p className="genesis-hero-label">Base Sepolia &nbsp;&middot;&nbsp; Five Seats &nbsp;&middot;&nbsp; Genesis Week</p>
           <h1 className="genesis-hero-title">SHRUB<br /><span>LEND</span></h1>
-          <p className="genesis-hero-sub">Genesis Protocol</p>
-          <p className="genesis-hero-lore">
+          <p className="genesis-hero-tag">Genesis Protocol</p>
+          <p className="genesis-hero-desc">
             Borrow USDC against your ETH at a <em>fixed rate</em>.<br />
             <strong>No variable surprises. No selling your assets.</strong><br />
-            Your rate locks at entry. It never moves.
+            Built on Aave. Secured by collateral. Locked by choice.
           </p>
           <a className="genesis-enter-btn" href="#" onClick={handleEnterClick}>
-            <span>Enter The Protocol</span>
-            <span className="genesis-btn-arrow">&rarr;</span>
+            <span>Enter the Protocol</span>
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+              <path d="M9 1l4 4-4 4M1 5h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </a>
-          <div className="genesis-scroll-hint">
-            <div className="genesis-scroll-line"></div>
-            <div className="genesis-scroll-label">scroll</div>
+          <div className="genesis-scroll-cue">
+            <div className="genesis-scroll-cue-line"></div>
+            <div className="genesis-scroll-cue-txt">scroll</div>
           </div>
         </section>
 
         {/* PROTOCOL TIERS */}
-        <div className="genesis-section">
-          <div className="genesis-s-label genesis-reveal">The Engine</div>
-          <h2 className="genesis-s-title genesis-reveal">
-            Four tiers. Four fixed rates.<br />
-            <em>Your rate never changes.</em><br />
-            <strong>Not with the market. Not ever.</strong>
+        <div className="genesis-page-section">
+          <div className="genesis-sec-label genesis-reveal">The Engine</div>
+          <h2 className="genesis-sec-title genesis-reveal">
+            Four tiers. Four fixed rates. <em>Your rate locks at entry. It never moves.</em>
           </h2>
           <div className="genesis-tiers genesis-reveal">
             <div className="genesis-tier">
-              <div className="genesis-tier-fill"></div>
               <div className="genesis-tier-bar"></div>
               <div className="genesis-tier-rate">0%</div>
               <div className="genesis-tier-ltv">20% LTV</div>
               <div className="genesis-tier-name">Ultra Safe</div>
-              <div className="genesis-tier-desc">5&times; collateral. ETH must fall 75% before any liquidation risk. Maximum peace of mind.</div>
-              <div className="genesis-tier-safe">ETH &minus;75% to liquidate</div>
+              <div className="genesis-tier-desc">5&times; collateral. ETH must fall 75% before any liquidation risk.</div>
+              <div className="genesis-tier-safe">&minus;75% to liquidate</div>
             </div>
             <div className="genesis-tier">
-              <div className="genesis-tier-fill"></div>
               <div className="genesis-tier-bar"></div>
               <div className="genesis-tier-rate">1%</div>
               <div className="genesis-tier-ltv">25% LTV</div>
               <div className="genesis-tier-name">Conservative</div>
-              <div className="genesis-tier-desc">4&times; collateral. Near-zero cost of capital for long-term holders who think in years.</div>
-              <div className="genesis-tier-safe">ETH &minus;69% to liquidate</div>
+              <div className="genesis-tier-desc">4&times; collateral. Near-zero cost of capital for long-term holders.</div>
+              <div className="genesis-tier-safe">&minus;69% to liquidate</div>
             </div>
             <div className="genesis-tier">
-              <div className="genesis-tier-fill"></div>
               <div className="genesis-tier-bar"></div>
               <div className="genesis-tier-rate">5%</div>
               <div className="genesis-tier-ltv">33.3% LTV</div>
               <div className="genesis-tier-name">Balanced</div>
-              <div className="genesis-tier-desc">3&times; collateral. Enough liquidity to act on opportunity while staying well protected.</div>
-              <div className="genesis-tier-safe">ETH &minus;59% to liquidate</div>
+              <div className="genesis-tier-desc">3&times; collateral. Enough liquidity to act on opportunity while protected.</div>
+              <div className="genesis-tier-safe">&minus;59% to liquidate</div>
             </div>
             <div className="genesis-tier">
-              <div className="genesis-tier-fill"></div>
               <div className="genesis-tier-bar"></div>
               <div className="genesis-tier-rate">8%</div>
               <div className="genesis-tier-ltv">50% LTV</div>
               <div className="genesis-tier-name">Maximum Borrow</div>
-              <div className="genesis-tier-desc">2&times; collateral. Maximum liquidity for disciplined operators who manage risk actively.</div>
-              <div className="genesis-tier-safe" style={{ borderColor: 'rgba(202,141,251,0.12)' }}>ETH &minus;39% to liquidate</div>
+              <div className="genesis-tier-desc">2&times; collateral. Maximum liquidity for disciplined operators.</div>
+              <div className="genesis-tier-safe" style={{ borderColor: 'rgba(202,141,251,0.1)' }}>&minus;39% to liquidate</div>
             </div>
           </div>
-          <p className="genesis-tier-footnote genesis-reveal">
-            1% origination fee &middot; no early repayment penalty &middot; collateral stays yours &middot; built on Aave V3
-          </p>
+          <p className="genesis-tiers-note genesis-reveal">1% origination fee &nbsp;&middot;&nbsp; no early repayment penalty &nbsp;&middot;&nbsp; built on Aave V3</p>
         </div>
 
         {/* CREED */}
         <section className="genesis-creed-wrap" ref={creedWrapRef}>
-          <div className="genesis-creed-glow"></div>
           <div className="genesis-creed-inner">
-            <div className="genesis-creed-label">The Creed of the Last Builders</div>
+            <div className="genesis-creed-tag">The Creed of the Last Builders</div>
             <div className="genesis-creed-lines">
-              <div className="genesis-creed-line" data-creed="">Activate what was <strong>left for dead.</strong></div>
-              <div className="genesis-creed-line" data-creed="">Systems that <em>self-sustain</em> beyond their creators.</div>
-              <div className="genesis-creed-line" data-creed=""><strong>Focus</strong> is armor.</div>
+              <div className="genesis-creed-line" data-creed=""><strong>Activate</strong> the engine.</div>
+              <div className="genesis-creed-line" data-creed="">Forge the system that <em>outlasts its builders.</em></div>
+              <div className="genesis-creed-line" data-creed=""><strong>Focus</strong> our armor.</div>
               <div className="genesis-creed-line" data-creed=""><em>Completion</em> is the signal.</div>
             </div>
           </div>
         </section>
 
         {/* ARCHETYPES */}
-        <div className="genesis-arch-wrap">
-          <div className="genesis-arch-header genesis-reveal">
-            <div>
-              <div className="genesis-s-label" style={{ marginBottom: '18px' }}>The Genesis Cell</div>
-              <h2 className="genesis-s-title" style={{ marginBottom: 0 }}>Five Were<br />Chosen</h2>
-            </div>
-            <div className="genesis-arch-count"><b>5</b> / 5 sealed</div>
-          </div>
+        <div className="genesis-page-section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+          <div className="genesis-sec-label genesis-reveal">The Genesis Cell</div>
+          <h2 className="genesis-sec-title genesis-reveal" style={{ marginBottom: '40px' }}>Five Were Chosen</h2>
           <div className="genesis-arch-list">
             <div className="genesis-arch-row genesis-reveal">
               <div className="genesis-arch-num">01</div>
@@ -423,13 +401,13 @@ const Genesis = () => {
             <div className="genesis-lc tr"></div>
             <div className="genesis-lc bl"></div>
             <div className="genesis-lc br"></div>
-            <span className="genesis-lock-sym">&#9724; &nbsp;&#9724; &nbsp;&#9724;</span>
+            <span className="genesis-locked-sym">&#9724; &#9724; &#9724;</span>
             <h2 className="genesis-locked-title">Access Is<br />By Invitation</h2>
             <p className="genesis-locked-body">
               The Genesis Cell is sealed.<br />
               If you were chosen, you have your link.<br />
-              If you were not — <em>the next door</em> opens<br />
-              <strong>when the time comes.</strong>
+              If you were not — <em>the next door opens</em><br />
+              when the time comes.
             </p>
             <div className="genesis-locked-tag">Genesis Protocol &middot; Sealed</div>
           </div>
@@ -459,7 +437,7 @@ const Genesis = () => {
           <div className="genesis-mc tr"></div>
           <div className="genesis-mc bl"></div>
           <div className="genesis-mc br"></div>
-          <span className="genesis-m-sym">&#9724; &nbsp;&#9724; &nbsp;&#9724;</span>
+          <span className="genesis-m-sym">&#9724; &#9724; &#9724;</span>
           <div className="genesis-m-title">Not Yet Chosen</div>
           <div className="genesis-m-body">
             The Genesis Cell is sealed at five.<br /><br />
