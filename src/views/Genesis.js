@@ -364,8 +364,8 @@ const Genesis = () => {
             <div className="genesis-creed-lines">
               <div className="genesis-creed-line" data-creed=""><strong>Activate</strong> the engine.</div>
               <div className="genesis-creed-line" data-creed="">Forge what <em>outlasts its builders.</em></div>
-              <div className="genesis-creed-line" data-creed=""><strong>Focus</strong> our armor.</div>
-              <div className="genesis-creed-line" data-creed=""><em>Completion</em> is the signal.</div>
+              <div className="genesis-creed-line" data-creed=""><strong>Focus</strong> is our armor.</div>
+              <div className="genesis-creed-line" data-creed=""><em>Completion</em> is our signal.</div>
             </div>
           </div>
         </section>
