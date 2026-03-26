@@ -1,66 +1,14 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { isMobile } from 'react-device-detect';
 import './Genesis.css';
 
 const Genesis = () => {
-  const [modalOpen, setModalOpen] = useState(false);
   const canvasRef = useRef(null);
-  const curRef = useRef(null);
-  const curRingRef = useRef(null);
-  const creedWrapRef = useRef(null);
 
   // ── Body class (mount/unmount) ──
   useEffect(() => {
-    if (!isMobile) document.body.classList.add('genesis-active');
+    document.body.classList.add('genesis-active');
     return () => document.body.classList.remove('genesis-active');
-  }, []);
-
-  // ── Custom cursor ──
-  useEffect(() => {
-    if (isMobile) return;
-    const cur = curRef.current;
-    const curR = curRingRef.current;
-    if (!cur || !curR) return;
-
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    let rafId;
-
-    const onMouseMove = (e) => {
-      mx = e.clientX;
-      my = e.clientY;
-      cur.style.left = mx + 'px';
-      cur.style.top = my + 'px';
-    };
-
-    const ring = () => {
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
-      curR.style.left = rx + 'px';
-      curR.style.top = ry + 'px';
-      rafId = requestAnimationFrame(ring);
-    };
-
-    const onEnter = () => { cur.classList.add('big'); curR.classList.add('big'); };
-    const onLeave = () => { cur.classList.remove('big'); curR.classList.remove('big'); };
-
-    document.addEventListener('mousemove', onMouseMove);
-    rafId = requestAnimationFrame(ring);
-
-    const onOver = (e) => {
-      if (e.target.closest('a, button')) onEnter();
-    };
-    const onOut = (e) => {
-      if (e.target.closest('a, button')) onLeave();
-    };
-    document.addEventListener('mouseover', onOver);
-    document.addEventListener('mouseout', onOut);
-
-    return () => {
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseover', onOver);
-      document.removeEventListener('mouseout', onOut);
-      cancelAnimationFrame(rafId);
-    };
   }, []);
 
   // ── Flow field canvas ──
@@ -112,9 +60,7 @@ const Genesis = () => {
       const n1 = noise(x * scale + t * 0.12, y * scale + t * 0.08);
       const n2 = noise(x * scale + eps, y * scale + t * 0.08);
       const n3 = noise(x * scale + t * 0.12, y * scale + eps);
-      const dx = (n3 - n1) / eps;
-      const dy = -(n2 - n1) / eps;
-      return Math.atan2(dy, dx);
+      return Math.atan2(-(n2 - n1) / eps, (n3 - n1) / eps);
     };
 
     const PARTICLE_COUNT = isMobile ? 400 : 1400;
@@ -127,7 +73,6 @@ const Genesis = () => {
         age: Math.random() * 120,
         maxAge: 80 + Math.random() * 100,
         speed: 0.8 + Math.random() * 1.2,
-        alpha: 0,
       }));
     };
     initParticles();
@@ -199,95 +144,26 @@ const Genesis = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('on'), i * 80);
+          setTimeout(() => entry.target.classList.add('on'), i * 120);
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
-  // ── Creed animation ──
-  useEffect(() => {
-    const wrap = creedWrapRef.current;
-    if (!wrap) return;
-
-    let creedDone = false;
-    const timeouts = [];
-
-    const animCreed = (lines, i) => {
-      if (i >= lines.length) return;
-      lines[i].classList.add('on');
-      const tid = setTimeout(() => animCreed(lines, i + 1), 650);
-      timeouts.push(tid);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !creedDone) {
-        creedDone = true;
-        const lines = wrap.querySelectorAll('[data-creed]');
-        const tid = setTimeout(() => animCreed(lines, 0), 300);
-        timeouts.push(tid);
-      }
-    }, { threshold: 0.45 });
-
-    observer.observe(wrap);
-    return () => {
-      observer.disconnect();
-      timeouts.forEach(clearTimeout);
-    };
-  }, []);
-
-  // ── Modal Escape key + body overflow ──
-  useEffect(() => {
-    if (!modalOpen) return;
-    document.body.style.overflow = 'hidden';
-
-    const onKey = (e) => {
-      if (e.key === 'Escape') setModalOpen(false);
-    };
-    document.addEventListener('keydown', onKey);
-
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = '';
-    };
-  }, [modalOpen]);
-
-  const handleEnterClick = useCallback((e) => {
-    e.preventDefault();
-    setModalOpen(true);
-  }, []);
-
-  const handleModalClose = useCallback(() => {
-    setModalOpen(false);
-  }, []);
-
-  const handleBackdropClick = useCallback((e) => {
-    if (e.target === e.currentTarget) setModalOpen(false);
-  }, []);
-
   return (
     <div className="genesis-page">
-      {/* Custom cursor (desktop only) */}
-      {!isMobile && (
-        <>
-          <div className="genesis-cursor" ref={curRef} />
-          <div className="genesis-cursor-ring" ref={curRingRef} />
-        </>
-      )}
-
-      {/* Flow field canvas */}
       <canvas id="genesis-flow" ref={canvasRef} />
-
       <div className="genesis-wrapper">
+
         {/* HERO */}
         <section className="genesis-hero">
-          <p className="genesis-hero-label">Base Sepolia &nbsp;&middot;&nbsp; Five Seats &nbsp;&middot;&nbsp; Genesis Week</p>
+          <p className="genesis-hero-label">Fixed-Rate Lending &nbsp;&middot;&nbsp; Built on Aave</p>
           <h1 className="genesis-hero-title">SHRUB<br /><span>LEND</span></h1>
-          <p className="genesis-hero-tag">Genesis Protocol</p>
+          <p className="genesis-hero-sub">A quiet engine for fixed-rate borrowing</p>
           <div className="genesis-hero-divider">
             <div className="genesis-hero-divider-line"></div>
             <div className="genesis-hero-divider-dot"></div>
@@ -296,129 +172,93 @@ const Genesis = () => {
             <div className="genesis-hero-divider-line" style={{ transform: 'scaleX(-1)' }}></div>
           </div>
           <p className="genesis-hero-desc">
-            Borrow USDC against your ETH at a <em>fixed rate</em>.<br />
-            <strong>No variable surprises. No selling your assets.</strong><br />
-            Built on Aave. Secured by collateral. Locked by choice.
+            Borrow USDC against your ETH.<br />
+            <em>Fixed rate. Locked at entry.</em><br />
+            No variable surprises. No selling your assets.
           </p>
-          <a className="genesis-enter-btn" href="#" onClick={handleEnterClick}>
-            <span>Enter the Protocol</span>
-            <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-              <path d="M9 1l4 4-4 4M1 5h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
           <div className="genesis-scroll-cue">
             <div className="genesis-scroll-cue-line"></div>
             <div className="genesis-scroll-cue-txt">scroll</div>
           </div>
         </section>
 
-        {/* PROTOCOL TIERS */}
-        <div className="genesis-page-section">
-          <div className="genesis-sec-label genesis-reveal">The Engine</div>
-          <h2 className="genesis-sec-title genesis-reveal">
-            Four tiers. Four fixed rates.<br />
-            <em>Your rate locks at entry.</em><br />
-            <strong>It never changes.</strong>
-          </h2>
-          <div className="genesis-tiers genesis-reveal">
-            <div className="genesis-tier">
-              <div className="genesis-tier-bar"></div>
-              <div className="genesis-tier-rate">0%</div>
-              <div className="genesis-tier-ltv">20% LTV</div>
-              <div className="genesis-tier-name">Ultra Safe</div>
-              <div className="genesis-tier-desc">5&times; collateral. ETH must fall 75% before any liquidation risk.</div>
-              <div className="genesis-tier-safe">&minus;75% to liquidate</div>
-            </div>
-            <div className="genesis-tier">
-              <div className="genesis-tier-bar"></div>
-              <div className="genesis-tier-rate">1%</div>
-              <div className="genesis-tier-ltv">25% LTV</div>
-              <div className="genesis-tier-name">Conservative</div>
-              <div className="genesis-tier-desc">4&times; collateral. Near-zero cost of capital for long-term holders.</div>
-              <div className="genesis-tier-safe">&minus;69% to liquidate</div>
-            </div>
-            <div className="genesis-tier">
-              <div className="genesis-tier-bar"></div>
-              <div className="genesis-tier-rate">5%</div>
-              <div className="genesis-tier-ltv">33.3% LTV</div>
-              <div className="genesis-tier-name">Balanced</div>
-              <div className="genesis-tier-desc">3&times; collateral. Enough liquidity to act on opportunity while protected.</div>
-              <div className="genesis-tier-safe">&minus;59% to liquidate</div>
-            </div>
-            <div className="genesis-tier">
-              <div className="genesis-tier-bar"></div>
-              <div className="genesis-tier-rate">8%</div>
-              <div className="genesis-tier-ltv">50% LTV</div>
-              <div className="genesis-tier-name">Maximum Borrow</div>
-              <div className="genesis-tier-desc">2&times; collateral. Maximum liquidity for disciplined operators.</div>
-              <div className="genesis-tier-safe" style={{ borderColor: 'rgba(202,141,251,0.1)' }}>&minus;39% to liquidate</div>
-            </div>
-          </div>
-          <p className="genesis-tiers-note genesis-reveal">1% origination fee &nbsp;&middot;&nbsp; no early repayment penalty &nbsp;&middot;&nbsp; built on Aave V3</p>
+        {/* STORY 1 */}
+        <div className="genesis-story">
+          <div className="genesis-story-label genesis-reveal">What happened</div>
+          <p className="genesis-reveal">The vaults went dark. Billions vanished. The people who trusted centralized lenders were left holding nothing.</p>
+          <p className="genesis-reveal">The industry moved on. <strong>Chased the next narrative.</strong> Built new speculation engines. But nobody went back to fix the thing that actually broke: <em>simple, trustworthy borrowing.</em></p>
+          <p className="genesis-reveal">Shrub Lend exists because that gap never closed. A fixed-rate lending protocol built on Aave — where your collateral stays yours, your rate locks at entry, and there are no keys for anyone to take.</p>
         </div>
 
-        {/* CREED */}
-        <section className="genesis-creed-wrap" ref={creedWrapRef}>
-          <div className="genesis-creed-inner">
-            <div className="genesis-creed-tag">The Creed of the Last Builders</div>
-            <div className="genesis-creed-lines">
-              <div className="genesis-creed-line" data-creed=""><strong>Activate</strong> the engine.</div>
-              <div className="genesis-creed-line" data-creed="">Forge what <em>outlasts its builders.</em></div>
-              <div className="genesis-creed-line" data-creed=""><strong>Focus</strong> is our armor.</div>
-              <div className="genesis-creed-line" data-creed=""><em>Completion</em> is signal.</div>
+        {/* STORY 2 */}
+        <div className="genesis-story">
+          <div className="genesis-story-label genesis-reveal">How we build</div>
+          <p className="genesis-reveal">Real protocols aren't launched. <strong>They're forged.</strong></p>
+          <p className="genesis-reveal">We started with five. Five people who understood what was missing. They tested every edge of the engine on Base Sepolia testnet — every tier, every failure mode, every liquidation path. <em>The engine held.</em></p>
+          <p className="genesis-reveal">Now five more join. Then more after that. Each chapter written by the people who show up — not for hype, not for announcements, but because they felt something was missing and decided to help build it.</p>
+          <p className="genesis-reveal">From one to five. From five to ten. <strong>From ten to many.</strong> The new chapters are written by believers, not spectators.</p>
+        </div>
+
+        {/* CHAPTERS */}
+        <div className="genesis-chapters">
+          <div className="genesis-story-label genesis-reveal">Chapters</div>
+          <div className="genesis-chapter genesis-reveal">
+            <div className="genesis-ch-num">01</div>
+            <div>
+              <div className="genesis-ch-title">Genesis — Cell Zero</div>
+              <div className="genesis-ch-status"><span className="genesis-ch-done">Five operatives. Testnet stress test. Engine validated.</span></div>
             </div>
           </div>
-        </section>
-
-        {/* ARCHETYPES */}
-        <div className="genesis-page-section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
-          <div className="genesis-sec-label genesis-reveal" style={{ marginBottom: '20px' }}>The Genesis Cell</div>
-          <h2 className="genesis-sec-title genesis-reveal" style={{ marginBottom: '40px' }}>Five Were Chosen</h2>
-          <div className="genesis-arch-list">
-            <div className="genesis-arch-row genesis-reveal">
-              <div className="genesis-arch-num">01</div>
-              <div><div className="genesis-arch-name">The Sentinel</div><div className="genesis-arch-role">Finds what breaks trust</div></div>
-              <div className="genesis-arch-icon">🛡️</div>
+          <div className="genesis-chapter genesis-reveal">
+            <div className="genesis-ch-num">02</div>
+            <div>
+              <div className="genesis-ch-title">Cell One — Second Wave</div>
+              <div className="genesis-ch-status"><em>Selecting five more.</em> Gates sealed until called.</div>
             </div>
-            <div className="genesis-arch-row genesis-reveal">
-              <div className="genesis-arch-num">02</div>
-              <div><div className="genesis-arch-name">The Explorer</div><div className="genesis-arch-role">Tests every edge, every boundary</div></div>
-              <div className="genesis-arch-icon">🌑</div>
+          </div>
+          <div className="genesis-chapter genesis-reveal">
+            <div className="genesis-ch-num">03</div>
+            <div>
+              <div className="genesis-ch-title">Mainnet</div>
+              <div className="genesis-ch-status">Every tester ships. The engine goes live.</div>
             </div>
-            <div className="genesis-arch-row genesis-reveal">
-              <div className="genesis-arch-num">03</div>
-              <div><div className="genesis-arch-name">The Architect</div><div className="genesis-arch-role">Finds the logic flaws others miss</div></div>
-              <div className="genesis-arch-icon">⚙️</div>
-            </div>
-            <div className="genesis-arch-row genesis-reveal">
-              <div className="genesis-arch-num">04</div>
-              <div><div className="genesis-arch-name">The Prime Mover</div><div className="genesis-arch-role">Stress tests until it breaks or holds</div></div>
-              <div className="genesis-arch-icon">⚡</div>
-            </div>
-            <div className="genesis-arch-row genesis-reveal">
-              <div className="genesis-arch-num">05</div>
-              <div><div className="genesis-arch-name">The Witness</div><div className="genesis-arch-role">Documents the first history</div></div>
-              <div className="genesis-arch-icon">📜</div>
+          </div>
+          <div className="genesis-chapter genesis-reveal">
+            <div className="genesis-ch-num">04</div>
+            <div>
+              <div className="genesis-ch-title">The Doors Open</div>
+              <div className="genesis-ch-status">Public access. The protocol belongs to everyone.</div>
             </div>
           </div>
         </div>
 
-        {/* LOCKED */}
-        <section className="genesis-locked-wrap">
-          <div className="genesis-locked-box genesis-reveal">
-            <div className="genesis-lc tl"></div>
-            <div className="genesis-lc tr"></div>
-            <div className="genesis-lc bl"></div>
-            <div className="genesis-lc br"></div>
-            <span className="genesis-locked-sym">&#9724; &#9724; &#9724;</span>
-            <h2 className="genesis-locked-title">Access Is<br />By Invitation</h2>
-            <p className="genesis-locked-body">
-              The Genesis Cell is sealed.<br />
-              If you were chosen, you have your link.<br />
-              If you were not — <em>the next door opens</em><br />
-              when the time comes.
-            </p>
-            <div className="genesis-locked-tag">Genesis Protocol &middot; Sealed</div>
+        {/* SIGNAL */}
+        <section className="genesis-signal-wrap">
+          <div className="genesis-signal-box genesis-reveal">
+            <div className="genesis-sc tl"></div>
+            <div className="genesis-sc tr"></div>
+            <div className="genesis-sc bl"></div>
+            <div className="genesis-sc br"></div>
+            <div className="genesis-signal-pulse"></div>
+            <div className="genesis-signal-title">The engine is running. The build continues in silence.</div>
+            <div className="genesis-signal-body">
+              If this resonates — if you've felt what's missing —<br />
+              the community is where the next chapters are written.
+            </div>
+            <div className="genesis-signal-links">
+              <a className="genesis-sig-link" href="https://discord.gg/yAc9JQT9dk" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+                </svg>
+                Discord
+              </a>
+              <a className="genesis-sig-link" href="https://x.com/shrubfinance" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                Twitter
+              </a>
+            </div>
           </div>
         </section>
 
@@ -428,35 +268,9 @@ const Genesis = () => {
             <div className="genesis-f-dot"></div>
             <div className="genesis-f-name"><span>Shrub</span> Lend</div>
           </div>
-          <div className="genesis-f-meta">
-            Base Sepolia &middot; Genesis Week<br />
-            Built on Aave V3 &middot; Fixed Rate Protocol<br />
-            Last Builders Collective
-          </div>
+          <div className="genesis-f-meta">Built on Aave V3 &nbsp;&middot;&nbsp; Base Sepolia Testnet</div>
         </footer>
-      </div>
 
-      {/* MODAL */}
-      <div
-        className={`genesis-modal-bg ${modalOpen ? 'on' : ''}`}
-        onClick={handleBackdropClick}
-      >
-        <div className="genesis-modal">
-          <div className="genesis-mc tl"></div>
-          <div className="genesis-mc tr"></div>
-          <div className="genesis-mc bl"></div>
-          <div className="genesis-mc br"></div>
-          <span className="genesis-m-sym">&#9724; &#9724; &#9724;</span>
-          <div className="genesis-m-title">Not Yet Chosen</div>
-          <div className="genesis-m-body">
-            The Genesis Cell is sealed at five.<br /><br />
-            Each member was given a unique link.<br />
-            If you have yours — use it.<br /><br />
-            If you were not part of Genesis —<br />
-            <em>the protocol opens publicly when the time comes.</em>
-          </div>
-          <button className="genesis-m-close" onClick={handleModalClose}>&larr; Return</button>
-        </div>
       </div>
     </div>
   );
