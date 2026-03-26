@@ -240,7 +240,7 @@ const Genesis = () => {
             <div className="genesis-sc bl"></div>
             <div className="genesis-sc br"></div>
             <div className="genesis-signal-pulse"></div>
-            <div className="genesis-signal-title">The engine is running. The build continues in silence.</div>
+            <div className="genesis-signal-title">The engine is running.<br />The build continues in silence.</div>
             <div className="genesis-signal-body">
               If this resonates — if you've felt what's missing —<br />
               the community is where the next chapters are written.
