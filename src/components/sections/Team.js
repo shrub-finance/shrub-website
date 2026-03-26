@@ -6,7 +6,7 @@ import ReactGA from "react-ga";
 import Image from "../elements/Image";
 import ChefBud from "../../assets/images/team/john.svg";
 import QueenBud from "../../assets/images/team/rachita.svg";
-import PrincessBud from "../../assets/images/team/anastasi.svg";
+
 import CloudBud from "../../assets/images/team/arkila.svg";
 import StarBud1 from "../../assets/images/team/diep.svg";
 import StarBud2 from "../../assets/images/team/jack.svg";

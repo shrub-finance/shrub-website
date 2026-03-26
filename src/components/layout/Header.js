@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Logo from './partials/Logo';
 import ReactGA from "react-ga";
-import {isDesktop, isMobile, isMobileOnly} from "react-device-detect";
+import {isMobileOnly} from "react-device-detect";
 import Button from "../elements/Button";
 
 const propTypes = {
@@ -75,8 +75,6 @@ const Header = ({
     bottomOuterDivider && 'has-bottom-divider',
     className
   );
-
-  const path = window.location.pathname;
 
   return (
     <header

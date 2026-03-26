@@ -43,13 +43,6 @@ const Tickets = ({
         bottomDivider && 'has-bottom-divider'
     );
 
-    const splitClasses = classNames(
-        'split-wrap',
-        invertMobile && 'invert-mobile',
-        invertDesktop && 'invert-desktop',
-        alignTop && 'align-top'
-    );
-
     const sectionHeader = {
         title: 'NFT Tickets',
         paragraph: 'The Next Generation of Distribution'
