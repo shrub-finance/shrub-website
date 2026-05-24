@@ -1,17 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { isMobile } from 'react-device-detect';
+import axios from 'axios';
 import './Genesis.css';
 
 const Genesis = () => {
   const canvasRef = useRef(null);
+  const creedWrapRef = useRef(null);
 
-  // ── Body class (mount/unmount) ──
+  const [email, setEmail] = useState('');
+  const [toggle, setToggle] = useState(false);
+  const [message, setMessage] = useState('');
+
   useEffect(() => {
     document.body.classList.add('genesis-active');
     return () => document.body.classList.remove('genesis-active');
   }, []);
 
-  // ── Flow field canvas ──
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -24,7 +28,6 @@ const Genesis = () => {
     };
     resize();
 
-    // Perlin noise
     const perm = new Uint8Array(512);
     const p = new Uint8Array(256);
     for (let i = 0; i < 256; i++) p[i] = i;
@@ -136,7 +139,31 @@ const Genesis = () => {
     };
   }, []);
 
-  // ── Scroll reveal ──
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const hero = document.querySelector('.genesis-hero');
+    if (!hero) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const heroH = hero.offsetHeight;
+        const scrollY = window.scrollY;
+        const progress = Math.max(0, Math.min(1, (scrollY - heroH * 0.5) / (heroH * 0.8)));
+        canvas.style.opacity = 1 - (progress * 0.88);
+        ticking = false;
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   useEffect(() => {
     const els = document.querySelectorAll('.genesis-reveal');
     if (!els.length) return;
@@ -144,22 +171,92 @@ const Genesis = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('on'), i * 120);
+          setTimeout(() => entry.target.classList.add('on'), i * 80);
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const wrap = creedWrapRef.current;
+    if (!wrap) return;
+    const lines = wrap.querySelectorAll('[data-creed]');
+    if (!lines.length) return;
+
+    let done = false;
+    const timers = [];
+
+    const animate = (i) => {
+      if (i >= lines.length) return;
+      lines[i].classList.add('on');
+      const id = setTimeout(() => animate(i + 1), 650);
+      timers.push(id);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !done) {
+        done = true;
+        const id = setTimeout(() => animate(0), 300);
+        timers.push(id);
+        observer.unobserve(wrap);
+      }
+    }, { threshold: 0.45 });
+
+    observer.observe(wrap);
+
+    return () => {
+      observer.disconnect();
+      timers.forEach((id) => clearTimeout(id));
+    };
+  }, []);
+
+  const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value.trim());
+  };
+
+  const handleWaitlistSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!email.length) {
+      setMessage('Please enter an email below.');
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setMessage('Please enter a valid email address.');
+      return;
+    }
+
+    try {
+      const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', { email });
+
+      if (response.status === 200 && response.data && response.data.message === 'Email already verified') {
+        setMessage('Email is already verified.');
+        return;
+      }
+
+      setMessage('');
+      setToggle(true);
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+        setMessage(error.response.data.message);
+      } else {
+        setMessage('Something went wrong. Please try again.');
+      }
+    }
+  };
 
   return (
     <div className="genesis-page">
       <canvas id="genesis-flow" ref={canvasRef} />
       <div className="genesis-wrapper">
 
-        {/* HERO */}
         <section className="genesis-hero">
           <p className="genesis-hero-label">Fixed-Rate Lending &nbsp;&middot;&nbsp; Built on Aave</p>
           <h1 className="genesis-hero-title">SHRUB<br /><span>LEND</span></h1>
@@ -172,67 +269,148 @@ const Genesis = () => {
             <div className="genesis-hero-divider-line" style={{ transform: 'scaleX(-1)' }}></div>
           </div>
           <p className="genesis-hero-desc">
-            Borrow USDC against your ETH.<br />
-            <em>Fixed rate. Locked at entry.</em><br />
-            No variable surprises. No selling your assets.
+            Borrow USDC against your ETH at a <strong>fixed rate.</strong><br />
+            No variable surprises. No selling your assets.<br />
+            Built on Aave. Secured by collateral. <em>Locked by choice.</em>
           </p>
           <div className="genesis-scroll-cue">
             <div className="genesis-scroll-cue-line"></div>
-            <div className="genesis-scroll-cue-txt">scroll</div>
           </div>
         </section>
 
-        {/* STORY 1 */}
-        <div className="genesis-story">
-          <div className="genesis-story-label genesis-reveal">What happened</div>
-          <p className="genesis-reveal">The vaults went dark. Billions vanished. The people who trusted centralized lenders were left holding nothing.</p>
-          <p className="genesis-reveal">The industry moved on. <strong>Chased the next narrative.</strong> Built new speculation engines. But nobody went back to fix the thing that actually broke: <em>simple, trustworthy borrowing.</em></p>
-          <p className="genesis-reveal">Shrub Lend exists because that gap never closed. A fixed-rate lending protocol built on Aave — where your collateral stays yours, your rate locks at entry, and there are no keys for anyone to take.</p>
+        <div className="genesis-breath genesis-reveal">
+          <div className="genesis-breath-label">What happened</div>
+          <div className="genesis-breath-line">
+            The vaults went dark. <strong>Billions vanished.</strong><br />
+            The people who trusted centralized lenders<br />
+            were left holding <em>nothing.</em>
+          </div>
         </div>
 
-        {/* STORY 2 */}
-        <div className="genesis-story">
-          <div className="genesis-story-label genesis-reveal">How we build</div>
-          <p className="genesis-reveal">Real protocols aren't launched. <strong>They're forged.</strong></p>
-          <p className="genesis-reveal">We started with five. Five people who understood what was missing. They tested every edge of the engine on Base Sepolia testnet — every tier, every failure mode, every liquidation path. <em>The engine held.</em></p>
-          <p className="genesis-reveal">Now five more join. Then more after that. Each chapter written by the people who show up — not for hype, not for announcements, but because they felt something was missing and decided to help build it.</p>
-          <p className="genesis-reveal">From one to five. From five to ten. <strong>From ten to many.</strong> The new chapters are written by believers, not spectators.</p>
+        <div className="genesis-verse">
+          <div className="genesis-verse-lines">
+            <div className="genesis-verse-line genesis-reveal">The industry moved on. <strong>Chased the next narrative.</strong></div>
+            <div className="genesis-verse-line genesis-reveal">Built new speculation engines.</div>
+            <div className="genesis-verse-line genesis-reveal">But nobody went back to fix <em>the thing that actually broke:</em></div>
+            <div className="genesis-verse-line genesis-reveal"><strong>simple, trustworthy borrowing.</strong></div>
+            <div className="genesis-verse-break genesis-reveal"></div>
+            <div className="genesis-verse-line genesis-reveal">Shrub Lend exists because that gap <em>never closed.</em></div>
+            <div className="genesis-verse-line genesis-reveal">Your collateral stays yours. Your rate locks at entry.</div>
+            <div className="genesis-verse-line genesis-reveal"><strong>There are no keys for anyone to take.</strong></div>
+          </div>
         </div>
 
-        {/* CHAPTERS */}
+        <div className="genesis-tiers-wrap">
+          <div className="genesis-tiers-label genesis-reveal">The Engine</div>
+          <h2 className="genesis-tiers-title genesis-reveal">Four tiers. Four target rates.<br /><em>Your rate stays locked for a year.</em></h2>
+          <div className="genesis-tiers genesis-reveal">
+            <div className="genesis-tier">
+              <div className="genesis-tier-bar"></div>
+              <div className="genesis-t-rate">0%</div>
+              <div className="genesis-t-ltv">20% LTV</div>
+              <div className="genesis-t-name">Ultra Safe</div>
+              <div className="genesis-t-desc">5&times; collateral. ETH must fall 75% before any liquidation risk.</div>
+              <div className="genesis-t-safe">&minus;75% to liquidate</div>
+            </div>
+            <div className="genesis-tier">
+              <div className="genesis-tier-bar"></div>
+              <div className="genesis-t-rate">1%</div>
+              <div className="genesis-t-ltv">25% LTV</div>
+              <div className="genesis-t-name">Conservative</div>
+              <div className="genesis-t-desc">4&times; collateral. Near-zero cost of capital for long-term holders.</div>
+              <div className="genesis-t-safe">&minus;69% to liquidate</div>
+            </div>
+            <div className="genesis-tier">
+              <div className="genesis-tier-bar"></div>
+              <div className="genesis-t-rate">5%</div>
+              <div className="genesis-t-ltv">33.3% LTV</div>
+              <div className="genesis-t-name">Balanced</div>
+              <div className="genesis-t-desc">3&times; collateral. Enough liquidity to act on opportunity while protected.</div>
+              <div className="genesis-t-safe">&minus;59% to liquidate</div>
+            </div>
+            <div className="genesis-tier">
+              <div className="genesis-tier-bar"></div>
+              <div className="genesis-t-rate">8%</div>
+              <div className="genesis-t-ltv">50% LTV</div>
+              <div className="genesis-t-name">Maximum Borrow</div>
+              <div className="genesis-t-desc">2&times; collateral. Maximum liquidity for disciplined operators.</div>
+              <div className="genesis-t-safe genesis-t-safe-purple">&minus;39% to liquidate</div>
+            </div>
+          </div>
+          <p className="genesis-tiers-note genesis-reveal">1% origination fee &nbsp;&middot;&nbsp; no early repayment penalty &nbsp;&middot;&nbsp; built on Aave V3</p>
+        </div>
+
+        <section className="genesis-creed-wrap" ref={creedWrapRef}>
+          <div className="genesis-creed-inner">
+            <div className="genesis-creed-tag">The Creed of the Last Builders</div>
+            <div className="genesis-creed-lines">
+              <div className="genesis-creed-line" data-creed><strong>Activate</strong> the engine.</div>
+              <div className="genesis-creed-line" data-creed>Forge the system that <em>outlasts its builders.</em></div>
+              <div className="genesis-creed-line" data-creed><strong>Focus</strong> our armor.</div>
+              <div className="genesis-creed-line" data-creed><em>Completion</em> is the signal.</div>
+            </div>
+          </div>
+        </section>
+
+        <div className="genesis-breath genesis-reveal">
+          <div className="genesis-breath-label">How we build</div>
+          <div className="genesis-breath-line">
+            Real protocols aren't launched.<br />
+            <strong>They're forged.</strong>
+          </div>
+        </div>
+
+        <div className="genesis-verse">
+          <div className="genesis-verse-lines">
+            <div className="genesis-verse-line genesis-reveal">We started with <strong>five.</strong> Then five more.</div>
+            <div className="genesis-verse-line genesis-reveal">Ten people tested every tier, every edge, every failure mode.</div>
+            <div className="genesis-verse-line genesis-reveal"><em>The engine held.</em></div>
+            <div className="genesis-verse-break genesis-reveal"></div>
+            <div className="genesis-verse-line genesis-reveal">From one to five. From five to ten. <strong>From ten to many.</strong></div>
+            <div className="genesis-verse-break genesis-reveal"></div>
+            <div className="genesis-verse-line genesis-reveal">Each chapter written by <em>believers, not spectators.</em></div>
+          </div>
+        </div>
+
         <div className="genesis-chapters">
-          <div className="genesis-story-label genesis-reveal">Chapters</div>
+          <div className="genesis-chapters-label genesis-reveal">Status</div>
           <div className="genesis-chapter genesis-reveal">
-            <div className="genesis-ch-num">01</div>
+            <div className="genesis-ch-num"><span className="genesis-ch-check">&#10003;</span></div>
             <div>
-              <div className="genesis-ch-title">Genesis — Cell Zero</div>
+              <div className="genesis-ch-title genesis-done-title">Cell Zero &mdash; Genesis</div>
               <div className="genesis-ch-status"><span className="genesis-ch-done">Five operatives. Testnet stress test. Engine validated.</span></div>
             </div>
           </div>
           <div className="genesis-chapter genesis-reveal">
-            <div className="genesis-ch-num">02</div>
+            <div className="genesis-ch-num"><span className="genesis-ch-check">&#10003;</span></div>
             <div>
-              <div className="genesis-ch-title">Cell One — Second Wave</div>
-              <div className="genesis-ch-status"><em>Selecting five more.</em> Gates sealed until called.</div>
+              <div className="genesis-ch-title genesis-done-title">Cell One &mdash; Second Wave</div>
+              <div className="genesis-ch-status"><span className="genesis-ch-done">Five more. Every edge tested again. Engine held.</span></div>
+            </div>
+          </div>
+          <div className="genesis-chapter genesis-ch-active genesis-reveal">
+            <div className="genesis-ch-num"><span className="genesis-ch-pulse"></span></div>
+            <div>
+              <div className="genesis-ch-title">Genesis Crew Locked &mdash; 10</div>
+              <div className="genesis-ch-status"><em>Building toward mainnet.</em></div>
             </div>
           </div>
           <div className="genesis-chapter genesis-reveal">
-            <div className="genesis-ch-num">03</div>
+            <div className="genesis-ch-num"><span className="genesis-ch-dot"></span></div>
             <div>
               <div className="genesis-ch-title">Mainnet</div>
-              <div className="genesis-ch-status">Every tester ships. The engine goes live.</div>
+              <div className="genesis-ch-status">The engine goes live.</div>
             </div>
           </div>
           <div className="genesis-chapter genesis-reveal">
-            <div className="genesis-ch-num">04</div>
+            <div className="genesis-ch-num"><span className="genesis-ch-dot"></span></div>
             <div>
-              <div className="genesis-ch-title">The Doors Open</div>
-              <div className="genesis-ch-status">Public access. The protocol belongs to everyone.</div>
+              <div className="genesis-ch-title">Public Access</div>
+              <div className="genesis-ch-status">The product belongs to everyone.</div>
             </div>
           </div>
         </div>
 
-        {/* SIGNAL */}
         <section className="genesis-signal-wrap">
           <div className="genesis-signal-box genesis-reveal">
             <div className="genesis-sc tl"></div>
@@ -240,11 +418,38 @@ const Genesis = () => {
             <div className="genesis-sc bl"></div>
             <div className="genesis-sc br"></div>
             <div className="genesis-signal-pulse"></div>
-            <div className="genesis-signal-title">The engine is running.<br />The build continues in silence.</div>
-            <div className="genesis-signal-body">
-              If this resonates — if you've felt what's missing —<br />
-              the community is where the next chapters are written.
-            </div>
+            <div className="genesis-signal-title">The next wave starts from this list.</div>
+
+            {message && <p className="genesis-wl-message">{message}</p>}
+
+            {!toggle && (
+              <form className="genesis-wl-form" onSubmit={handleWaitlistSubmit}>
+                <input
+                  type="email"
+                  name="email"
+                  aria-label="email"
+                  autoComplete="email"
+                  autoCapitalize="off"
+                  placeholder="Your email"
+                  className="genesis-wl-input"
+                  value={email}
+                  onChange={handleEmailChange}
+                />
+                <button type="submit" className="genesis-wl-btn">
+                  <span>Reserve Your Place</span>
+                </button>
+              </form>
+            )}
+
+            {toggle && (
+              <div className="genesis-wl-success">
+                <div className="genesis-wl-success-title">Check your inbox</div>
+                <div className="genesis-wl-success-body">Verify your email to complete sign up.</div>
+              </div>
+            )}
+
+            <div className="genesis-wl-note">First come, first served. We'll reach out when it's time.</div>
+
             <div className="genesis-signal-links">
               <a className="genesis-sig-link" href="https://discord.gg/yAc9JQT9dk" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
@@ -262,13 +467,12 @@ const Genesis = () => {
           </div>
         </section>
 
-        {/* FOOTER */}
         <footer className="genesis-footer">
           <div className="genesis-f-logo">
             <div className="genesis-f-dot"></div>
             <div className="genesis-f-name"><span>Shrub</span> Lend</div>
           </div>
-          <div className="genesis-f-meta">Built on Aave V3 &nbsp;&middot;&nbsp; Base Sepolia Testnet</div>
+          <div className="genesis-f-meta">Built on Aave V3 &nbsp;&middot;&nbsp; Ethereum &nbsp;&middot;&nbsp; Last Builders Collective</div>
         </footer>
 
       </div>
