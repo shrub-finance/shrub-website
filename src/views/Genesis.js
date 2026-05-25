@@ -442,12 +442,14 @@ const Genesis = () => {
 
             {toggle && (
               <div className="genesis-wl-success">
-                <div className="genesis-wl-success-title">Check your inbox</div>
-                <div className="genesis-wl-success-body">Verify your email to complete sign up.</div>
+                <div className="genesis-wl-success-title">You're on the list.</div>
+                <div className="genesis-wl-success-body">We'll reach out when it's time to onboard.</div>
               </div>
             )}
 
-            <div className="genesis-wl-note">First come, first served. We'll reach out when it's time.</div>
+            {!toggle && (
+              <div className="genesis-wl-note">First come, first served. We'll reach out when it's time.</div>
+            )}
 
             <div className="genesis-signal-links">
               <a className="genesis-sig-link" href="https://discord.gg/yAc9JQT9dk" target="_blank" rel="noopener noreferrer">
