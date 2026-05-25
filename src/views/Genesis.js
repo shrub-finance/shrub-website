@@ -234,21 +234,20 @@ const Genesis = () => {
     }
 
     try {
-      const response = await axios.post('https://submissions.shrub.finance/lend-waitlist', { email });
-
-      if (response.status === 200 && response.data && response.data.message === 'Email already verified') {
-        setMessage('Email is already verified.');
-        return;
-      }
+      await axios.post('https://api.getwaitlist.com/api/v1/signup', {
+        email,
+        waitlist_id: 20191,
+        referral_link: typeof window !== 'undefined' ? window.location.href : 'https://shrub.finance/',
+      });
 
       setMessage('');
       setToggle(true);
     } catch (error) {
-      if (error.response && error.response.data && error.response.data.message) {
-        setMessage(error.response.data.message);
-      } else {
-        setMessage('Something went wrong. Please try again.');
-      }
+      const apiMessage =
+        error.response &&
+        error.response.data &&
+        (error.response.data.error_string || error.response.data.message || error.response.data.detail);
+      setMessage(apiMessage || 'Something went wrong. Please try again.');
     }
   };
 
