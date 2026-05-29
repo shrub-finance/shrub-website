@@ -258,7 +258,7 @@ const Genesis = () => {
 
         <section className="genesis-hero">
           <p className="genesis-hero-label">Fixed-Rate Lending &nbsp;&middot;&nbsp; Built on Aave</p>
-          <h1 className="genesis-hero-title">SHRUB<br /><span>LEND</span></h1>
+          <h1 className="genesis-hero-title">SHRUB</h1>
           <p className="genesis-hero-sub">A quiet engine for fixed-rate borrowing</p>
           <div className="genesis-hero-divider">
             <div className="genesis-hero-divider-line"></div>
@@ -293,7 +293,7 @@ const Genesis = () => {
             <div className="genesis-verse-line genesis-reveal">But nobody went back to fix <em>the thing that actually broke:</em></div>
             <div className="genesis-verse-line genesis-reveal"><strong>simple, trustworthy borrowing.</strong></div>
             <div className="genesis-verse-break genesis-reveal"></div>
-            <div className="genesis-verse-line genesis-reveal">Shrub Lend exists because that gap <em>never closed.</em></div>
+            <div className="genesis-verse-line genesis-reveal">Shrub exists because that gap <em>never closed.</em></div>
             <div className="genesis-verse-line genesis-reveal">Your collateral stays yours. Your rate locks at entry.</div>
             <div className="genesis-verse-line genesis-reveal"><strong>There are no keys for anyone to take.</strong></div>
           </div>
@@ -404,8 +404,8 @@ const Genesis = () => {
           <div className="genesis-chapter genesis-reveal">
             <div className="genesis-ch-num"><span className="genesis-ch-dot"></span></div>
             <div>
-              <div className="genesis-ch-title">Public Access</div>
-              <div className="genesis-ch-status">The product belongs to everyone.</div>
+              <div className="genesis-ch-title">Waitlist Onboarding</div>
+              <div className="genesis-ch-status">New batches drawn from the waitlist. <em>First come, first served.</em></div>
             </div>
           </div>
         </div>
@@ -471,7 +471,7 @@ const Genesis = () => {
         <footer className="genesis-footer">
           <div className="genesis-f-logo">
             <div className="genesis-f-dot"></div>
-            <div className="genesis-f-name"><span>Shrub</span> Lend</div>
+            <div className="genesis-f-name"><span>Shrub</span></div>
           </div>
           <div className="genesis-f-meta">Built on Aave V3 &nbsp;&middot;&nbsp; Ethereum &nbsp;&middot;&nbsp; Last Builders Collective</div>
         </footer>
