@@ -301,7 +301,7 @@ const Genesis = () => {
 
         <div className="genesis-tiers-wrap">
           <div className="genesis-tiers-label genesis-reveal">The Engine</div>
-          <h2 className="genesis-tiers-title genesis-reveal">Three tiers. Three target rates.<br /><em>Your rate stays locked for a year.</em></h2>
+          <h2 className="genesis-tiers-title genesis-reveal">Three tiers. Three target rates.<br /><em>Locked for the full term you choose.</em></h2>
           <div className="genesis-tiers genesis-reveal">
             <div className="genesis-tier">
               <div className="genesis-tier-bar"></div>
@@ -396,8 +396,8 @@ const Genesis = () => {
           <div className="genesis-chapter genesis-reveal">
             <div className="genesis-ch-num"><span className="genesis-ch-dot"></span></div>
             <div>
-              <div className="genesis-ch-title">Waitlist Onboarding</div>
-              <div className="genesis-ch-status">New batches drawn from the waitlist. <em>First come, first served.</em></div>
+              <div className="genesis-ch-title">Open Cells</div>
+              <div className="genesis-ch-status">New operatives drawn from the waitlist.</div>
             </div>
           </div>
         </div>
@@ -411,9 +411,11 @@ const Genesis = () => {
             <div className="genesis-signal-pulse"></div>
             <div className="genesis-signal-title">This isn't for everyone.</div>
             <p className="genesis-signal-body">
-              It's for the ones who want a different future for DeFi.
+              We're writing the next chapter of DeFi.<br />
+              Where the people who use the product are the ones who <em>built it.</em><br />
+              Where what gets made is what's needed, not what's funded.
             </p>
-            <p className="genesis-signal-closer">Then <em>start the engine with us.</em></p>
+            <p className="genesis-signal-closer">If it is you, <em>start the engine with us.</em></p>
 
             {message && <p className="genesis-wl-message">{message}</p>}
 

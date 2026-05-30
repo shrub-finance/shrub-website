@@ -637,6 +637,12 @@ body.genesis-active {
   margin-bottom: 20px;
 }
 
+.genesis-signal-body em {
+  color: var(--mint);
+  font-style: normal;
+  font-weight: 600;
+}
+
 .genesis-signal-closer {
   font-size: 14px;
   font-weight: 500;
@@ -646,9 +652,9 @@ body.genesis-active {
 }
 
 .genesis-signal-closer em {
-  color: var(--mint);
+  color: var(--text-1);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .genesis-wl-message {
