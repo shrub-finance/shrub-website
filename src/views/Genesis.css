@@ -610,12 +610,45 @@ body.genesis-active {
   animation: genesis-pulse 2.5s ease-in-out infinite;
 }
 
+.genesis-signal-pre {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--mint);
+  opacity: 0.55;
+  margin-bottom: 16px;
+}
+
 .genesis-signal-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--text-1);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.genesis-signal-body {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.genesis-signal-closer {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-1);
   line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.genesis-signal-closer em {
+  color: var(--mint);
+  font-style: normal;
+  font-weight: 600;
 }
 
 .genesis-wl-message {

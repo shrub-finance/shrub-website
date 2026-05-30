@@ -409,7 +409,14 @@ const Genesis = () => {
             <div className="genesis-sc bl"></div>
             <div className="genesis-sc br"></div>
             <div className="genesis-signal-pulse"></div>
-            <div className="genesis-signal-title">The next wave starts from this list.</div>
+            <div className="genesis-signal-title">This isn't for everyone.</div>
+            <p className="genesis-signal-body">
+              It's for the ones who want a different future for DeFi.<br />
+              Where community runs what it needs.<br />
+              Where security comes first, not last.<br />
+              Where your assets are actually yours.
+            </p>
+            <p className="genesis-signal-closer">If that's you, <em>we've been waiting.</em></p>
 
             {message && <p className="genesis-wl-message">{message}</p>}
 
@@ -440,7 +447,7 @@ const Genesis = () => {
             )}
 
             {!toggle && (
-              <div className="genesis-wl-note">First come, first served. We'll reach out when it's time.</div>
+              <div className="genesis-wl-note">First come, first served. The next wave starts from this list.</div>
             )}
 
             <div className="genesis-signal-links">
