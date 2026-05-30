@@ -301,16 +301,8 @@ const Genesis = () => {
 
         <div className="genesis-tiers-wrap">
           <div className="genesis-tiers-label genesis-reveal">The Engine</div>
-          <h2 className="genesis-tiers-title genesis-reveal">Four tiers. Four target rates.<br /><em>Your rate stays locked for a year.</em></h2>
+          <h2 className="genesis-tiers-title genesis-reveal">Three tiers. Three target rates.<br /><em>Your rate stays locked for a year.</em></h2>
           <div className="genesis-tiers genesis-reveal">
-            <div className="genesis-tier">
-              <div className="genesis-tier-bar"></div>
-              <div className="genesis-t-rate">0%</div>
-              <div className="genesis-t-ltv">20% LTV</div>
-              <div className="genesis-t-name">Ultra Safe</div>
-              <div className="genesis-t-desc">5&times; collateral. ETH must fall 75% before any liquidation risk.</div>
-              <div className="genesis-t-safe">&minus;75% to liquidate</div>
-            </div>
             <div className="genesis-tier">
               <div className="genesis-tier-bar"></div>
               <div className="genesis-t-rate">1%</div>

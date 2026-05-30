@@ -317,7 +317,7 @@ body.genesis-active {
 
 .genesis-tiers {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border: 1px solid rgba(56, 246, 201, 0.07);
   gap: 1px;
   background: rgba(56, 246, 201, 0.07);
@@ -350,7 +350,7 @@ body.genesis-active {
   height: 100%;
 }
 
-.genesis-tier:nth-child(4) .genesis-tier-bar {
+.genesis-tier:nth-child(3) .genesis-tier-bar {
   background: var(--purple);
 }
 
@@ -363,7 +363,7 @@ body.genesis-active {
   margin-bottom: 4px;
 }
 
-.genesis-tier:nth-child(4) .genesis-t-rate {
+.genesis-tier:nth-child(3) .genesis-t-rate {
   color: var(--purple);
 }
 
@@ -376,7 +376,7 @@ body.genesis-active {
   margin-bottom: 16px;
 }
 
-.genesis-tier:nth-child(4) .genesis-t-ltv {
+.genesis-tier:nth-child(3) .genesis-t-ltv {
   color: rgba(202, 141, 251, 0.4);
 }
 
