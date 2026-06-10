@@ -1,15 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { isMobile } from 'react-device-detect';
-import axios from 'axios';
 import './Genesis.css';
 
 const Genesis = () => {
   const canvasRef = useRef(null);
   const creedWrapRef = useRef(null);
-
-  const [email, setEmail] = useState('');
-  const [toggle, setToggle] = useState(false);
-  const [message, setMessage] = useState('');
 
   useEffect(() => {
     document.body.classList.add('genesis-active');
@@ -214,43 +209,6 @@ const Genesis = () => {
     };
   }, []);
 
-  const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value.trim());
-  };
-
-  const handleWaitlistSubmit = async (event) => {
-    event.preventDefault();
-
-    if (!email.length) {
-      setMessage('Please enter an email below.');
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      setMessage('Please enter a valid email address.');
-      return;
-    }
-
-    try {
-      await axios.post('https://api.getwaitlist.com/api/v1/signup', {
-        email,
-        waitlist_id: 20191,
-        referral_link: typeof window !== 'undefined' ? window.location.href : 'https://shrub.finance/',
-      });
-
-      setMessage('');
-      setToggle(true);
-    } catch (error) {
-      const apiMessage =
-        error.response &&
-        error.response.data &&
-        (error.response.data.error_string || error.response.data.message || error.response.data.detail);
-      setMessage(apiMessage || 'Something went wrong. Please try again.');
-    }
-  };
-
   return (
     <div className="genesis-page">
       <canvas id="genesis-flow" ref={canvasRef} />
@@ -401,6 +359,7 @@ const Genesis = () => {
               <div className="genesis-ch-status">The engine goes live.</div>
             </div>
           </div>
+          {/* Hidden for now: Open Cells chapter
           <div className="genesis-chapter genesis-reveal">
             <div className="genesis-ch-num"><span className="genesis-ch-dot"></span></div>
             <div>
@@ -408,71 +367,8 @@ const Genesis = () => {
               <div className="genesis-ch-status">New operatives drawn from the waitlist.</div>
             </div>
           </div>
+          */}
         </div>
-
-        <section className="genesis-signal-wrap">
-          <div className="genesis-signal-box genesis-reveal">
-            <div className="genesis-sc tl"></div>
-            <div className="genesis-sc tr"></div>
-            <div className="genesis-sc bl"></div>
-            <div className="genesis-sc br"></div>
-            <div className="genesis-signal-pulse"></div>
-            <div className="genesis-signal-title">This isn't for everyone.</div>
-            <p className="genesis-signal-body">
-              We're writing the next chapter of DeFi.<br />
-              Where the people who use the product are the ones who <em>built it.</em><br />
-              Where what gets made is what's needed, not what's funded.
-            </p>
-            <p className="genesis-signal-closer">If it is you, <em>start the engine with us.</em></p>
-
-            {message && <p className="genesis-wl-message">{message}</p>}
-
-            {!toggle && (
-              <form className="genesis-wl-form" onSubmit={handleWaitlistSubmit}>
-                <input
-                  type="email"
-                  name="email"
-                  aria-label="email"
-                  autoComplete="email"
-                  autoCapitalize="off"
-                  placeholder="Your email"
-                  className="genesis-wl-input"
-                  value={email}
-                  onChange={handleEmailChange}
-                />
-                <button type="submit" className="genesis-wl-btn">
-                  <span>Reserve Your Place</span>
-                </button>
-              </form>
-            )}
-
-            {toggle && (
-              <div className="genesis-wl-success">
-                <div className="genesis-wl-success-title">You're on the list.</div>
-                <div className="genesis-wl-success-body">We'll reach out when it's time to onboard.</div>
-              </div>
-            )}
-
-            {!toggle && (
-              <div className="genesis-wl-note">First in, first called. The next wave starts here.</div>
-            )}
-
-            <div className="genesis-signal-links">
-              <a className="genesis-sig-link" href="https://discord.gg/yAc9JQT9dk" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
-                </svg>
-                Discord
-              </a>
-              <a className="genesis-sig-link" href="https://x.com/shrubfinance" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-                Twitter
-              </a>
-            </div>
-          </div>
-        </section>
 
         <footer className="genesis-footer">
           <div className="genesis-f-logo">
