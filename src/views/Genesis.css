@@ -771,6 +771,10 @@ body.genesis-active {
   margin-top: 28px;
 }
 
+.genesis-follow-links {
+  margin: 0 auto 72px;
+}
+
 .genesis-sig-link {
   display: inline-flex;
   align-items: center;
