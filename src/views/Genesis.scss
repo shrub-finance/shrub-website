@@ -24,7 +24,7 @@
   --mint-dim: #2f6e57;
   --warn: #c9a36b;
   --purple: #ca8dfb;     /* shrub accent purple — manifesto emphasis */
-  --serif: "Fraunces", Georgia, serif;
+  --serif: "Inter", system-ui, sans-serif;  /* brand font — was Fraunces serif */
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --sans: "Inter", system-ui, sans-serif;
 }
@@ -55,6 +55,12 @@ body.genesis-active {
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   .wrap { max-width: 720px; margin: 0 auto; padding: 0 30px; }
+
+  /* the universe — fixed star canvas behind everything (ported from the gate page) */
+  .stars {
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1; pointer-events: none;
+  }
 
   /* utilities — keep the markup free of one-off inline styles */
   .center { text-align: center; }

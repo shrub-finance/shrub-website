@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import RateEngine from '../components/genesis/RateEngine';
+import Starfield from '../components/genesis/Starfield';
 import useStaggerReveal from '../hooks/useStaggerReveal';
 import useScrolled from '../hooks/useScrolled';
 import shrubLogo from '../assets/images/bud/bud-mark.svg';
@@ -27,6 +28,7 @@ const Genesis = () => {
 
   return (
     <div className="shrub-landing" ref={rootRef}>
+      <Starfield />
       <nav className={navSolid ? 'solid' : undefined}>
         <Link to="/" className="brand" aria-label="Shrub home">
           <img className="brand-logo" src={shrubLogo} alt="Shrub" />
@@ -176,7 +178,7 @@ const Genesis = () => {
             <span className="l sp">Activate the engine.</span>
             <span className="l sp">Build what outlasts its <em>builders</em>.</span>
             <span className="l sp">Focus is our armor.</span>
-            <span className="l sp"><em>Completion</em> is the proof.</span>
+            <span className="l sp"><em>Completion</em> is the signal.</span>
           </div>
         </div>
       </section>
