@@ -88,6 +88,8 @@ body.genesis-active {
   /* beat = a stanza of the story */
   .beat { padding: 78px 0; }
   .beat.big { padding: 104px 0; }
+  /* a single line given the whole viewport — silence around one thought */
+  .beat.breath { min-height: 88vh; display: flex; align-items: center; justify-content: center; }
 
   /* staggered reveal, like lines being spoken */
   .sp {

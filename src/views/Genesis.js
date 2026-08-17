@@ -45,7 +45,7 @@ const Genesis = () => {
             <span className="l em">Money that answered to you.</span>
             <span className="l mute">Then it became a casino.</span>
             <span className="l mute">The builders who meant it left.</span>
-            <span className="l mint">We did not.</span>
+            <span className="l mint">You did not.</span>
           </div>
           <div className="cue"><span className="bar" />READ ON</div>
         </div>
@@ -54,7 +54,7 @@ const Genesis = () => {
       {/* THE WALL */}
       <section className="beat" data-reveal>
         <div className="wrap tell">
-          <span className="l sp">We wanted one honest thing.</span>
+          <span className="l sp">You wanted one honest thing.</span>
           <span className="l sp soft">A loan you could understand.</span>
           <span className="l sp soft">Borrow against what you hold. Know the number. Leave when you want.</span>
           <span className="l sp gap">It did not exist.</span>
@@ -104,10 +104,15 @@ const Genesis = () => {
         </div>
       </section>
 
-      {/* THE COST */}
+      {/* THE COST — the belief line gets the whole screen; the facts land after. */}
+      <section className="beat breath" data-reveal>
+        <div className="wrap tell center">
+          <span className="l sp soft">It cost us to believe that.</span>
+        </div>
+      </section>
+
       <section className="beat" data-reveal>
         <div className="wrap">
-          <div className="tell"><span className="l sp soft">It cost us to believe that.</span></div>
           <div className="facts sp">
             <span className="fact">FOUR YEARS</span>
             <span className="fact">THIRD PRODUCT</span>
@@ -119,6 +124,7 @@ const Genesis = () => {
             <span className="l sp mute note">
               We built it for the people who paid real money to believe, back when no one was watching. We did not forget who this is for.
             </span>
+            <span className="l sp mint gap">This is for you.</span>
           </div>
         </div>
       </section>
