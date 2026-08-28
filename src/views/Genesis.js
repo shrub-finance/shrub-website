@@ -33,7 +33,12 @@ const Genesis = () => {
         <Link to="/" className="brand" aria-label="Shrub home">
           <img className="brand-logo" src={shrubLogo} alt="Shrub" />
         </Link>
-        <div className="navstat">The Last Builders Collective</div>
+        <div className="navright">
+          <div className="navstat">The Last Builders Collective</div>
+          <a className="navcta" href="https://genesis.shrub.finance/" target="_blank" rel="noopener noreferrer">
+            Go to App
+          </a>
+        </div>
       </nav>
 
       {/* HERO — the story opens. no product. */}

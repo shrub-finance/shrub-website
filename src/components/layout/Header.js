@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Logo from './partials/Logo';
 import ReactGA from "react-ga";
-import {isMobileOnly} from "react-device-detect";
 import Button from "../elements/Button";
 
 const propTypes = {
@@ -117,16 +116,16 @@ const Header = ({
                 {!hideSignin &&
                 <ul className="list-reset header-nav-right">
 
-                  {!isMobileOnly && <li>
+                  <li>
 
                       <Button tag="a" color="primary" wideMobile>
-                        <ReactGA.OutboundLink eventLabel="lend" to="https://lend.shrub.finance/"
+                        <ReactGA.OutboundLink eventLabel="lend" to="https://genesis.shrub.finance/"
                                               target="_blank" rel='noopener noreferrer'>
-                          Launch App
+                          Go to App
                         </ReactGA.OutboundLink>
                       </Button>
 
-                  </li>}
+                  </li>
 
                   <li>
                     <ReactGA.OutboundLink eventLabel="Header Twitter Link" to="https://twitter.com/shrubfinance"

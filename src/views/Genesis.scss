@@ -117,6 +117,16 @@ body.genesis-active {
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
     color: var(--mute); text-transform: uppercase;
   }
+  .navright { display: flex; align-items: center; gap: 22px; }
+  .navcta {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--base);
+    background: var(--mint); border-radius: 4px; padding: 8px 16px;
+    text-decoration: none; font-weight: 600;
+    transition: opacity 0.2s;
+
+    &:hover { opacity: 0.85; }
+  }
 
   /* ── hero : the story opens, no product ─────────────────────────────── */
   .hero {
