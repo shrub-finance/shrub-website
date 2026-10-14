@@ -93,7 +93,7 @@ const RateEngine = () => {
           {locked ? (
             <>
               <span className="lk" />
-              Locked — the market keeps moving, yours doesn&apos;t
+              Locked — the market keeps moving, your rate doesn&apos;t
             </>
           ) : (
             'Live rate'

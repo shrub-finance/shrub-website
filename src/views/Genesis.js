@@ -7,6 +7,10 @@ import useScrolled from '../hooks/useScrolled';
 import shrubLogo from '../assets/images/bud/bud-mark.svg';
 import './Genesis.scss';
 
+// ShrubLend went live on Base mainnet on 2026-08-04 (UTC). Launch day counts as day 1.
+const MAINNET_LAUNCH_UTC = Date.UTC(2026, 7, 4);
+const daysLiveOnBase = () => Math.max(1, Math.floor((Date.now() - MAINNET_LAUNCH_UTC) / 86400000) + 1);
+
 const DISCORD = 'https://discord.gg/yAc9JQT9dk';
 const TWITTER = 'https://x.com/shrubfinance';
 
@@ -33,9 +37,8 @@ const Genesis = () => {
         <Link to="/" className="brand" aria-label="Shrub home">
           <img className="brand-logo" src={shrubLogo} alt="Shrub" />
         </Link>
-        <div className="navright links">
-          <a href={TWITTER} target="_blank" rel="noopener noreferrer">X</a>
-          <a href={DISCORD} target="_blank" rel="noopener noreferrer">Discord</a>
+        <div className="navright">
+          <div className="navstat">Live on Base &middot; Day {daysLiveOnBase()} &middot; Zero incidents</div>
         </div>
       </nav>
 
@@ -46,8 +49,8 @@ const Genesis = () => {
             <span className="l">Crypto promised one thing.</span>
             <span className="l em">Money that answered to you.</span>
             <span className="l mute">Then it became a casino.</span>
-            <span className="l mute">The builders who meant it left.</span>
-            <span className="l mint">You did not.</span>
+            <span className="l mute">The markets dipped. The builders left.</span>
+            <span className="l mint it">You did not.</span>
           </div>
           <div className="cue"><span className="bar" />READ ON</div>
         </div>
@@ -59,7 +62,7 @@ const Genesis = () => {
           <span className="l sp">You wanted one honest thing.</span>
           <span className="l sp soft">A loan you could understand.</span>
           <span className="l sp soft">Borrow against what you hold. Know the number. Leave when you want.</span>
-          <span className="l sp gap">It did not exist.</span>
+          <span className="l sp gap it">It did not happen.</span>
         </div>
       </section>
 
@@ -80,7 +83,7 @@ const Genesis = () => {
         <div className="wrap">
           <div className="tell"><span className="l sp">We tried. Twice. Neither was it.</span></div>
           <div className="tries sp">
-            <div className="try"><span className="v">V1</span><span className="t">The token model. We came close to a raise. We let it go.</span></div>
+            <div className="try"><span className="v">V1</span><span className="t">The token model. We came close. We let it go.</span></div>
             <div className="try"><span className="v">V2</span><span className="t">Two sides, pooled. Closer. Still a market.</span></div>
           </div>
         </div>
@@ -90,9 +93,9 @@ const Genesis = () => {
       <section className="beat big" data-reveal>
         <div className="wrap tell">
           <span className="l sp mute">Then we saw why no one built the loan.</span>
-          <span className="l sp soft">To fix the rate, someone has to carry the risk of the rate.</span>
+          <span className="l sp soft">To fix the rate, someone has to carry the risk.</span>
           <span className="l sp soft">Every protocol handed that risk to the borrower.</span>
-          <span className="l sp mint gap">We decided to carry it ourselves.</span>
+          <span className="l sp mint gap it">We decided to carry it ourselves.</span>
         </div>
       </section>
 
@@ -106,23 +109,13 @@ const Genesis = () => {
         </div>
       </section>
 
-      {/* THE COST — the belief line gets the whole screen; the facts land after. */}
-      <section className="beat breath" data-reveal>
-        <div className="wrap tell center">
-          <span className="l sp soft">It cost us to believe that.</span>
-        </div>
-      </section>
-
       <section className="beat" data-reveal>
         <div className="wrap">
-          <div className="facts sp">
-            <span className="fact">UNBOUGHT. UNBOSSED.</span>
-          </div>
-          <div className="tell costnote">
-            <span className="l sp mute note">
+          <div className="tell">
+            <span className="l sp mute">
               We built it for the people who paid real money to believe, back when no one was watching. We did not forget who this is for.
             </span>
-            <span className="l sp mint gap">This is for you.</span>
+            <span className="l sp mint gap it">This is for you.</span>
           </div>
         </div>
       </section>
@@ -142,7 +135,6 @@ const Genesis = () => {
           <div className="terms sp">
             <span className="fact">BUILT ON AAVE</span>
             <span className="fact">NON CUSTODIAL</span>
-            <span className="fact">1% ORIGINATION</span>
             <span className="fact">NO EARLY REPAYMENT PENALTY</span>
           </div>
         </div>

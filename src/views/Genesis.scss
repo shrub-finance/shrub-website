@@ -82,6 +82,7 @@ body.genesis-active {
     .mute { color: var(--mute); }
     .mint { color: var(--mint); }
     .em { font-style: italic; color: var(--ink); }
+    .it { font-style: italic; }
     .note { font-size: 0.62em; line-height: 1.5; }
   }
 
@@ -113,17 +114,11 @@ body.genesis-active {
   }
   .brand { display: inline-flex; align-items: center; }
   .brand-logo { display: block; height: 24px; width: auto; }
-  .navright {
-    display: flex; align-items: center; gap: 26px;
-
-    a {
-      color: var(--mute); font-family: var(--mono); font-size: 11px;
-      letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
-      transition: color 0.25s;
-
-      &:hover { color: var(--mint); }
-    }
+  .navstat {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+    color: var(--mint); text-transform: uppercase;
   }
+  .navright { display: flex; align-items: center; gap: 22px; }
   /* ── hero : the story opens, no product ─────────────────────────────── */
   .hero {
     min-height: 100vh; display: flex; flex-direction: column;
@@ -152,7 +147,6 @@ body.genesis-active {
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
     color: var(--mute); border: 1px solid var(--faint); border-radius: 2px; padding: 7px 12px;
   }
-  .costnote { margin-top: 30px; }
 
   /* ── the failed attempts ────────────────────────────────────────────── */
   .tries { margin-top: 30px; }
