@@ -113,11 +113,17 @@ body.genesis-active {
   }
   .brand { display: inline-flex; align-items: center; }
   .brand-logo { display: block; height: 24px; width: auto; }
-  .navstat {
-    font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
-    color: var(--mute); text-transform: uppercase;
+  .navright {
+    display: flex; align-items: center; gap: 26px;
+
+    a {
+      color: var(--mute); font-family: var(--mono); font-size: 11px;
+      letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+      transition: color 0.25s;
+
+      &:hover { color: var(--mint); }
+    }
   }
-  .navright { display: flex; align-items: center; gap: 22px; }
   /* ── hero : the story opens, no product ─────────────────────────────── */
   .hero {
     min-height: 100vh; display: flex; flex-direction: column;
@@ -253,7 +259,7 @@ body.genesis-active {
   footer {
     padding: 44px 0 56px; text-align: center; border-top: 1px solid var(--faint);
 
-    .links { display: flex; gap: 26px; justify-content: center; margin-bottom: 18px; }
+    .links { display: flex; gap: 26px; justify-content: center; }
     a {
       color: var(--mute); font-family: var(--mono); font-size: 11px;
       letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
@@ -261,7 +267,6 @@ body.genesis-active {
 
       &:hover { color: var(--mint); }
     }
-    .fine { color: var(--dim); font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; }
   }
 }
 

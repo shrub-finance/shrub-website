@@ -33,15 +33,15 @@ const Genesis = () => {
         <Link to="/" className="brand" aria-label="Shrub home">
           <img className="brand-logo" src={shrubLogo} alt="Shrub" />
         </Link>
-        <div className="navright">
-          <div className="navstat">The Last Builders Collective</div>
+        <div className="navright links">
+          <a href={TWITTER} target="_blank" rel="noopener noreferrer">X</a>
+          <a href={DISCORD} target="_blank" rel="noopener noreferrer">Discord</a>
         </div>
       </nav>
 
       {/* HERO — the story opens. no product. */}
       <header className="hero">
         <div className="wrap">
-          <div className="eyebrow">The Last Builders</div>
           <div className="tell">
             <span className="l">Crypto promised one thing.</span>
             <span className="l em">Money that answered to you.</span>
@@ -116,10 +116,6 @@ const Genesis = () => {
       <section className="beat" data-reveal>
         <div className="wrap">
           <div className="facts sp">
-            <span className="fact">FOUR YEARS</span>
-            <span className="fact">THIRD PRODUCT</span>
-            <span className="fact">FUNDING TURNED DOWN, 2X</span>
-            <span className="fact">ONLY BELIEVERS REMAINED</span>
             <span className="fact">UNBOUGHT. UNBOSSED.</span>
           </div>
           <div className="tell costnote">
@@ -160,44 +156,12 @@ const Genesis = () => {
 
       <div className="rule" />
 
-      {/* THE DROP */}
-      <section className="beat drop" data-reveal>
-        <div className="wrap">
-          <div className="tell"><span className="l sp">We are not opening the gates.</span></div>
-          <div className="tell">
-            <span className="l sp mute note dropsub">We are proving it works with the few who came first.</span>
-          </div>
-          <div className="seq sp">
-            <span className="n">1</span><span className="ar">&rarr;</span>
-            <span className="n">5</span><span className="ar">&rarr;</span>
-            <span className="n live">10</span>
-          </div>
-          <div className="cap sp">Genesis. Mainnet. With ten.</div>
-        </div>
-      </section>
-
-      <div className="rule" />
-
-      {/* THE CREED */}
-      <section className="beat big creed" data-reveal>
-        <div className="wrap">
-          <div className="eyebrow sp block">The Last Builders Manifesto</div>
-          <div className="tell creed-lines">
-            <span className="l sp">Activate the engine.</span>
-            <span className="l sp">Build what outlasts its <em>builders</em>.</span>
-            <span className="l sp">Focus is our armor.</span>
-            <span className="l sp"><em>Completion</em> is the signal.</span>
-          </div>
-        </div>
-      </section>
-
       <footer>
         <div className="wrap">
           <div className="links">
             <a href={TWITTER} target="_blank" rel="noopener noreferrer">X</a>
             <a href={DISCORD} target="_blank" rel="noopener noreferrer">Discord</a>
           </div>
-          <div className="fine">THE LAST BUILDERS COLLECTIVE</div>
         </div>
       </footer>
     </div>
