@@ -35,9 +35,6 @@ const Genesis = () => {
         </Link>
         <div className="navright">
           <div className="navstat">The Last Builders Collective</div>
-          <a className="navcta" href="https://genesis.shrub.finance/" target="_blank" rel="noopener noreferrer">
-            Go to App
-          </a>
         </div>
       </nav>
 
