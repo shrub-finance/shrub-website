@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Logo from './partials/Logo';
 import ReactGA from "react-ga";
-import Button from "../elements/Button";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -115,17 +114,6 @@ const Header = ({
                 </ul>
                 {!hideSignin &&
                 <ul className="list-reset header-nav-right">
-
-                  <li>
-
-                      <Button tag="a" color="primary" wideMobile>
-                        <ReactGA.OutboundLink eventLabel="lend" to="https://genesis.shrub.finance/"
-                                              target="_blank" rel='noopener noreferrer'>
-                          Go to App
-                        </ReactGA.OutboundLink>
-                      </Button>
-
-                  </li>
 
                   <li>
                     <ReactGA.OutboundLink eventLabel="Header Twitter Link" to="https://twitter.com/shrubfinance"
