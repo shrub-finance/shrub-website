@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import RateEngine from '../components/genesis/RateEngine';
 import Starfield from '../components/genesis/Starfield';
@@ -7,9 +7,45 @@ import useScrolled from '../hooks/useScrolled';
 import shrubLogo from '../assets/images/bud/bud-mark.svg';
 import './Genesis.scss';
 
-// ShrubLend went live on Base mainnet on 2026-08-04 (UTC). Launch day counts as day 1.
-const MAINNET_LAUNCH_UTC = Date.UTC(2026, 7, 4);
-const daysLiveOnBase = () => Math.max(1, Math.floor((Date.now() - MAINNET_LAUNCH_UTC) / 86400000) + 1);
+// ShrubLend proxy 0x9d23D0CE040770D33BaDF445c870F210571A88B8 was deployed on Base in block 49516003.
+// The day counter reads that block's timestamp from the chain; the constant below is the
+// known value (2026-08-04 05:29:13 UTC) used until the RPC answers, or if it never does.
+const BASE_RPC = 'https://mainnet.base.org';
+const DEPLOY_BLOCK = 49516003;
+const DEPLOY_TIMESTAMP_FALLBACK = 1785821353;
+const daysSince = (unixSeconds) => Math.max(1, Math.floor((Date.now() / 1000 - unixSeconds) / 86400) + 1);
+
+function useDaysLiveOnBase() {
+  const [deployedAt, setDeployedAt] = useState(DEPLOY_TIMESTAMP_FALLBACK);
+  const [days, setDays] = useState(() => daysSince(DEPLOY_TIMESTAMP_FALLBACK));
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(BASE_RPC, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        jsonrpc: '2.0', id: 1, method: 'eth_getBlockByNumber',
+        params: ['0x' + DEPLOY_BLOCK.toString(16), false],
+      }),
+    })
+      .then((r) => r.json())
+      .then((j) => {
+        const ts = j && j.result && parseInt(j.result.timestamp, 16);
+        if (!cancelled && ts > 0) setDeployedAt(ts);
+      })
+      .catch(() => { /* keep the fallback */ });
+    return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
+    setDays(daysSince(deployedAt));
+    const id = setInterval(() => setDays(daysSince(deployedAt)), 60000);
+    return () => clearInterval(id);
+  }, [deployedAt]);
+
+  return days;
+}
 
 const DISCORD = 'https://discord.gg/yAc9JQT9dk';
 const TWITTER = 'https://x.com/shrubfinance';
@@ -23,6 +59,7 @@ const TWITTER = 'https://x.com/shrubfinance';
 const Genesis = () => {
   const rootRef = useRef(null);
   const navSolid = useScrolled(40);
+  const daysLive = useDaysLiveOnBase();
   useStaggerReveal(rootRef);
 
   useEffect(() => {
@@ -38,7 +75,7 @@ const Genesis = () => {
           <img className="brand-logo" src={shrubLogo} alt="Shrub" />
         </Link>
         <div className="navright">
-          <div className="navstat">Live on Base &middot; Day {daysLiveOnBase()} &middot; Zero incidents</div>
+          <div className="navstat">Live on Base &middot; Day {daysLive} &middot; Zero incidents</div>
         </div>
       </nav>
 
