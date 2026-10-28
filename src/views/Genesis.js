@@ -75,7 +75,12 @@ const Genesis = () => {
           <img className="brand-logo" src={shrubLogo} alt="Shrub" />
         </Link>
         <div className="navright">
-          <div className="navstat">Live on Base &middot; Day {daysLive} &middot; Zero incidents</div>
+          <div
+            className="navstat"
+            title={`Since deploy on 2026-08-04: no exploit, no bad debt, no change to any open loan's locked rate.`}
+          >
+            Live on Base &middot; Day {daysLive} &middot; Zero incidents
+          </div>
         </div>
       </nav>
 
@@ -171,7 +176,7 @@ const Genesis = () => {
 
           <div className="terms sp">
             <span className="fact">BUILT ON AAVE</span>
-            <span className="fact">NON CUSTODIAL</span>
+            <span className="fact">FIXED FOR 90 DAYS</span>
             <span className="fact">NO EARLY REPAYMENT PENALTY</span>
           </div>
         </div>
@@ -179,7 +184,7 @@ const Genesis = () => {
 
       <section className="beat" data-reveal>
         <div className="wrap tell center">
-          <span className="l sp mute note">Your rate, once taken, never recalculates again.</span>
+          <span className="l sp mute note">Your rate, once taken, holds for 90 days. Then it renews, never above your tier&rsquo;s ceiling.</span>
         </div>
       </section>
 
@@ -191,6 +196,7 @@ const Genesis = () => {
             <a href={TWITTER} target="_blank" rel="noopener noreferrer">X</a>
             <a href={DISCORD} target="_blank" rel="noopener noreferrer">Discord</a>
           </div>
+          <div className="legal">&copy; {new Date().getFullYear()} Shrub Finance, Inc.</div>
         </div>
       </footer>
     </div>

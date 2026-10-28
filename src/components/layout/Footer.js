@@ -44,7 +44,7 @@ const Footer = ({
             <FooterSocial />
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <div>© 2022 Shrub Finance, Inc.</div>
+            <div>© {new Date().getFullYear()} Shrub Finance, Inc.</div>
             <div></div>
 
           </div>

@@ -254,6 +254,10 @@ body.genesis-active {
     padding: 28px 0 36px; text-align: center;
 
     .links { display: flex; gap: 26px; justify-content: center; }
+    .legal {
+      margin-top: 18px; font-family: var(--mono); font-size: 11px;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--dim);
+    }
     a {
       color: var(--mute); font-family: var(--mono); font-size: 11px;
       letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
