@@ -1,0 +1,15 @@
+# Supply-chain quarantine: only install npm releases older than 30 days (same policy as the app repo).
+minimumReleaseAge: 43200
+# next 15.5.28 (2026-10-14) closes a disclosed RCE; waiting out the quarantine on a public
+# advisory is the worse trade. Remove once it is >30 days old.
+minimumReleaseAgeExclude:
+  - next
+  - '@next/*'
+
+# No dependency may run install scripts (postinstall is the primary npm supply-chain vector).
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
+allowBuilds:
+  sharp: false
+  unrs-resolver: false
