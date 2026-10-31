@@ -1,0 +1,14 @@
+# Cloudflare Pages response headers (Next `output: 'export'` has no server to emit them).
+# This site is a static landing page: it loads nothing from any third party at runtime.
+# Fonts are vendored (next/font/local), there is no analytics, no RPC call, no iframe.
+# Every directive below is therefore 'self' or 'none'. Adding an external host here needs a
+# necessity case: a vendor script on the page is the Polymarket/DebugBear attack.
+# 'unsafe-inline' for script/style is the price of a static export (per-response nonces are
+# impossible; Next's hydration bootstrap is inline). Verified in-browser before each release.
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; media-src 'self'; worker-src 'none'

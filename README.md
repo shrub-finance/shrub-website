@@ -1,27 +1,16 @@
+# shrub.finance
 
-### Available Scripts
+Marketing landing page for Shrub Finance. Next.js static export, served by Cloudflare Pages.
+Zero runtime third parties: fonts are vendored, no analytics, no external scripts.
 
-#### `yarn`
-To install the dependencies package.
+```bash
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm build      # release gate -> next build -> release gate (out/)
+```
 
-#### `yarn start`
+`scripts/release-gate.js` runs inside `pnpm build` and fails the build on any new route,
+third-party host in the CSP, unused dependency, or analytics/vendor reference in the bundle.
+Headers and redirects ship from `public/_headers` and `public/_redirects`.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-Launches the test runner in the interactive watch mode.
-#### `yarn test`
-
-Builds the app for production to the build folder.
-#### `yarn build`
-
-## Credits
-- [Nucleo](https://nucleoapp.com/)
-- [Unsplash](https://unsplash.com/)
-
-## Terms and License
-
-- Released under the [GPL](https://www.gnu.org/licenses/gpl-3.0.html).
-- Copyright 2020 [Cruip](https://cruip.com/).
-
+The pre-2026 Create React App site is preserved at git tag `cra-final`.
