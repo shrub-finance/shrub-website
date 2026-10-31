@@ -13,3 +13,9 @@ ignoredBuiltDependencies:
 allowBuilds:
   sharp: false
   unrs-resolver: false
+
+# next pins postcss to an exact 8.4.31 (2023); pull the patched line in under it.
+# Pinned to the newest versions that clear the 30-day quarantine.
+overrides:
+  postcss: 8.5.28
+  source-map-js: 1.2.2
