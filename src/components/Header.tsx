@@ -30,12 +30,7 @@ export default function Header() {
       <a href="/" className="brand" aria-label="Shrub home">
         <img className="brand-logo" src="/bud-mark.svg" alt="Shrub" />
       </a>
-      <div
-        className="status"
-        title="Since deploy on 2026-08-04: no exploit, no bad debt, no change to any open loan's locked rate."
-      >
-        Live on Base{daysLive !== null && <> &middot; Day {daysLive}</>} &middot; Zero incidents
-      </div>
+      <div className="status">Live on Base{daysLive !== null && <> &middot; {daysLive} days</>}</div>
     </header>
   );
 }

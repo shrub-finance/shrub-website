@@ -20,7 +20,7 @@ export default function Landing() {
       <Header />
       <main className="page">
         <section className="story">
-          <h1 className="mark">Shrub Lend</h1>
+          <h1 className="mark">Shrub</h1>
 
           <p className="pull">There is a fundamental that runs the world.</p>
 
@@ -55,8 +55,6 @@ export default function Landing() {
           </ul>
 
           <p className="cost">1% origination fee &middot; no early repayment penalty</p>
-
-          <p className="cost">More collateral, lower rate. Fixed 90 days, then renews at the current rate. Never above the ceiling then in force.</p>
 
           <p className="beat">
             It unlocks liquidity from your asset without a floating rate to lose sleep over.{' '}
@@ -150,8 +148,13 @@ export default function Landing() {
             </nav>
             <p>
               <span className="line">
-                If you want to be a part of building something where you belong, where you are a part, not a participant,{' '}
-                <strong>come join us.</strong> Email{' '}
+                If you want to be a part of building something <strong>where you belong</strong>,
+              </span>
+              <span className="line">
+                Where you are a <strong>part</strong>, not a <strong>participant</strong>,
+              </span>
+              <span className="line">
+                Email{' '}
                 <a className="mint" href={WAITLIST_MAILTO}>
                   {EMAIL}
                 </a>{' '}
@@ -161,7 +164,10 @@ export default function Landing() {
           </div>
         </section>
 
-        <footer className="colophon">Shrub Lend &middot; Built on Aave V3 &middot; Base</footer>
+        <footer className="colophon">
+          <span className="line">Shrub Lend &middot; Built on Aave V3 &middot; Base</span>
+          <span className="line">&copy; {new Date().getFullYear()} Shrub Finance, Inc.</span>
+        </footer>
       </main>
     </>
   );
