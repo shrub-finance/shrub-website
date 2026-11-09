@@ -3,18 +3,26 @@ import localFont from 'next/font/local';
 import './globals.css';
 
 // Fonts are vendored and self-hosted (next/font/local): the page never calls Google Fonts.
+const cormorant = localFont({
+  src: [
+    { path: '../fonts/cormorant-garamond-latin-400.woff2', weight: '400' },
+    { path: '../fonts/cormorant-garamond-latin-500.woff2', weight: '500' },
+  ],
+  display: 'swap',
+  variable: '--font-cormorant',
+  adjustFontFallback: 'Times New Roman',
+});
 const inter = localFont({
-  src: '../fonts/inter-latin-400.woff2',
-  weight: '400',
+  src: [
+    { path: '../fonts/inter-latin-400.woff2', weight: '400' },
+    { path: '../fonts/inter-latin-500.woff2', weight: '500' },
+  ],
   display: 'swap',
   variable: '--font-inter',
 });
 const plexMono = localFont({
-  src: [
-    { path: '../fonts/ibm-plex-mono-latin-400.woff2', weight: '400' },
-    { path: '../fonts/ibm-plex-mono-latin-500.woff2', weight: '500' },
-    { path: '../fonts/ibm-plex-mono-latin-600.woff2', weight: '600' },
-  ],
+  src: '../fonts/ibm-plex-mono-latin-400.woff2',
+  weight: '400',
   display: 'swap',
   variable: '--font-plex-mono',
 });
@@ -57,14 +65,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#090d0b',
+  themeColor: '#080e0b',
   width: 'device-width',
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${plexMono.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable} ${plexMono.variable}`}>
       <body>{children}</body>
     </html>
   );
