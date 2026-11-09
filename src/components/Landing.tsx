@@ -125,7 +125,7 @@ export default function Landing() {
             Real ETH. Real USDC. Every locked rate honored.
           </p>
 
-          <p className="conviction">Every person who tested it is still here.</p>
+          <p className="conviction">Every person who battle tested it and shaped it from the beginning is still here.</p>
 
           <p className="conviction mint">The thing working is the proof we have.</p>
         </section>
