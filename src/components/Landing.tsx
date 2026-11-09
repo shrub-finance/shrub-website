@@ -44,17 +44,18 @@ export default function Landing() {
             <span className="line">The rate locks the moment you borrow.</span>
           </p>
 
-          <ul className="tiers">
-            {TIERS.map(({ rate, ltv }) => (
-              <li key={ltv}>
-                <span className="tier-from">from</span>
-                <span className="tier-rate">{rate}</span>
-                <span className="tier-ltv">{ltv}</span>
-              </li>
-            ))}
-          </ul>
-
-          <p className="cost">1% origination fee &middot; no early repayment penalty</p>
+          <div className="tiers">
+            <ul className="tier-list">
+              {TIERS.map(({ rate, ltv }) => (
+                <li key={ltv}>
+                  <span className="tier-from">from</span>
+                  <span className="tier-rate">{rate}</span>
+                  <span className="tier-ltv">{ltv}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="cost">1% origination fee &middot; no early repayment penalty</p>
+          </div>
 
           <p className="beat">
             It unlocks liquidity from your asset without a floating rate to lose sleep over.{' '}

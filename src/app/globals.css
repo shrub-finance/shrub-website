@@ -112,16 +112,13 @@ strong { color: var(--cream); font-weight: 500; }
 }
 
 .tiers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
   margin: 2em 0 3em;
   padding: 2em;
   border: 1px solid rgb(56 246 201 / 0.06);
   background: rgb(56 246 201 / 0.03);
-  list-style: none;
 }
-.tiers li { display: flex; flex-direction: column; }
+.tier-list { display: flex; flex-wrap: wrap; gap: 32px; list-style: none; }
+.tier-list li { display: flex; flex-direction: column; }
 
 .tier-rate {
   color: var(--mint);
@@ -144,7 +141,8 @@ strong { color: var(--cream); font-weight: 500; }
 .tier-ltv { margin-top: 6px; }
 
 .story .cost {
-  margin-left: 2em;
+  max-width: none;
+  margin: 2em 0 0;
   color: var(--faint);
   font-size: 12px;
   letter-spacing: 0.15em;
@@ -193,8 +191,8 @@ strong { color: var(--cream); font-weight: 500; }
   .page { padding: 12vh 24px 16vh; }
   .story .pull { padding-left: 16px; font-size: 23px; }
   .story .conviction { font-size: 20px; }
-  .story .cost { margin-left: 0; }
-  .tiers { gap: 24px; padding: 1.5em; }
+  .tiers { padding: 1.5em; }
+  .tier-list { gap: 24px; }
 }
 
 /* Only hide what script can bring back: no-JS and reduced-motion readers get the page as is. */
