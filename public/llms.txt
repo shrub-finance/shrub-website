@@ -1,0 +1,78 @@
+# Shrub
+
+> Shrub - Making Lending Accessible. Shrub Lend: borrow USDC against ETH at a rate that locks the moment you borrow. Built on Aave V3, on Base. By Shrub Finance, Inc.
+
+This file is the text of https://shrub.finance/ for language models. The page is the source of truth.
+
+## There is a fundamental that runs the world.
+
+**Borrow against what you own without selling it.** Every economy on earth runs on this.
+
+It barely exists on-chain. Not because it can't. Because someone has to absorb the rate complexity so the borrower never sees it.
+
+That is WHAT Shrub does.
+That is ALL Shrub does.
+
+You have ETH. You need USDC.
+The rate locks the moment you borrow.
+
+- from 0% at 20% LTV
+- from 1% at 25% LTV
+- from 5% at 33.3% LTV
+- from 8% at 50% LTV
+
+1% origination fee. No early repayment penalty.
+
+It unlocks liquidity from your asset without a floating rate to lose sleep over. **The way loans are supposed to work.**
+
+We serve the individual, not institutions. No custom deals. No preferred terms. This is what the Last Builders are doing.
+
+## Simple and easy are not the same thing.
+
+Easy is surface. Simple is structure.
+
+You do not arrive at simple by adding features. You arrive at it by refusing to stop until the thing you built needs nothing explained.
+
+We had a working protocol. Won pitches. Had funding on the table. Then someone we respected told us the deposit side was unnecessary weight.
+
+So we walked away from the funding and went back to the beginning.
+
+Not because it was broken. **Because it could be better.**
+
+That is the discipline to begin again. Twice. Three times. However many it takes until the person using it has nothing to figure out.
+
+## We are here because we want to be.
+
+Not because we could not be somewhere else. Most projects arrive to capture a wave and leave when it passes. We self-fund now. The product is built to sustain itself by serving borrowers. The builders carry the rest.
+
+No outside money deciding what this becomes.
+
+Built by people who believe money should stay free. Used by people who feel the same.
+
+Nothing to inflate. It is exactly what it is meant to be.
+
+It serves a small set of people who opted in. Quiet builders setting the template for how money should work in DeFi. The right way. The slow way.
+
+Real ETH. Real USDC. Every locked rate honored.
+
+Every person who battle tested it and shaped it from the beginning is still here.
+
+The thing working is the proof we have.
+
+## For those invited
+
+This is for long-term holders who never entered crypto to make fast money. Who can tell the difference between something built to be talked about and something built to be used.
+
+When you need your asset to work without selling it, this is here, for those invited.
+
+If you want to be a part of building something where you belong, where you are a part, not a participant, email connect@shrub.finance and we will put you on the Last Builders waitlist.
+
+## Links
+
+- [Shrub](https://shrub.finance/): the page this file mirrors
+- [Discord](https://discord.gg/yAc9JQT9dk)
+- [Twitter](https://x.com/shrubfinance)
+- [Email](mailto:connect@shrub.finance): Last Builders waitlist
+
+Shrub Lend · Built on Aave V3 · Base
+© Shrub Finance, Inc.
