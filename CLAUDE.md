@@ -7,6 +7,7 @@ Deployed by Cloudflare Pages from this repo (build `pnpm build`, output `out/`).
   and a `public/_headers` CSP change, verified in a browser.
 - `scripts/release-gate.js` is wired into `pnpm build`; a new page or dependency means updating it in the same commit.
 - Copy on the landing page is brand copy: port, do not rewrite, without an explicit ask.
+- `public/llms.txt` mirrors the landing page text for AI readers. Any copy change in `src/components/Landing.tsx` updates `llms.txt` in the same commit (rates and wording verbatim).
 - Supply chain: `minimumReleaseAge` quarantine in `pnpm-workspace.yaml`; install scripts denied. Do not lower or bypass.
 - The maintainer commits and pushes. Do not run `git commit`/`git push` here.
 - History: the previous Create React App site is tagged `cra-final`.
