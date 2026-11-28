@@ -4,74 +4,72 @@
 
 This file is the text of https://shrub.finance/ for language models. The page is the source of truth.
 
-## There is a fundamental that runs the world.
+## You bought ETH and you held. Then life needed cash.
 
-**Borrow against what you own without selling it.** Every economy on earth runs on this.
+Crypto gave you two choices: sell, or borrow at a rate that can change overnight.
 
-It barely exists on-chain. Not because it can't. Because someone has to absorb the rate complexity so the borrower never sees it.
+On most lending apps, when rates jump, you pay.
 
-That is WHAT Shrub does.
-That is ALL Shrub does.
+The risk is yours.
+
+Shrub takes that risk off you.
 
 You have ETH. You need USDC.
 The rate locks the moment you borrow.
 
 Say you have $10,000 in ETH. How much do you need?
 
-- Borrow $2,000 (20% LTV): from 0%
-- Borrow $2,500 (25% LTV): from 1%
-- Borrow $3,333 (33.3% LTV): from 5%
-- Borrow $5,000 (50% LTV): from 8%
+- Borrow $2,000: from 0%
+- Borrow $2,500: from 1%
+- Borrow $3,333: from 5%
+- Borrow $5,000: from 8%
 
-Borrow less, pay less. Once you borrow, your rate is locked. The market keeps moving. Your rate does not.
+Your rate is locked for 90 days. A floating rate changes every day.
 
 1% origination fee. No early repayment penalty.
 
 Example numbers.
 
-You get cash without selling your ETH, and no changing rate to lose sleep over. **The way loans are supposed to work.**
+## Your ETH helps pay for your loan.
 
-## Simple is not the same as easy.
+1. Your ETH goes into Aave and earns yield while it is locked.
+2. Borrow a small slice of its value, and that yield offsets the cost. That is how a rate can start from 0%.
+3. When the market's rate jumps, Shrub's own capital covers the difference. Your rate stays fixed for 90 days, then renews at the current rate for your tier.
 
-Easy means it looks simple. Simple means it is.
+Borrow less, pay less. **The way loans are supposed to work.**
 
-We did not get here by adding features. We kept cutting until nothing needed explaining.
+It is still a loan. If the price of ETH falls far enough, some of your ETH can be sold to repay it.
 
-We had a working protocol. Won pitches. Had funding on the table. Then someone we respected told us the deposit side was unnecessary weight.
+## Most of crypto builds for the wave. Launch. Hype. Leave.
 
-So we walked away from the funding and went back to the beginning.
+The Last Builders are the ones still here when it passes.
 
-Not because it was broken. **Because it could be better.**
+We believe three things.
 
-That is the discipline to begin again. Twice. Three times. However many it takes until the person using it has nothing to figure out.
+You should never have to sell what you believe in.
+A rate you agreed to is a promise.
+Things worth using get built slowly.
 
-## We are here because we want to be.
+Simple is not the same as easy. Easy means it looks simple. Simple means it is. We kept cutting until nothing needed explaining.
 
-Not because we could not be somewhere else. Most projects arrive to capture a wave and leave when it passes. We self-fund now. The product is built to sustain itself by serving borrowers. The builders carry the rest.
+No outside money. Nobody to answer to but the people who use it.
 
-No outside money deciding what this becomes.
+**Live on Base since August 2026.** Real ETH. Real USDC. Every locked rate honored.
 
-Built by people who believe money should stay free. Used by people who feel the same.
-
-Nothing to inflate. It is exactly what it is meant to be.
-
-It serves a small set of people who opted in. Quiet builders setting the template for how money should work in DeFi. The right way. The slow way.
-
-Real ETH. Real USDC. Every locked rate honored.
-
-Every person who battle tested it and shaped it from the beginning is still here.
+Everyone who tested it from day one is still here.
 
 The thing working is the proof we have.
 
-## For those invited
+## This is not open to everyone. Not yet.
 
-This is for long-term holders who never entered crypto to make fast money. Who can tell the difference between something built to be talked about and something built to be used.
+It is for holders who never came to crypto for fast money. Who can tell what is built to be talked about from what is built to be used.
 
-When you need your asset to work without selling it, this is here, for those invited.
+If that is you, you are not a user here.
+You are a Last Builder.
 
-Connect with us.
+Ask for an invite.
 
-If you want to be a part of building something where you belong, where you are a part, not a participant, email connect@shrub.finance and we will put you on the Last Builders waitlist.
+Email connect@shrub.finance and we will put you on the Last Builders waitlist.
 
 ## Links
 

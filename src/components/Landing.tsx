@@ -16,22 +16,17 @@ export default function Landing() {
         <section className="story">
           <h1 className="mark">Shrub</h1>
 
-          <p className="pull">There is a fundamental that runs the world.</p>
+          <p className="pull">You bought ETH and you held. Then life needed cash.</p>
 
-          <p className="beat">
-            <strong>Borrow against what you own without selling it.</strong> Every economy on earth runs on this.
-          </p>
+          <p className="beat">Crypto gave you two choices: sell, or borrow at a rate that can change overnight.</p>
 
-          <p className="indent">
-            It barely exists on-chain. Not because it can't. Because someone has to absorb the rate complexity so the borrower never sees it.
-          </p>
+          <p className="indent">On most lending apps, when rates jump, you pay.</p>
 
-          <p className="conviction">
-            <span className="line">That is WHAT Shrub does.</span>
-            <span className="line">That is ALL Shrub does.</span>
-          </p>
+          <p className="conviction">The risk is yours.</p>
 
           <hr className="rule" />
+
+          <p className="conviction mint">Shrub takes that risk off you.</p>
 
           <p className="beat">
             <span className="line">You have ETH. You need USDC.</span>
@@ -40,82 +35,72 @@ export default function Landing() {
 
           <RateEngine />
 
+          <p className="pull">Your ETH helps pay for your loan.</p>
+
+          <ol className="steps">
+            <li>Your ETH goes into Aave and earns yield while it is locked.</li>
+            <li>Borrow a small slice of its value, and that yield offsets the cost. That is how a rate can start from 0%.</li>
+            <li>
+              When the market&apos;s rate jumps, Shrub&apos;s own capital covers the difference. Your rate stays fixed for 90
+              days, then renews at the current rate for your tier.
+            </li>
+          </ol>
+
           <p className="beat">
-            You get cash without selling your ETH, and no changing rate to lose sleep over.{' '}
-            <strong>The way loans are supposed to work.</strong>
+            Borrow less, pay less. <strong>The way loans are supposed to work.</strong>
+          </p>
+
+          <p className="indent">
+            It is still a loan. If the price of ETH falls far enough, some of your ETH can be sold to repay it.
           </p>
         </section>
 
         <section className="story">
-          <p className="pull">Simple is not the same as easy.</p>
+          <p className="pull">Most of crypto builds for the wave. Launch. Hype. Leave.</p>
 
-          <p className="beat">Easy means it looks simple. Simple means it is.</p>
+          <p className="conviction">The Last Builders are the ones still here when it passes.</p>
+
+          <p className="beat">We believe three things.</p>
+
+          <p className="conviction">
+            <span className="line">You should never have to sell what you believe in.</span>
+            <span className="line">A rate you agreed to is a promise.</span>
+            <span className="line">Things worth using get built slowly.</span>
+          </p>
 
           <p className="indent">
-            We did not get here by adding features. We kept cutting until nothing needed explaining.
+            Simple is not the same as easy. Easy means it looks simple. Simple means it is. We kept cutting until nothing
+            needed explaining.
           </p>
+
+          <p className="beat">No outside money. Nobody to answer to but the people who use it.</p>
 
           <hr className="rule" />
 
-          <p className="indent">
-            We had a working protocol. Won pitches. Had funding on the table. Then someone we respected told us the
-            deposit side was unnecessary weight.
-          </p>
-
-          <p className="indent">So we walked away from the funding and went back to the beginning.</p>
-
           <p className="beat">
-            Not because it was broken. <strong>Because it could be better.</strong>
+            <strong>Live on Base since August 2026.</strong> Real ETH. Real USDC. Every locked rate honored.
           </p>
 
-          <p className="indent">
-            That is the discipline to begin again. Twice. Three times. However many it takes until the person using it
-            has nothing to figure out.
-          </p>
-        </section>
-
-        <section className="story">
-          <p className="pull">We are here because we want to be.</p>
-
-          <p className="indent">
-            Not because we could not be somewhere else. Most projects arrive to capture a wave and leave when it
-            passes. We self-fund now. The product is built to sustain itself by serving borrowers. The builders carry the rest.
-          </p>
-
-          <p className="beat">No outside money deciding what this becomes.</p>
-
-          <p className="indent">
-            Built by people who believe money should stay free. Used by people who feel the same.
-          </p>
-
-          <p className="conviction">Nothing to inflate. It is exactly what it is meant to be.</p>
-
-          <hr className="rule" />
-
-          <p className="indent">
-            It serves a small set of people who opted in. Quiet builders setting the template for how money should work
-            in DeFi. The right way. The slow way.
-          </p>
-
-          <p className="beat">
-            Real ETH. Real USDC. Every locked rate honored.
-          </p>
-
-          <p className="conviction">Every person who battle tested it and shaped it from the beginning is still here.</p>
+          <p className="conviction">Everyone who tested it from day one is still here.</p>
 
           <p className="conviction mint">The thing working is the proof we have.</p>
         </section>
 
         <section className="story">
+          <p className="pull">This is not open to everyone. Not yet.</p>
+
           <p className="indent">
-            This is for long-term holders who never entered crypto to make fast money. Who can tell the difference
-            between something built to be talked about and something built to be used.
+            It is for holders who never came to crypto for fast money. Who can tell what is built to be talked about from
+            what is built to be used.
           </p>
 
-          <p className="conviction">When you need your asset to work without selling it, this is here, for those invited.</p>
+          <p className="conviction">
+            <span className="line">If that is you, you are not a user here.</span>
+            <span className="line">You are a Last Builder.</span>
+          </p>
 
           <div className="connect" id="waitlist">
-            <p>Connect with us.</p>
+            <p>Ask for an invite.</p>
             <nav className="links" aria-label="Community">
               <a href={DISCORD} target="_blank" rel="noopener noreferrer">
                 Discord
@@ -125,19 +110,11 @@ export default function Landing() {
               </a>
             </nav>
             <p>
-              <span className="line">
-                If you want to be a part of building something <strong>where you belong</strong>,
-              </span>
-              <span className="line">
-                Where you are a <strong>part</strong>, not a <strong>participant</strong>,
-              </span>
-              <span className="line">
-                Email{' '}
-                <a className="mint" href={WAITLIST_MAILTO}>
-                  {EMAIL}
-                </a>{' '}
-                and we will put you on the Last Builders waitlist.
-              </span>
+              Email{' '}
+              <a className="mint" href={WAITLIST_MAILTO}>
+                {EMAIL}
+              </a>{' '}
+              and we will put you on the Last Builders waitlist.
             </p>
           </div>
         </section>

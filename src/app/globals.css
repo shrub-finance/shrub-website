@@ -17,7 +17,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html, body, h1, p, ul, hr { margin: 0; padding: 0; }
+html, body, h1, p, ol, hr { margin: 0; padding: 0; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
 body {
@@ -160,25 +160,15 @@ strong { color: var(--cream); font-weight: 500; }
   background: rgb(56 246 201 / 0.2);
 }
 
-/* The rate engine: pick an amount, watch your rate lock while a floating one keeps moving. */
+/* The rate engine: pick an amount, your rate holds while a floating one keeps moving. */
 .engine {
-  margin: 2em 0 3em;
+  margin: 2em 0 2.4em;
   padding: 2em;
   border: 1px solid rgb(56 246 201 / 0.06);
   background: rgb(56 246 201 / 0.03);
   font-variant-numeric: tabular-nums;
 }
 .story .engine p { max-width: none; }
-
-.story .engine-label {
-  margin-bottom: 0.6em;
-  color: var(--faint);
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-}
 .story .engine-prompt { margin-bottom: 1.2em; color: var(--cream); line-height: 1.5; }
 
 .engine-options {
@@ -187,43 +177,25 @@ strong { color: var(--cream); font-weight: 500; }
   gap: 12px;
 }
 .engine-option {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 14px 14px 12px;
+  padding: 14px;
   border: 1px solid rgb(56 246 201 / 0.1);
   background: transparent;
   color: var(--cream);
-  font: inherit;
-  text-align: left;
+  font-family: var(--sans);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
   cursor: pointer;
-  transition: border-color 0.3s, background 0.3s;
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
 }
 .engine-option:hover { border-color: rgb(56 246 201 / 0.3); }
 .engine-option[aria-pressed='true'] {
   border-color: var(--mint);
   background: rgb(56 246 201 / 0.08);
+  color: var(--mint);
 }
 .engine-option:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
-
-.engine-borrow {
-  color: var(--cream);
-  font-family: var(--sans);
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-.engine-option[aria-pressed='true'] .engine-borrow { color: var(--mint); }
-
-.engine-from, .engine-col-label, .engine-state, .story .engine-note {
-  color: var(--faint);
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  line-height: 1.6;
-}
 
 .engine-readout {
   display: grid;
@@ -231,47 +203,48 @@ strong { color: var(--cream); font-weight: 500; }
   gap: 24px;
   margin-top: 2em;
 }
-.engine-col { display: flex; flex-direction: column; gap: 8px; }
-.engine-col-label { text-transform: uppercase; letter-spacing: 0.15em; }
+.engine-col { display: flex; flex-direction: column; gap: 10px; }
+
+.engine-col-label, .engine-sub, .story .engine-note {
+  color: var(--faint);
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+.engine-col-label { letter-spacing: 0.15em; text-transform: uppercase; }
 
 .engine-big {
-  color: var(--cream);
   font-family: var(--sans);
   font-size: 44px;
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1;
   white-space: nowrap;
-  transition: color 0.4s;
 }
-.engine-big.is-locked { color: var(--mint); }
-.engine-big-from { font-size: 14px; font-weight: 400; letter-spacing: 0.04em; }
+.engine-mine { color: var(--mint); }
 .engine-floating { color: var(--muted); }
+.engine-big-from { font-size: 14px; font-weight: 400; letter-spacing: 0.04em; }
 
-/* Two lines held either way, so the locked message never shifts the layout. */
-.engine-state { display: flex; align-items: flex-start; gap: 8px; min-height: 3.2em; }
-.engine-state.is-locked { color: var(--cream); }
+.engine-sub { display: flex; align-items: center; gap: 8px; }
 .engine-dot {
   flex: none;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  margin-top: 0.55em;
   background: var(--mint);
 }
 
-/* The longest sentence sits invisibly underneath to hold the space before anything is picked. */
-.engine-explain {
-  display: grid;
-  margin-top: 1.6em;
-  color: var(--muted);
-  font-size: 19px;
-  line-height: 1.6;
-}
-.engine-explain-sizer, .engine-explain-text { grid-area: 1 / 1; }
-.engine-explain-sizer { visibility: hidden; }
-
 .story .engine-note { margin: 0.8em 0 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 .story .cost {
   max-width: none;
@@ -281,13 +254,40 @@ strong { color: var(--cream); font-weight: 500; }
   letter-spacing: 0.15em;
 }
 
+/* How it works: numbered like labels, read like prose. */
+.steps {
+  max-width: 540px;
+  margin: 0 0 2.4em;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.steps li {
+  position: relative;
+  margin-bottom: 1.4em;
+  padding-left: 2.6em;
+  counter-increment: step;
+}
+.steps li:last-child { margin-bottom: 0; }
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  color: var(--mint);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  line-height: 1.75;
+}
+
 .connect {
   margin-top: 6vh;
   padding-top: 4vh;
   border-top: 1px solid rgb(56 246 201 / 0.08);
 }
 .connect p { margin-bottom: 0; font-size: 18px; line-height: 1.7; }
-.connect .line + .line { margin-top: 0.7em; }
 .connect p a { text-decoration: none; }
 .connect p a:hover, .connect p a:focus-visible { text-decoration: underline; }
 
@@ -329,9 +329,8 @@ strong { color: var(--cream); font-weight: 500; }
   .story .conviction { font-size: 20px; }
   .engine { padding: 1.5em; }
   .engine-options { grid-template-columns: 1fr 1fr; }
-  .engine-readout { grid-template-columns: 1fr; gap: 20px; }
+  .engine-readout { grid-template-columns: 1fr; gap: 24px; }
   .engine-big { font-size: 38px; }
-  .engine-explain { font-size: 17px; }
 }
 
 /* Only hide what script can bring back: no-JS and reduced-motion readers get the page as is. */
