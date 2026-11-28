@@ -16,26 +16,26 @@ export default function Landing() {
         <section className="story">
           <h1 className="mark">Shrub</h1>
 
-          <p className="pull">You bought ETH and you held. Then life needed cash.</p>
-
-          <p className="beat">Crypto gave you two choices: sell, or borrow at a rate that can change overnight.</p>
-
-          <p className="indent">On most lending apps, when rates jump, you pay.</p>
-
-          <p className="conviction">The risk is yours.</p>
-
-          <hr className="rule" />
-
-          <p className="conviction mint">Shrub takes that risk off you.</p>
+          <p className="pull">We believe you should never have to sell what you believe in.</p>
 
           <p className="beat">
-            <span className="line">You have ETH. You need USDC.</span>
-            <span className="line">The rate locks the moment you borrow.</span>
+            You bought ETH because you believe in where it is going. Then life needs cash, and crypto tells you to sell,
+            or to borrow at a rate that can change overnight.
           </p>
 
-          <RateEngine />
+          <p className="indent">
+            Everywhere else, people borrow against what they own and keep it. That is how homes get bought and
+            businesses get built.
+          </p>
 
-          <p className="pull">Your ETH helps pay for your loan.</p>
+          <p className="conviction">
+            <span className="line">Holders deserve the same.</span>
+            <span className="line mint">That is why Shrub exists.</span>
+          </p>
+        </section>
+
+        <section className="story">
+          <p className="pull">So we take the risk that used to be yours.</p>
 
           <ol className="steps">
             <li>Your ETH goes into Aave and earns yield while it is locked.</li>
@@ -45,6 +45,16 @@ export default function Landing() {
               days, then renews at the current rate for your tier.
             </li>
           </ol>
+
+          <p className="indent">Simple is not the same as easy. We kept cutting until nothing needed explaining.</p>
+        </section>
+
+        <section className="story">
+          <p className="beat">
+            What came out is one thing. A loan against your ETH, at a rate that locks the moment you borrow.
+          </p>
+
+          <RateEngine />
 
           <p className="beat">
             Borrow less, pay less. <strong>The way loans are supposed to work.</strong>
@@ -60,20 +70,11 @@ export default function Landing() {
 
           <p className="conviction">The Last Builders are the ones still here when it passes.</p>
 
-          <p className="beat">We believe three things.</p>
-
-          <p className="conviction">
-            <span className="line">You should never have to sell what you believe in.</span>
+          <p className="beat">
             <span className="line">A rate you agreed to is a promise.</span>
             <span className="line">Things worth using get built slowly.</span>
+            <span className="line">No outside money. Nobody to answer to but the people who use it.</span>
           </p>
-
-          <p className="indent">
-            Simple is not the same as easy. Easy means it looks simple. Simple means it is. We kept cutting until nothing
-            needed explaining.
-          </p>
-
-          <p className="beat">No outside money. Nobody to answer to but the people who use it.</p>
 
           <hr className="rule" />
 
@@ -89,18 +90,15 @@ export default function Landing() {
         <section className="story">
           <p className="pull">This is not open to everyone. Not yet.</p>
 
-          <p className="indent">
-            It is for holders who never came to crypto for fast money. Who can tell what is built to be talked about from
-            what is built to be used.
-          </p>
+          <p className="indent">It is for holders who never came to crypto for fast money.</p>
 
           <p className="conviction">
-            <span className="line">If that is you, you are not a user here.</span>
+            <span className="line">If you believe what we believe, you are not a user here.</span>
             <span className="line">You are a Last Builder.</span>
+            <span className="line mint">Build with us.</span>
           </p>
 
           <div className="connect" id="waitlist">
-            <p>Ask for an invite.</p>
             <nav className="links" aria-label="Community">
               <a href={DISCORD} target="_blank" rel="noopener noreferrer">
                 Discord

@@ -4,18 +4,26 @@
 
 This file is the text of https://shrub.finance/ for language models. The page is the source of truth.
 
-## You bought ETH and you held. Then life needed cash.
+## We believe you should never have to sell what you believe in.
 
-Crypto gave you two choices: sell, or borrow at a rate that can change overnight.
+You bought ETH because you believe in where it is going. Then life needs cash, and crypto tells you to sell, or to borrow at a rate that can change overnight.
 
-On most lending apps, when rates jump, you pay.
+Everywhere else, people borrow against what they own and keep it. That is how homes get bought and businesses get built.
 
-The risk is yours.
+Holders deserve the same.
+That is why Shrub exists.
 
-Shrub takes that risk off you.
+## So we take the risk that used to be yours.
 
-You have ETH. You need USDC.
-The rate locks the moment you borrow.
+1. Your ETH goes into Aave and earns yield while it is locked.
+2. Borrow a small slice of its value, and that yield offsets the cost. That is how a rate can start from 0%.
+3. When the market's rate jumps, Shrub's own capital covers the difference. Your rate stays fixed for 90 days, then renews at the current rate for your tier.
+
+Simple is not the same as easy. We kept cutting until nothing needed explaining.
+
+## What came out is one thing.
+
+What came out is one thing. A loan against your ETH, at a rate that locks the moment you borrow.
 
 Say you have $10,000 in ETH. How much do you need?
 
@@ -30,12 +38,6 @@ Your rate is locked for 90 days. A floating rate changes every day.
 
 Example numbers.
 
-## Your ETH helps pay for your loan.
-
-1. Your ETH goes into Aave and earns yield while it is locked.
-2. Borrow a small slice of its value, and that yield offsets the cost. That is how a rate can start from 0%.
-3. When the market's rate jumps, Shrub's own capital covers the difference. Your rate stays fixed for 90 days, then renews at the current rate for your tier.
-
 Borrow less, pay less. **The way loans are supposed to work.**
 
 It is still a loan. If the price of ETH falls far enough, some of your ETH can be sold to repay it.
@@ -44,14 +46,8 @@ It is still a loan. If the price of ETH falls far enough, some of your ETH can b
 
 The Last Builders are the ones still here when it passes.
 
-We believe three things.
-
-You should never have to sell what you believe in.
 A rate you agreed to is a promise.
 Things worth using get built slowly.
-
-Simple is not the same as easy. Easy means it looks simple. Simple means it is. We kept cutting until nothing needed explaining.
-
 No outside money. Nobody to answer to but the people who use it.
 
 **Live on Base since August 2026.** Real ETH. Real USDC. Every locked rate honored.
@@ -62,12 +58,11 @@ The thing working is the proof we have.
 
 ## This is not open to everyone. Not yet.
 
-It is for holders who never came to crypto for fast money. Who can tell what is built to be talked about from what is built to be used.
+It is for holders who never came to crypto for fast money.
 
-If that is you, you are not a user here.
+If you believe what we believe, you are not a user here.
 You are a Last Builder.
-
-Ask for an invite.
+Build with us.
 
 Email connect@shrub.finance and we will put you on the Last Builders waitlist.
 

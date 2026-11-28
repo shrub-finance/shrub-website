@@ -295,7 +295,7 @@ strong { color: var(--cream); font-weight: 500; }
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin: 1.2em 0 2em;
+  margin: 0 0 2em;
 }
 .links a {
   padding: 10px 20px;
