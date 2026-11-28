@@ -49,7 +49,8 @@ strong { color: var(--cream); font-weight: 500; }
   background: rgb(8 14 11 / 0.94);
 }
 .brand { display: inline-flex; align-items: center; }
-.brand-logo { display: block; width: auto; height: 24px; }
+/* The stacked lockup: 38px tall keeps the bud mark at about 24px, as before, with the wordmark beneath. */
+.brand-logo { display: block; width: auto; height: 38px; }
 .header-end { display: flex; align-items: center; gap: 22px; }
 .status {
   display: inline-flex;
@@ -89,23 +90,6 @@ strong { color: var(--cream); font-weight: 500; }
   70%, 100% { opacity: 0; transform: scale(3.4); }
 }
 
-.header-cta {
-  padding: 8px 14px;
-  border: 1px solid rgb(56 246 201 / 0.3);
-  color: var(--mint);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  line-height: normal;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition: background 0.3s, border-color 0.3s;
-}
-.header-cta:hover, .header-cta:focus-visible {
-  border-color: var(--mint);
-  background: rgb(56 246 201 / 0.08);
-}
 #waitlist { scroll-margin-top: 90px; }
 
 .page { max-width: 620px; margin: 0 auto; padding: 15vh 32px 20vh; }
@@ -116,20 +100,11 @@ strong { color: var(--cream); font-weight: 500; }
 .line { display: block; }
 
 /* Small uppercase labels share one voice. */
-.mark, .cost, .links a, .colophon {
+.cost, .links a, .colophon {
   font-family: var(--sans);
   text-transform: uppercase;
 }
 
-.mark {
-  margin-bottom: 6vh;
-  color: var(--mint);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-}
-
-.story .indent { text-indent: 2em; }
 
 .story .beat { max-width: 420px; margin-bottom: 2.4em; color: var(--cream); }
 
@@ -287,15 +262,16 @@ strong { color: var(--cream); font-weight: 500; }
   padding-top: 4vh;
   border-top: 1px solid rgb(56 246 201 / 0.08);
 }
-.connect p { margin-bottom: 0; font-size: 18px; line-height: 1.7; }
-.connect p a { text-decoration: none; }
-.connect p a:hover, .connect p a:focus-visible { text-decoration: underline; }
+.story .conviction:has(+ .invite) { margin-bottom: 0.7em; }
+.story .invite { margin-bottom: 0; font-size: 16px; line-height: 1.7; }
+.invite a { text-decoration: none; }
+.invite a:hover, .invite a:focus-visible { text-decoration: underline; }
 
 .links {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin: 0 0 2em;
+  margin: 0;
 }
 .links a {
   padding: 10px 20px;
@@ -322,8 +298,6 @@ strong { color: var(--cream); font-weight: 500; }
 @media (max-width: 600px) {
   body { font-size: 19px; }
   .site-header { padding: 16px 24px; }
-  .header-end { flex-direction: column; align-items: flex-end; gap: 10px; }
-  .header-cta { padding: 6px 10px; font-size: 10px; }
   .page { padding: 12vh 24px 16vh; }
   .story .pull { padding-left: 16px; font-size: 23px; }
   .story .conviction { font-size: 20px; }

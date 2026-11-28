@@ -14,8 +14,6 @@ export default function Landing() {
       <Header />
       <main className="page">
         <section className="story">
-          <h1 className="mark">Shrub</h1>
-
           <p className="pull">We believe you should never have to sell what you believe in.</p>
 
           <p className="beat">
@@ -98,7 +96,15 @@ export default function Landing() {
             <span className="line mint">Build with us.</span>
           </p>
 
-          <div className="connect" id="waitlist">
+          <p className="invite" id="waitlist">
+            Email{' '}
+            <a className="mint" href={WAITLIST_MAILTO}>
+              {EMAIL}
+            </a>{' '}
+            and we will put you on the Last Builders waitlist.
+          </p>
+
+          <div className="connect">
             <nav className="links" aria-label="Community">
               <a href={DISCORD} target="_blank" rel="noopener noreferrer">
                 Discord
@@ -107,13 +113,6 @@ export default function Landing() {
                 Twitter
               </a>
             </nav>
-            <p>
-              Email{' '}
-              <a className="mint" href={WAITLIST_MAILTO}>
-                {EMAIL}
-              </a>{' '}
-              and we will put you on the Last Builders waitlist.
-            </p>
           </div>
         </section>
 

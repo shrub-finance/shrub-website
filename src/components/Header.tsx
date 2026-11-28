@@ -27,17 +27,15 @@ export default function Header() {
 
   return (
     <header className={solid ? 'site-header solid' : 'site-header'}>
+      <h1 className="sr-only">Shrub</h1>
       <a href="/" className="brand" aria-label="Shrub home">
-        <img className="brand-logo" src="/bud-mark.svg" alt="Shrub" />
+        <img className="brand-logo" src="/shrub-stacked.svg" alt="Shrub" />
       </a>
       <div className="header-end">
         <div className="status">
           <span className="pulse" aria-hidden="true" />
           Live on Base{daysLive !== null && <> &middot; {daysLive} days</>}
         </div>
-        <a className="header-cta" href="#waitlist">
-          Join the waitlist
-        </a>
       </div>
     </header>
   );

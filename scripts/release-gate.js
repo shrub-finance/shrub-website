@@ -20,7 +20,7 @@ const OUT = path.join(ROOT, 'out');
 /** Every public route, on purpose. Adding a page means adding it here, in the same commit. */
 const ALLOWED_ROUTES = ['/'];
 /** Files Cloudflare Pages must receive with the export. */
-const MUST_SHIP = ['_headers', '_redirects', 'robots.txt', 'llms.txt', 'sitemap.xml', 'favicon.ico', 'social-card.png'];
+const MUST_SHIP = ['_headers', '_redirects', 'robots.txt', 'llms.txt', 'sitemap.xml', 'favicon.ico', 'social-card.png', 'shrub-stacked.svg'];
 /** Anything matching these must never appear in shipped JS/HTML. */
 const BUNDLE_FORBIDDEN = [
   [/fonts\.googleapis\.com|fonts\.gstatic\.com/, 'runtime Google Fonts request (fonts are vendored under src/fonts)'],
