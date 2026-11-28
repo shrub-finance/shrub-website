@@ -16,22 +16,26 @@ That is ALL Shrub does.
 You have ETH. You need USDC.
 The rate locks the moment you borrow.
 
-- from 0% at 20% LTV
-- from 1% at 25% LTV
-- from 5% at 33.3% LTV
-- from 8% at 50% LTV
+Say you have $10,000 in ETH. How much do you need?
+
+- Borrow $2,000 (20% LTV): from 0%
+- Borrow $2,500 (25% LTV): from 1%
+- Borrow $3,333 (33.3% LTV): from 5%
+- Borrow $5,000 (50% LTV): from 8%
+
+Borrow less, pay less. Once you borrow, your rate is locked. The market keeps moving. Your rate does not.
 
 1% origination fee. No early repayment penalty.
 
-It unlocks liquidity from your asset without a floating rate to lose sleep over. **The way loans are supposed to work.**
+Example numbers.
 
-We serve the individual, not institutions. No custom deals. No preferred terms. This is what the Last Builders are doing.
+You get cash without selling your ETH, and no changing rate to lose sleep over. **The way loans are supposed to work.**
 
-## Simple and easy are not the same thing.
+## Simple is not the same as easy.
 
-Easy is surface. Simple is structure.
+Easy means it looks simple. Simple means it is.
 
-You do not arrive at simple by adding features. You arrive at it by refusing to stop until the thing you built needs nothing explained.
+We did not get here by adding features. We kept cutting until nothing needed explaining.
 
 We had a working protocol. Won pitches. Had funding on the table. Then someone we respected told us the deposit side was unnecessary weight.
 

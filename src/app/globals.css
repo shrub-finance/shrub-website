@@ -18,6 +18,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html, body, h1, p, ul, hr { margin: 0; padding: 0; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
 body {
   background: var(--bg);
@@ -49,7 +50,11 @@ strong { color: var(--cream); font-weight: 500; }
 }
 .brand { display: inline-flex; align-items: center; }
 .brand-logo { display: block; width: auto; height: 24px; }
+.header-end { display: flex; align-items: center; gap: 22px; }
 .status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--mint);
   font-family: var(--mono);
   font-size: 11px;
@@ -58,6 +63,50 @@ strong { color: var(--cream); font-weight: 500; }
   text-align: right;
   text-transform: uppercase;
 }
+
+/* The live dot: a steady core with a ring that breathes outward. */
+.pulse {
+  position: relative;
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mint);
+}
+.pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--mint);
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pulse::after { animation: pulse 2.4s ease-out infinite; }
+}
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scale(1); }
+  70%, 100% { opacity: 0; transform: scale(3.4); }
+}
+
+.header-cta {
+  padding: 8px 14px;
+  border: 1px solid rgb(56 246 201 / 0.3);
+  color: var(--mint);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background 0.3s, border-color 0.3s;
+}
+.header-cta:hover, .header-cta:focus-visible {
+  border-color: var(--mint);
+  background: rgb(56 246 201 / 0.08);
+}
+#waitlist { scroll-margin-top: 90px; }
 
 .page { max-width: 620px; margin: 0 auto; padding: 15vh 32px 20vh; }
 .story + .story { padding-top: 14vh; }
@@ -111,34 +160,118 @@ strong { color: var(--cream); font-weight: 500; }
   background: rgb(56 246 201 / 0.2);
 }
 
-.tiers {
+/* The rate engine: pick an amount, watch your rate lock while a floating one keeps moving. */
+.engine {
   margin: 2em 0 3em;
   padding: 2em;
   border: 1px solid rgb(56 246 201 / 0.06);
   background: rgb(56 246 201 / 0.03);
+  font-variant-numeric: tabular-nums;
 }
-.tier-list { display: flex; flex-wrap: wrap; gap: 32px; list-style: none; }
-.tier-list li { display: flex; flex-direction: column; }
+.story .engine p { max-width: none; }
 
-.tier-rate {
-  color: var(--mint);
+.story .engine-label {
+  margin-bottom: 0.6em;
+  color: var(--faint);
   font-family: var(--sans);
-  font-size: 26px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.story .engine-prompt { margin-bottom: 1.2em; color: var(--cream); line-height: 1.5; }
+
+.engine-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.engine-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 14px 14px 12px;
+  border: 1px solid rgb(56 246 201 / 0.1);
+  background: transparent;
+  color: var(--cream);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
+}
+.engine-option:hover { border-color: rgb(56 246 201 / 0.3); }
+.engine-option[aria-pressed='true'] {
+  border-color: var(--mint);
+  background: rgb(56 246 201 / 0.08);
+}
+.engine-option:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+
+.engine-borrow {
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1;
 }
+.engine-option[aria-pressed='true'] .engine-borrow { color: var(--mint); }
 
-.tier-from, .tier-ltv {
+.engine-from, .engine-col-label, .engine-state, .story .engine-note {
   color: var(--faint);
   font-family: var(--sans);
   font-size: 11px;
   letter-spacing: 0.08em;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
-.tier-from { margin-bottom: 6px; }
-.tier-ltv { margin-top: 6px; }
+.engine-readout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 2em;
+}
+.engine-col { display: flex; flex-direction: column; gap: 8px; }
+.engine-col-label { text-transform: uppercase; letter-spacing: 0.15em; }
+
+.engine-big {
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 44px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.4s;
+}
+.engine-big.is-locked { color: var(--mint); }
+.engine-big-from { font-size: 14px; font-weight: 400; letter-spacing: 0.04em; }
+.engine-floating { color: var(--muted); }
+
+/* Two lines held either way, so the locked message never shifts the layout. */
+.engine-state { display: flex; align-items: flex-start; gap: 8px; min-height: 3.2em; }
+.engine-state.is-locked { color: var(--cream); }
+.engine-dot {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 0.55em;
+  background: var(--mint);
+}
+
+/* The longest sentence sits invisibly underneath to hold the space before anything is picked. */
+.engine-explain {
+  display: grid;
+  margin-top: 1.6em;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.6;
+}
+.engine-explain-sizer, .engine-explain-text { grid-area: 1 / 1; }
+.engine-explain-sizer { visibility: hidden; }
+
+.story .engine-note { margin: 0.8em 0 0; }
 
 .story .cost {
   max-width: none;
@@ -188,11 +321,17 @@ strong { color: var(--cream); font-weight: 500; }
 
 @media (max-width: 600px) {
   body { font-size: 19px; }
+  .site-header { padding: 16px 24px; }
+  .header-end { flex-direction: column; align-items: flex-end; gap: 10px; }
+  .header-cta { padding: 6px 10px; font-size: 10px; }
   .page { padding: 12vh 24px 16vh; }
   .story .pull { padding-left: 16px; font-size: 23px; }
   .story .conviction { font-size: 20px; }
-  .tiers { padding: 1.5em; }
-  .tier-list { gap: 24px; }
+  .engine { padding: 1.5em; }
+  .engine-options { grid-template-columns: 1fr 1fr; }
+  .engine-readout { grid-template-columns: 1fr; gap: 20px; }
+  .engine-big { font-size: 38px; }
+  .engine-explain { font-size: 17px; }
 }
 
 /* Only hide what script can bring back: no-JS and reduced-motion readers get the page as is. */

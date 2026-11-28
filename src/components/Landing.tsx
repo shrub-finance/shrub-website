@@ -1,17 +1,11 @@
 import Header from './Header';
+import RateEngine from './RateEngine';
 import RevealOnScroll from './RevealOnScroll';
 
 const DISCORD = 'https://discord.gg/yAc9JQT9dk';
 const TWITTER = 'https://x.com/shrubfinance';
 const EMAIL = 'connect@shrub.finance';
 const WAITLIST_MAILTO = `mailto:${EMAIL}?subject=${encodeURIComponent('I want to join the Last Builders waitlist')}`;
-
-const TIERS = [
-  { rate: '0%', ltv: '20% LTV' },
-  { rate: '1%', ltv: '25% LTV' },
-  { rate: '5%', ltv: '33.3% LTV' },
-  { rate: '8%', ltv: '50% LTV' },
-];
 
 export default function Landing() {
   return (
@@ -44,38 +38,21 @@ export default function Landing() {
             <span className="line">The rate locks the moment you borrow.</span>
           </p>
 
-          <div className="tiers">
-            <ul className="tier-list">
-              {TIERS.map(({ rate, ltv }) => (
-                <li key={ltv}>
-                  <span className="tier-from">from</span>
-                  <span className="tier-rate">{rate}</span>
-                  <span className="tier-ltv">{ltv}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="cost">1% origination fee &middot; no early repayment penalty</p>
-          </div>
+          <RateEngine />
 
           <p className="beat">
-            It unlocks liquidity from your asset without a floating rate to lose sleep over.{' '}
+            You get cash without selling your ETH, and no changing rate to lose sleep over.{' '}
             <strong>The way loans are supposed to work.</strong>
-          </p>
-
-          <p className="indent">
-            We serve the individual, not institutions. No custom deals. No preferred terms. This is what the{' '}
-            <span className="mint">Last Builders</span> are doing.
           </p>
         </section>
 
         <section className="story">
-          <p className="pull">Simple and easy are not the same thing.</p>
+          <p className="pull">Simple is not the same as easy.</p>
 
-          <p className="beat">Easy is surface. Simple is structure.</p>
+          <p className="beat">Easy means it looks simple. Simple means it is.</p>
 
           <p className="indent">
-            You do not arrive at simple by adding features. You arrive at it by refusing to stop until the thing you
-            built needs nothing explained.
+            We did not get here by adding features. We kept cutting until nothing needed explaining.
           </p>
 
           <hr className="rule" />
@@ -137,7 +114,7 @@ export default function Landing() {
 
           <p className="conviction">When you need your asset to work without selling it, this is here, for those invited.</p>
 
-          <div className="connect">
+          <div className="connect" id="waitlist">
             <p>Connect with us.</p>
             <nav className="links" aria-label="Community">
               <a href={DISCORD} target="_blank" rel="noopener noreferrer">

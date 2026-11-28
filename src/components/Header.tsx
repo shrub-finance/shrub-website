@@ -30,7 +30,15 @@ export default function Header() {
       <a href="/" className="brand" aria-label="Shrub home">
         <img className="brand-logo" src="/bud-mark.svg" alt="Shrub" />
       </a>
-      <div className="status">Live on Base{daysLive !== null && <> &middot; {daysLive} days</>}</div>
+      <div className="header-end">
+        <div className="status">
+          <span className="pulse" aria-hidden="true" />
+          Live on Base{daysLive !== null && <> &middot; {daysLive} days</>}
+        </div>
+        <a className="header-cta" href="#waitlist">
+          Join the waitlist
+        </a>
+      </div>
     </header>
   );
 }
